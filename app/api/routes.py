@@ -4,7 +4,7 @@ from typing import Any
 
 from fastapi import APIRouter, HTTPException, Query
 
-from app.agents.orchestrator import build_agent_summary
+from app.agents.orchestrator import build_agent_summary, supported_task_kinds
 from app.api.data_access import (
     ArtifactUnavailableError,
     index_by_player_name,
@@ -34,6 +34,7 @@ def summary() -> dict[str, object]:
         "project": "elitefootball-agenticAi",
         "mvp_scope": "IDV players",
         "agents": build_agent_summary(),
+        "orchestration": {"supported_task_kinds": supported_task_kinds()},
         "scraping": get_idv_player_scrape_plan(),
     }
 

@@ -24,3 +24,8 @@ The backend now exposes read-only artifact-backed endpoints:
 - These endpoints read generated artifacts from `data/silver/` and `data/gold/`.
 - They do not write data or query the live database in the MVP.
 - Run the pipeline first so required artifacts exist before calling compare/value routes.
+
+## Multi-Agent Orchestration
+- The MVP now includes a lightweight in-process orchestration layer under `app/agents/`.
+- Agent modules coordinate existing scraping, pipeline, and analysis code instead of duplicating it.
+- Supported task kinds currently include scraping, cleaning, analysis, report generation, and a composite `full_refresh` route.

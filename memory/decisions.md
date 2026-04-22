@@ -105,6 +105,18 @@
 - the dashboard should use a lightweight requests-based API client with `ELITEFOOTBALL_API_BASE_URL` as the backend base-url override.
 - valuation enrichment on the compare page is acceptable as a UI join over API responses and should not introduce new analysis logic.
 
+## Multi-Agent Planning Decisions Added in PAP-222
+- PAP-222 should be implemented as a lightweight in-process orchestration layer, not a distributed agent runtime.
+- the orchestrator should own a central task-kind route map instead of hiding routing logic inside individual agent modules.
+- `app/agents/` should coordinate existing scraping, pipeline, and analysis modules rather than duplicating their logic.
+- the initial PAP-222 agent roster should be Scraper Agent, Data Cleaner Agent, Analyst Agent, and Report Generator Agent.
+- agent task/result contracts should be explicit and structured so composite workflows remain testable.
+- a memory-backed agent role manifest should be added to document responsibilities and boundaries.
+- `/summary` compatibility should be preserved while enriching the agent model.
+- the implemented PAP-222 agent task kinds are `scrape_players`, `clean_data`, `run_analysis`, `generate_report`, and `full_refresh`.
+- the implemented PAP-222 orchestrator should pass cleaner outputs into analyst/reporter steps through explicit in-memory task metadata rather than introducing new persistence.
+- the implemented Scraper Agent should default to a safe plan-only response unless a concrete scrape URL is supplied.
+
 ## Critical Rule
 All future tasks MUST:
 - read memory before work

@@ -30,6 +30,11 @@ Initial repository bootstrap completed at the scaffold level.
 - implemented a simplified player valuation engine with pipeline-integrated Gold output generation
 - completed architecture planning for an MVP Streamlit dashboard covering player and comparison views
 - implemented an MVP Streamlit dashboard with player and comparison pages
+- completed architecture planning for PAP-222 multi-agent orchestration covering Scraper, Data Cleaner, Analyst, and Report Generator agents plus task routing and memory-backed role definitions
+- added architect handoff artifacts for PAP-222 at `ARCHITECT_PLAN_PAP-222.md`, `GRUNT_HANDOFF_PAP-222.md`, and `PEDANT_HANDOFF_PAP-222.md`
+- implemented PAP-222 lightweight in-process orchestration across `app/agents/` with shared task/result contracts and route-aware agent wrappers
+- added `memory/agent_roles.md` to document agent purposes, route map, and module boundaries
+- added orchestrator coverage in `tests/test_agents_orchestrator.py` and updated API summary coverage in `tests/test_api_routes.py`
 
 ## Next Steps
 - validate player similarity rankings against real player data and tune feature weighting if needed
@@ -44,6 +49,7 @@ Initial repository bootstrap completed at the scaffold level.
 - validate the dashboard against a live backend with real player and comparison data
 - refine the player and comparison layouts once real data is available
 - add non-UI smoke coverage in an environment where Streamlit is installed and runnable
+- pedant-review PAP-222 task routing, summary compatibility, and context handoff between cleaner, analyst, and reporter
 - refine the coordinator workflow between agents
 
 ## Working Rules
