@@ -58,6 +58,8 @@ The KPI implementation now belongs under `app/analysis/`, while the main pipelin
 
 A simplified player valuation model now follows the same downstream-analysis pattern. The valuation engine lives under `app/analysis/`, consumes Gold player features plus KPI outputs and optional advanced-metric enrichment, and emits a dedicated `player_valuation` Gold artifact without changing scraper or database boundaries.
 
+Club development + resale analysis now follows the same downstream pattern. A dedicated analysis engine consumes existing Silver/Gold player, transfer, KPI, and valuation artifacts and emits a club-ranking Gold artifact for tracked clubs without moving logic into the API or UI layers.
+
 ## Working Rules
 All future tasks MUST:
 - read memory before work

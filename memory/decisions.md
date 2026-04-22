@@ -95,6 +95,16 @@
 - the implemented risk component should subtract value using discipline risk plus a consistency penalty when consistency falls below `60`.
 - the valuation artifact should include transparent component breakdowns, raw inputs, a model version tag, and a derived valuation tier.
 
+## Club Development Planning Decisions Added in PAP-219
+- club development + resale analysis should be implemented as a Gold-layer heuristic ranking artifact rather than as database-first or UI-first logic.
+- the MVP comparison set should explicitly target IDV, Benfica, and Ajax.
+- rankings must include confidence and coverage fields because current artifact coverage may be sparse or uneven.
+- club-name normalization is required so grouping is reliable across player, valuation, and transfer artifacts.
+- development and resale should be scored separately, with overall ranking leaning slightly toward development in sparse-data conditions.
+- the first implemented club-ranking model should emit rows for all tracked clubs even when inputs are empty.
+- the implemented club-ranking output should use explicit coverage counts and a simple evidence-based confidence score.
+- transfer-driven resale should only consider outbound moves away from the source club and should apply small static destination-quality weights.
+
 ## Critical Rule
 All future tasks MUST:
 - read memory before work

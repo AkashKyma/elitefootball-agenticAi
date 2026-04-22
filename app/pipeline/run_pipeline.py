@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from app.analysis.advanced_metrics_engine import build_advanced_metrics_output
+from app.analysis.club_development import build_club_development_rankings
 from app.analysis.kpi_engine import build_kpi_engine_output
 from app.analysis.similarity_engine import build_similarity_output
 from app.analysis.valuation_engine import build_valuation_output
@@ -17,6 +18,7 @@ def run_pipeline() -> dict[str, object]:
     advanced_metrics = build_advanced_metrics_output(silver["tables"])
     similarity = build_similarity_output(silver["tables"], gold["tables"], kpi["rows"])
     valuation = build_valuation_output(silver["tables"], gold["tables"], kpi["rows"], advanced_metrics["rows"])
+    club_development = build_club_development_rankings(silver["tables"], gold["tables"], kpi["rows"], valuation["rows"])
     return {
         "bronze": bronze,
         "silver": silver,
@@ -25,6 +27,7 @@ def run_pipeline() -> dict[str, object]:
         "advanced_metrics": advanced_metrics,
         "similarity": similarity,
         "valuation": valuation,
+        "club_development": club_development,
     }
 
 
