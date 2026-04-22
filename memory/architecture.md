@@ -7,6 +7,10 @@ The system uses a multi-agent design with clear boundaries:
 - Memory Agent: reads memory before work and updates memory after work
 - Analysis Agent: interprets collected data for future reporting and insight workflows
 
+PAP-222 should evolve this into an explicit in-process orchestration layer under `app/agents/`, with dedicated Scraper, Data Cleaner, Analyst, and Report Generator agent modules plus a central orchestrator route map. That layer should coordinate existing `app/scraping/`, `app/pipeline/`, and `app/analysis/` modules rather than replacing them.
+
+The PAP-222 implementation now follows that design with shared task/result contracts in `app/agents/types.py`, dedicated agent wrappers under `app/agents/`, a route-aware orchestrator in `app/agents/orchestrator.py`, and a memory-backed role manifest at `memory/agent_roles.md`.
+
 ## Base Architecture
 - Python backend in `app/`
 - API surface in `app/api/`

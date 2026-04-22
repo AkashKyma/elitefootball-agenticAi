@@ -113,7 +113,12 @@ class TestApiRoutes(unittest.TestCase):
 
     def test_health_and_summary(self):
         self.assertEqual(self.client.get("/health").status_code, 200)
-        self.assertEqual(self.client.get("/summary").status_code, 200)
+        response = self.client.get("/summary")
+        self.assertEqual(response.status_code, 200)
+        payload = response.json()
+        self.assertIn("agents", payload)
+        self.assertIn("orchestration", payload)
+        self.assertIn("supported_task_kinds", payload["orchestration"])
 
     @patch("app.api.routes.load_players")
     @patch("app.api.routes.load_player_features")
