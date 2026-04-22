@@ -18,15 +18,15 @@ Initial repository bootstrap completed at the scaffold level.
 - defined raw HTML and parsed data storage as required outputs for scraping work
 - added Playwright-backed scraping modules for browser access, parsing, storage, and Transfermarkt orchestration
 - implemented raw HTML and parsed JSON persistence for Transfermarkt scraping outputs
-- completed architecture planning for a Bronze/Silver/Gold data pipeline
-- added a dedicated pipeline package with Bronze manifest generation, Silver table cleaning, and Gold feature generation
+- completed architecture planning for an FBref scraper covering match stats and player stat extraction
+- added source-specific FBref scraping, parsing, and DB-mapping helpers for match and player stat extraction
+- implemented FBref raw HTML and parsed JSON persistence with match, player match stats, and per-90 payload sections
 
 ## Next Steps
-- validate pipeline outputs against real scraped Transfermarkt and FBref artifacts
-- connect cleaned Silver tables and Gold features to database ingestion and analysis workflows
-- validate scraping selectors against live Transfermarkt and FBref pages and refine parser accuracy
+- validate FBref and Transfermarkt selectors against live pages and refine parser accuracy
+- connect FBref and Transfermarkt parsed outputs to database ingestion workflows
 - seed tracked club records for IDV + five clubs
-- add tests for parsing behavior, storage outputs, pipeline transforms, and backend entrypoints
+- add tests for parsing behavior, storage outputs, mapping helpers, and backend entrypoints
 - refine the coordinator workflow between agents
 
 ## Working Rules

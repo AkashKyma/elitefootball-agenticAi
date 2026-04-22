@@ -39,12 +39,14 @@ The current scraping flow is expected to persist:
 - raw HTML under a raw Transfermarkt data path
 - parsed profile + transfer payloads under a parsed Transfermarkt data path
 
-A dedicated pipeline layer should sit downstream from scraping and upstream from analysis/DB ingestion:
-- Bronze for raw artifact manifests
-- Silver for cleaned source-agnostic tables
-- Gold for derived features
+FBref scraping should follow the same source-specific pattern, with parsing kept separate from DB mapping so that match-safe fields can map into the existing schema while per-90 outputs remain available for future schema expansion.
 
-The current implementation direction is an `app/pipeline/` package with separate modules for IO, Bronze staging, Silver transforms, Gold features, and a pipeline runner.
+The FBref pipeline now mirrors the Transfermarkt split:
+- page fetch
+- raw HTML persistence
+- source-specific parsing
+- DB-safe mapping helpers
+- parsed JSON persistence
 
 ## Working Rules
 All future tasks MUST:
