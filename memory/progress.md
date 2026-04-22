@@ -28,6 +28,8 @@ Initial repository bootstrap completed at the scaffold level.
 - implemented a player similarity engine with nearest-neighbor output generation
 - completed architecture planning for a simplified player valuation model
 - implemented a simplified player valuation engine with pipeline-integrated Gold output generation
+- completed architecture planning for an MVP Streamlit dashboard covering player and comparison views
+- implemented an MVP Streamlit dashboard with player and comparison pages
 
 ## Next Steps
 - validate player similarity rankings against real player data and tune feature weighting if needed
@@ -39,6 +41,9 @@ Initial repository bootstrap completed at the scaffold level.
 - validate valuation output against real player data and tune weights if needed
 - refine static club/league lookup assumptions against real player data
 - expand valuation coverage if richer competition or club-strength context becomes available
+- validate the dashboard against a live backend with real player and comparison data
+- refine the player and comparison layouts once real data is available
+- add non-UI smoke coverage in an environment where Streamlit is installed and runnable
 - refine the coordinator workflow between agents
 
 ## Working Rules

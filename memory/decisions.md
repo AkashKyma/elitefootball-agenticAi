@@ -95,6 +95,16 @@
 - the implemented risk component should subtract value using discipline risk plus a consistency penalty when consistency falls below `60`.
 - the valuation artifact should include transparent component breakdowns, raw inputs, a model version tag, and a derived valuation tier.
 
+## UI Planning Decisions Added in PAP-218
+- Streamlit should be chosen over Next.js for the MVP dashboard because the repository is already Python-first and API-driven.
+- the dashboard should be a separate UI layer that consumes backend endpoints rather than reading raw artifacts directly.
+- the MVP dashboard should ship as a small multipage app with `player` and `compare` pages.
+- the dashboard should remain internal-facing and prioritize simple Streamlit widgets over custom frontend styling.
+- missing backend or analysis data should surface as explicit UI states rather than causing page crashes.
+- the first dashboard implementation should use Streamlit multipage layout with `Home`, `Player`, and `Compare` pages.
+- the dashboard should use a lightweight requests-based API client with `ELITEFOOTBALL_API_BASE_URL` as the backend base-url override.
+- valuation enrichment on the compare page is acceptable as a UI join over API responses and should not introduce new analysis logic.
+
 ## Critical Rule
 All future tasks MUST:
 - read memory before work
