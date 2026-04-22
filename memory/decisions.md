@@ -45,6 +45,14 @@
 - the scraper keeps profile parsing and transfer-history parsing as separate concerns.
 - Playwright browser startup is isolated from parsing and storage modules to preserve architecture boundaries.
 
+## Pipeline Design Decisions Added in PAP-211
+- Bronze should represent source-preserving raw/parsed scraper artifacts and manifests.
+- Silver should hold cleaned table-shaped records derived from parsed source outputs.
+- Gold should hold only derived features computed from Silver outputs.
+- Transformation logic should live in a dedicated pipeline module rather than inside scraper files.
+- the MVP pipeline should remain file-based and resilient when source artifact directories are empty.
+- Gold feature generation should consume Silver outputs only, never raw HTML directly.
+
 ## Critical Rule
 All future tasks MUST:
 - read memory before work

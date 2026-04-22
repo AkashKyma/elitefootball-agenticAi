@@ -39,6 +39,13 @@ The current scraping flow is expected to persist:
 - raw HTML under a raw Transfermarkt data path
 - parsed profile + transfer payloads under a parsed Transfermarkt data path
 
+A dedicated pipeline layer should sit downstream from scraping and upstream from analysis/DB ingestion:
+- Bronze for raw artifact manifests
+- Silver for cleaned source-agnostic tables
+- Gold for derived features
+
+The current implementation direction is an `app/pipeline/` package with separate modules for IO, Bronze staging, Silver transforms, Gold features, and a pipeline runner.
+
 ## Working Rules
 All future tasks MUST:
 - read memory before work
