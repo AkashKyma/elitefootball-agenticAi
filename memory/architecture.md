@@ -58,6 +58,8 @@ The KPI implementation now belongs under `app/analysis/`, while the main pipelin
 
 A simplified player valuation model now follows the same downstream-analysis pattern. The valuation engine lives under `app/analysis/`, consumes Gold player features plus KPI outputs and optional advanced-metric enrichment, and emits a dedicated `player_valuation` Gold artifact without changing scraper or database boundaries.
 
+An MVP dashboard now sits as a separate Streamlit UI layer on top of the backend/API surface. The dashboard does not duplicate analysis logic or read raw artifacts directly; instead it consumes backend endpoints for player, stats, comparison, and valuation views through a lightweight API client.
+
 ## Working Rules
 All future tasks MUST:
 - read memory before work
