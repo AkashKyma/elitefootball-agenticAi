@@ -192,6 +192,16 @@
 - the probe explicitly detects and classifies Cloudflare challenges as `challenge_page`
 - each statically-probed source URL captures a final status classification plus indicator remarks for deeper diagnostics
 
+## Dashboard Endpoint Audit Decisions Added in PAP-244 Planning
+- the current MVP dashboard contract should remain backend-API-based and artifact-backed; the dashboard should not read DB tables or artifact files directly.
+- the current dashboard endpoint payload shapes are broadly aligned with frontend expectations, so the immediate no-data symptom is more likely caused by empty upstream artifacts than by a route-schema mismatch.
+- backend debugging for dashboard issues should distinguish clearly between `missing`, `empty`, and `invalid` artifacts rather than collapsing malformed payloads into generic empty results.
+- a dedicated dashboard data-status endpoint is preferable to polluting user-facing endpoints with temporary debug fields.
+- route-level and artifact-level observability should explain why the dashboard is empty before any DB-backed dashboard migration is considered.
+- the implemented PAP-244 backend status path should stay artifact-backed and expose per-artifact readiness without changing the dashboard to a DB-backed model.
+- malformed artifact payloads should surface as explicit backend failures rather than being silently treated as empty datasets.
+- a dedicated `/dashboard/status` endpoint is the preferred place for backend-debug visibility so user-facing data payloads remain stable.
+
 ## Critical Rule
 All future tasks MUST:
 - read memory before work

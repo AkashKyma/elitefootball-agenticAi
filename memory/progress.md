@@ -72,6 +72,14 @@ Initial repository bootstrap completed at the scaffold level.
 - added PAP-241 compatibility tests in `tests/test_scraping_compatibility.py`
 - captured the current source-access findings in `PAP-241_TECHNICAL_COMPATIBILITY_REPORT.md`
 - added grunt handoff notes for PAP-241 at `GRUNT_HANDOFF_PAP-241.md`
+- completed architecture planning for PAP-244 dashboard-backend data-flow audit in `ARCHITECT_PLAN_PAP-244.md`
+- confirmed that the dashboard is correctly API-backed and currently reads backend endpoints rather than raw files or DB tables directly
+- confirmed that the current dashboard-facing artifact files in `data/silver/` and `data/gold/` are empty in the checked-out repo, which can legitimately produce a no-data dashboard even when endpoint shapes are correct
+- implemented PAP-244 backend artifact inspection and dashboard-status visibility in `app/api/data_access.py` and `app/api/routes.py`
+- added `GET /dashboard/status` so backend state now distinguishes ready vs partial vs empty vs artifact_missing vs artifact_invalid
+- updated dashboard-facing backend behavior so invalid artifact payloads surface explicitly instead of silently degrading to empty results
+- added PAP-244 tests in `tests/test_data_access.py` and expanded `tests/test_api_routes.py` for dashboard status + invalid artifact handling
+- documented the backend/dashboard data-path findings in `PAP-244_BACKEND_DATA_FLOW_AUDIT.md` and `PEDANT_HANDOFF_PAP-244.md`
 
 ## Next Steps
 - validate player similarity rankings against real player data and tune feature weighting if needed
@@ -104,6 +112,8 @@ Initial repository bootstrap completed at the scaffold level.
 - pedant-review PAP-240 event naming, INFO-vs-DEBUG verbosity, and whether `db.write.*` persistence logs are clear enough without implying real DB ingestion
 - implement PAP-242 by adding source compatibility probes plus browser-based FBref access validation so the team can confirm whether Playwright can clear or still hits the challenge path
 - pedant-reviewed PAP-241 probe classification naming; confirmed revised naming matched test expectations; and confirmed that the new `anti_bot_mitigation_required` flag makes the challenge context explicit before wiring the probe into operational scraper flows
+- pedant-review PAP-244 status classification, optional-artifact behavior, and whether the dashboard UI should consume `/dashboard/status` directly in the next ticket
+- implement PAP-245 to surface backend dashboard-status diagnostics in Streamlit and optionally include artifact generation timestamps for debugging stale data
 
 ## Working Rules
 All future tasks MUST:
