@@ -131,6 +131,15 @@ Initial repository bootstrap completed at the scaffold level.
 - added PAP-247 regression coverage for status metadata and helper messaging in `tests/test_data_access.py`, `tests/test_dashboard_api_client.py`, and `tests/test_api_routes.py`
 - pedant-review PAP-247 confirmed artifact-mtime-based sync metadata is conservative and warning vs info severity consistency across pages
 
+- completed architecture planning for PAP-250 as a standalone static HTML/CSS fashion showcase rather than a Python/dashboard feature
+- added implementation guidance in `ARCHITECT_PLAN_PAP-250.md`, `GRUNT_HANDOFF_PAP-250.md`, and `PEDANT_HANDOFF_PAP-250.md`
+- defined PAP-250 as a scoped static UI deliverable with elegant product cards, pricing, quick-shop CTAs, and responsive layout requirements
+- recommended dedicated page/style files for PAP-250 to avoid selector collisions with the existing calculator assets
+- implemented PAP-250 as a standalone static fashion showcase in `fashion-showcase.html` and `fashion-showcase.css`
+- added an editorial-style hero, four product cards, pricing, and quick-shop CTAs with responsive grid behavior and scoped selectors
+- verified the new HTML/CSS artifacts are present, non-empty, and include the expected showcase/grid/button structure
+- next pedant phase should review spacing balance, CTA prominence, and responsive elegance across narrow and wide layouts
+
 ## Working Rules
 All future tasks MUST:
 - read memory before work
