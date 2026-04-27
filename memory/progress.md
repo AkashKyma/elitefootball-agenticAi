@@ -72,6 +72,11 @@ Initial repository bootstrap completed at the scaffold level.
 - added PAP-241 compatibility tests in `tests/test_scraping_compatibility.py`
 - captured the current source-access findings in `PAP-241_TECHNICAL_COMPATIBILITY_REPORT.md`
 - added grunt handoff notes for PAP-241 at `GRUNT_HANDOFF_PAP-241.md`
+- implemented PAP-242 extraction hardening across browser waits, Transfermarkt parsing, FBref parsing, and post-parse validation
+- added `app/scraping/validation.py` so scrape payloads now carry explicit extraction diagnostics instead of silent empty-success outcomes
+- added `tests/test_scraping_extraction.py` with fixture-based coverage for Transfermarkt success, FBref success, and FBref challenge classification
+- documented sample extracted records and schema mapping in `PAP-242_EXTRACTION_REPORT.md`
+- added grunt handoff notes for PAP-242 at `GRUNT_HANDOFF_PAP-242.md`
 
 ## Next Steps
 - validate player similarity rankings against real player data and tune feature weighting if needed
@@ -104,6 +109,8 @@ Initial repository bootstrap completed at the scaffold level.
 - pedant-review PAP-240 event naming, INFO-vs-DEBUG verbosity, and whether `db.write.*` persistence logs are clear enough without implying real DB ingestion
 - implement PAP-242 by adding source compatibility probes plus browser-based FBref access validation so the team can confirm whether Playwright can clear or still hits the challenge path
 - pedant-reviewed PAP-241 probe classification naming; confirmed revised naming matched test expectations; and confirmed that the new `anti_bot_mitigation_required` flag makes the challenge context explicit before wiring the probe into operational scraper flows
+- pedant-review PAP-242 extraction diagnostics, challenge-page DB-mapping behavior, and whether Silver should filter invalid extraction artifacts before downstream shaping
+- implement PAP-243 to wire extraction diagnostics into orchestrated refresh flows and decide how Silver/DB-preview paths should treat `challenge_page` and `schema_invalid` payloads
 
 ## Working Rules
 All future tasks MUST:

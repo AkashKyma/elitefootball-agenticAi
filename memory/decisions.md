@@ -192,6 +192,14 @@
 - the probe explicitly detects and classifies Cloudflare challenges as `challenge_page`
 - each statically-probed source URL captures a final status classification plus indicator remarks for deeper diagnostics
 
+## Extraction Hardening Decisions Added in PAP-242 Implementation
+- source scrape payloads should now include explicit `diagnostics` metadata so partial, invalid, and blocked extraction outcomes are first-class states rather than inferred from empty arrays.
+- Transfermarkt extraction should prefer source-specific inline label parsing and season-shaped transfer-row detection over broad text-token heuristics.
+- FBref player-match-stat extraction should exclude per-90 tables from standard stat-row parsing and should treat challenge-page titles as access-state signals.
+- post-parse validation should classify outcomes as `success_complete`, `success_partial`, `schema_invalid`, `selector_missing`, or `challenge_page` before downstream consumers treat a scrape as healthy.
+- browser fetch readiness should be source-aware and should log selector-missing or challenge-detected states even when navigation itself succeeds.
+- live source-access blocking and parser correctness remain separate concerns: challenge pages may still produce placeholder metadata, but they should not be mistaken for successful stat extraction.
+
 ## Critical Rule
 All future tasks MUST:
 - read memory before work
