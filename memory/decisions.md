@@ -174,6 +174,24 @@
 - fetch and scrape boundary failures should log stack traces through shared exception helpers so dependency/runtime problems are immediately visible.
 - current `db.write.*` events document active persistence attempts/results at the file-artifact seam and should not be interpreted as completed relational DB ingestion.
 
+## Source Compatibility Decisions Added in PAP-241
+- the source stack should be treated as source-specific rather than fetch-method-uniform: Transfermarkt and FBref do not currently have the same accessibility profile.
+- the tested Transfermarkt squad page currently returns usable HTML to static HTTP requests, so requests-first is a valid preferred strategy for that page class.
+- the tested FBref squad/stats page currently returns a Cloudflare challenge response (`403`, `cf-mitigated: challenge`) to static HTTP requests, so requests-only is not a valid strategy for FBref in the current environment.
+- for FBref, the next technical validation step should use the existing Playwright-based browser stack rather than introducing Puppeteer or another parallel browser technology.
+- FBref failures should be classified first as source-access/challenge failures until a browser-based compatibility probe proves that real content can be reached.
+
+## Compatibility Probe Decisions Added in PAP-241 Implementation
+- the repo now carries a reusable static compatibility probe under `app/scraping/compatibility.py` so source accessibility can be classified explicitly instead of inferred from downstream parse failures.
+- compatibility checks should capture status code, challenge markers, cookies, title, source-marker hits, and a final classification for each tested source URL.
+- `challenge_page` is currently the canonical classification for Cloudflare-style blocked responses that return interstitial HTML rather than source content.
+- the current live compatibility evidence supports keeping Transfermarkt on a requests-first path for the tested page class while treating FBref as browser-validation-required.
+
+## Adjustments Made During PAP-241
+- `javascript_likely_required` was replaced with `anti_bot_mitigation_required` to improve clarity around access challenges
+- the probe explicitly detects and classifies Cloudflare challenges as `challenge_page`
+- each statically-probed source URL captures a final status classification plus indicator remarks for deeper diagnostics
+
 ## Critical Rule
 All future tasks MUST:
 - read memory before work
