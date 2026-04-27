@@ -72,6 +72,14 @@ Initial repository bootstrap completed at the scaffold level.
 - added PAP-241 compatibility tests in `tests/test_scraping_compatibility.py`
 - captured the current source-access findings in `PAP-241_TECHNICAL_COMPATIBILITY_REPORT.md`
 - added grunt handoff notes for PAP-241 at `GRUNT_HANDOFF_PAP-241.md`
+- completed architecture planning for PAP-246 end-to-end scrape-to-dashboard validation in `ARCHITECT_PLAN_PAP-246.md`
+- confirmed there is currently no single command/workflow that validates scrape/parsing/storage/API/dashboard flow end-to-end
+- confirmed the current checked-in dashboard-facing artifacts remain empty, so any true happy-path validation must seed deterministic non-empty inputs rather than rely on repo data
+- confirmed `full_refresh` is still not self-sufficient for a live scrape because the scraper agent only performs an actual fetch when an explicit URL is supplied
+- implemented PAP-246 seeded end-to-end validation in `tests/e2e_dashboard_flow_support.py`, `tests/test_e2e_dashboard_flow.py`, and `scripts/verify_dashboard_flow.py`
+- added a one-command regression path that seeds sample parsed inputs, runs the real pipeline, verifies written dashboard artifacts, and emits stage-by-stage PASS/FAIL output
+- updated `README.md` with E2E validation commands and known limitations for seeded mode versus best-effort live scraping
+- documented implementation and review notes in `GRUNT_HANDOFF_PAP-246.md` and `PEDANT_HANDOFF_PAP-246.md`
 
 ## Next Steps
 - validate player similarity rankings against real player data and tune feature weighting if needed
@@ -104,6 +112,10 @@ Initial repository bootstrap completed at the scaffold level.
 - pedant-review PAP-240 event naming, INFO-vs-DEBUG verbosity, and whether `db.write.*` persistence logs are clear enough without implying real DB ingestion
 - implement PAP-242 by adding source compatibility probes plus browser-based FBref access validation so the team can confirm whether Playwright can clear or still hits the challenge path
 - pedant-reviewed PAP-241 probe classification naming; confirmed revised naming matched test expectations; and confirmed that the new `anti_bot_mitigation_required` flag makes the challenge context explicit before wiring the probe into operational scraper flows
+- implement PAP-246 by adding a deterministic, one-command seeded end-to-end validation path that exercises pipeline outputs, backend routes, and dashboard-client payload consumption
+- document any live scrape verification mode as best-effort only, not the required regression gate
+- pedant-review PAP-246 hermetic temp-path behavior, API/client stage skip semantics, and report clarity
+- after PAP-246, implement PAP-247 to make `full_refresh` self-targeting with a concrete scrape target registry for optional live end-to-end validation
 
 ## Working Rules
 All future tasks MUST:

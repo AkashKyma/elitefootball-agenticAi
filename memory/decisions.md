@@ -192,6 +192,15 @@
 - the probe explicitly detects and classifies Cloudflare challenges as `challenge_page`
 - each statically-probed source URL captures a final status classification plus indicator remarks for deeper diagnostics
 
+## End-to-End Validation Decisions Added in PAP-246 Planning
+- PAP-246 should define a deterministic, fixture-driven end-to-end validation path as the primary regression test rather than depending on a live external scrape.
+- the required E2E path should validate seeded parsed inputs, real pipeline execution, artifact storage, backend/API responses, and dashboard-client payload consumption in that order.
+- any live scrape validation should be explicitly optional and best-effort because current runtime and source-access constraints make it too fragile for the required regression gate.
+- the E2E test should be hermetic by default and use temporary paths rather than mutating checked-in data artifacts.
+- the implemented PAP-246 validation path should seed minimal sample parsed inputs for both Transfermarkt and FBref so similarity, valuation, and dashboard-facing artifacts are provably non-empty in the happy path.
+- the primary operator entrypoints for PAP-246 should be `python3 -m unittest tests.test_e2e_dashboard_flow` and `python3 scripts/verify_dashboard_flow.py`.
+- backend/API and dashboard-client validation should be optional-in-environment and skip cleanly when FastAPI is unavailable, while still requiring the core pipeline/artifact stages to pass.
+
 ## Critical Rule
 All future tasks MUST:
 - read memory before work
