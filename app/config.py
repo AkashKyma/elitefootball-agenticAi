@@ -2,6 +2,13 @@ from dataclasses import dataclass
 import os
 
 
+def _env_bool(name: str, default: bool = False) -> bool:
+    value = os.getenv(name)
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
+
+
 @dataclass(frozen=True)
 class Settings:
     """Runtime settings for the bootstrap application."""
@@ -21,6 +28,10 @@ class Settings:
     gold_data_dir: str = os.getenv("GOLD_DATA_DIR", "data/gold")
     repo_root: str = os.getenv("REPO_ROOT", os.getcwd())
     safety_approval_ttl_seconds: int = int(os.getenv("SAFETY_APPROVAL_TTL_SECONDS", "900"))
+    log_level: str = os.getenv("LOG_LEVEL", "INFO")
+    log_debug_enabled: bool = _env_bool("LOG_DEBUG_ENABLED", False)
+    log_file_enabled: bool = _env_bool("LOG_FILE_ENABLED", False)
+    log_file_path: str | None = os.getenv("LOG_FILE_PATH")
 
 
 settings = Settings()

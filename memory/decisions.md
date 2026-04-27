@@ -157,6 +157,23 @@
 - scraper fetch and parser stages should emit diagnostic signals for timeout, challenge/login walls, selector readiness, and partial-field extraction so empty artifacts do not appear as silent success.
 - database ingestion remains a later follow-up and should not be prioritized ahead of making the scrape-to-artifact path reliably non-empty.
 
+## Structured Logging Planning Decisions Added in PAP-240
+- PAP-240 should introduce a small shared logging helper under `app/services/` rather than scattering logger setup across scraper modules.
+- the MVP should use Python standard-library logging with structured key/value terminal-friendly messages instead of adding third-party logging dependencies.
+- debug logging must be environment-gated and should increase diagnostic detail without changing scraper behavior or dumping full HTML bodies.
+- file logging should be optional and explicitly configured; terminal logging remains the default behavior.
+- fetch, parse, storage, and Silver build stages should emit stable event names and record counts so empty-results and partial-results are visible as first-class outcomes.
+- exception logging should always include stack traces (`exc_info`) at the top-level fetch/scrape/store boundaries.
+- PAP-240 should not fabricate database-write behavior; it should instrument current file-based persistence and leave a documented DB logging seam for future ingestion work.
+
+## Structured Logging Decisions Added in PAP-240 Implementation
+- the implemented structured logging layer now lives in `app/services/logging_service.py` and is shared by scraper, parser, storage, pipeline, and DB-base modules.
+- the MVP log format is terminal-readable key/value text with stable event names rather than raw JSON logging.
+- logging defaults remain terminal-only at `INFO`, while debug detail and file logging are enabled only through environment flags.
+- empty or partial scrape outcomes should be logged as warning-level first-class events (`scrape.empty_result`, `parse.partial_result`, `silver.empty_output`) instead of being inferred only from empty artifacts.
+- fetch and scrape boundary failures should log stack traces through shared exception helpers so dependency/runtime problems are immediately visible.
+- current `db.write.*` events document active persistence attempts/results at the file-artifact seam and should not be interpreted as completed relational DB ingestion.
+
 ## Critical Rule
 All future tasks MUST:
 - read memory before work
