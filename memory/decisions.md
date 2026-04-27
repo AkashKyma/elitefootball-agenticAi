@@ -213,15 +213,15 @@
 - fallback player creation during stat ingestion is acceptable for the current MVP when Silver stats contain a player/club pair not already present in player artifacts, but this should be revisited when stable cross-source IDs exist.
 - validated FBref scraping mechanisms under PAP-242 for selector completeness and full-render extraction fidelity
 - ensured pedant-driven reviews address empty/missing data paths with log-awareness rather than silent failure
-- PAP-226 full-system validation should use deterministic seeded scrape-like artifacts as the default regression gate because live scrape execution remains too environment-sensitive for reliable CI-style validation.
-- the full-system validator should report PASS / FAIL / SKIP by stage so missing runtime dependencies are explicit rather than looking like silent success or generic failure.
-- DB ingestion, backend-route validation, and dashboard-client validation may skip when required runtime dependencies are absent locally, but the workflow should still exercise Bronze, Silver, and downstream analysis artifacts in every environment.
-- PAP-227 should extend the existing seeded full-system validator rather than create a second competing end-to-end framework.
-- PAP-227 should introduce explicit release-readiness rollups (`READY`, `READY_WITH_LIMITATIONS`, `NOT_READY`) so dependency-limited validation is not mistaken for fully release-ready verification.
-- the required full-pipeline contract for PAP-227 remains seeded scrape-like inputs -> Bronze -> Silver -> DB verification when available -> KPI/analysis artifacts -> backend/dashboard contract checks when available.
-- PAP-227 implementation should keep `result.ok` aligned with release readiness semantics by treating `READY` and `READY_WITH_LIMITATIONS` as acceptable validation outcomes while reserving `NOT_READY` for executed-stage failures.
-- environment preflight reporting should surface SQLAlchemy, FastAPI, and Playwright availability at the top of the validation report so operators can immediately distinguish dependency limits from regressions.
-- README guidance for the full-system validator should explicitly document readiness rollups and clarify that seeded validation is the required regression gate while live scraping remains optional best-effort verification.
+- PAP-247 should preserve the current artifact-backed dashboard architecture and improve UX by enriching `/dashboard/status` plus centralizing empty/error-state messaging in dashboard helpers.
+- based on pedant review, future changes should prioritize improving visibility of run metadata and evaluating succinctness of existing artifact states for comprehensive error interpretation.
+- dashboard pages should distinguish between `no data yet`, `partial data`, `upstream scrape/pipeline failure`, `backend unreachable`, and `no records found` rather than collapsing them into generic warnings.
+- last successful sync time should come from backend status metadata when available, with nullable/fallback behavior preferred over guessed failure claims.
+- retry behavior should remain UI-local (`st.button` + rerun) and should not introduce backend-side mutation or orchestration logic into the dashboard.
+- the implemented PAP-247 status payload should add sync/diagnostic metadata at the backend seam rather than teaching Streamlit pages to inspect filesystem state directly.
+- when explicit run metadata is unavailable, dashboard sync recency may fall back to artifact mtimes, but failure timestamps/messages should remain nullable unless the backend can state them with confidence.
+- Home, Player, and Compare should all render a visible placeholder or status explanation before stopping so the dashboard never appears silently broken.
+- valuation-enrichment failure on Compare should degrade separately from similarity rows so useful comparison output remains visible.
 
 ## Critical Rule
 All future tasks MUST:
