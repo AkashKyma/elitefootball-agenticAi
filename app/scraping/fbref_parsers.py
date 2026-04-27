@@ -254,6 +254,7 @@ def parse_fbref_player_match_stats(html: str, source_url: str) -> list[dict[str,
         log_fields["candidate_table_ids"] = candidate_table_ids
     log_event(logger, logging.INFO, "parse.fbref.player_stats.complete", **log_fields)
     if not player_rows:
+        log_event(logger, logging.WARNING, "parse.empty_player_stats", source="fbref", source_url=source_url)
         log_event(logger, logging.WARNING, "parse.partial_result", source="fbref", source_url=source_url, section="player_match_stats", records_extracted=0)
     return player_rows
 

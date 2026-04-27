@@ -16,7 +16,7 @@ except ImportError:  # pragma: no cover - dependency may not be installed in boo
 logger = get_logger(__name__)
 READY_SELECTORS = {
     "transfermarkt": ["main", "div.data-header__headline-container", "div.marktwert", "body"],
-    "fbref": ["div[id^='all_stats']", "table[id*='stats']", "div#content", "body"],
+    "fbref": ["section.content", "div[id^='all_stats']", "table[id*='stats']", "section[data-stat='player_stats']", "div#content", "body"],
 }
 CHALLENGE_MARKERS = ("just a moment", "cf-mitigated", "challenge", "captcha", "access denied")
 
