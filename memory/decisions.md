@@ -198,7 +198,7 @@
 - backend debugging for dashboard issues should distinguish clearly between `missing`, `empty`, and `invalid` artifacts rather than collapsing malformed payloads into generic empty results.
 - a dedicated dashboard data-status endpoint is preferable to polluting user-facing endpoints with temporary debug fields.
 - route-level and artifact-level observability should explain why the dashboard is empty before any DB-backed dashboard migration is considered.
-- the implemented PAP-244 backend status path should stay artifact-backed and expose per-artifact readiness without changing the dashboard to a DB-backed model.
+- the implemented PAP-244 backend status path exposes per-artifact readiness through `/dashboard/status` and supports distinguishing `ready`, `partial`, `empty`, `artifact_missing`, and `artifact_invalid` states without requiring DB-backend migration.
 - malformed artifact payloads should surface as explicit backend failures rather than being silently treated as empty datasets.
 - a dedicated `/dashboard/status` endpoint is the preferred place for backend-debug visibility so user-facing data payloads remain stable.
 
