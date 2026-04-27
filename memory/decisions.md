@@ -223,6 +223,13 @@
 - Home, Player, and Compare should all render a visible placeholder or status explanation before stopping so the dashboard never appears silently broken.
 - valuation-enrichment failure on Compare should degrade separately from similarity rows so useful comparison output remains visible.
 
+- PAP-250 should be implemented as a standalone static HTML/CSS page because the current repo frontend surface is file-based and minimal, not framework-backed.
+- PAP-250 should prefer dedicated scoped files such as `fashion-showcase.html` and `fashion-showcase.css` to avoid CSS collisions with the existing calculator page.
+- the fashion showcase should favor editorial elegance, restrained hover motion, and clear pricing/CTA hierarchy over dense marketplace-style UI.
+- PAP-250 implementation should use gradient-based media blocks instead of remote product images so the static page remains visually polished without external asset fragility.
+- scoped `showcase`/`product-card` selectors should remain isolated from existing calculator files to avoid cross-page styling regressions.
+- the featured card may span extra columns on desktop, but mobile behavior should collapse cleanly to a single-column layout with full-width quick-shop buttons.
+
 ## Critical Rule
 All future tasks MUST:
 - read memory before work
