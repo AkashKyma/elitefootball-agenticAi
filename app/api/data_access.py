@@ -26,6 +26,7 @@ ARTIFACT_PATHS = {
     "similarity": DATA_ROOT / "gold" / "player_similarity.json",
     "valuation": DATA_ROOT / "gold" / "player_valuation.json",
 }
+REQUIRED_DASHBOARD_ARTIFACTS = {"players", "player_match_stats", "similarity", "valuation"}
 
 
 def normalize_name(value: str | None) -> str:
