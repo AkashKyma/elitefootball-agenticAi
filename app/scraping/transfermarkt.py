@@ -1,10 +1,15 @@
 from __future__ import annotations
 
+import logging
 from urllib.parse import urlparse
 
 from app.scraping.browser import BrowserConfig, fetch_page_html
 from app.scraping.parsers import parse_player_profile, parse_transfer_history
 from app.scraping.storage import save_parsed_payload, save_raw_html, slugify
+from app.services.logging_service import get_logger, log_event, log_exception
+
+
+logger = get_logger(__name__)
 
 
 def _slug_from_url(url: str) -> str:
@@ -16,18 +21,33 @@ def _slug_from_url(url: str) -> str:
 
 def scrape_transfermarkt_player(url: str, *, slug: str | None = None, headless: bool = True) -> dict[str, object]:
     runtime_slug = slug or _slug_from_url(url)
-    html = fetch_page_html(url, BrowserConfig(headless=headless))
-    raw_path = save_raw_html(runtime_slug, html)
+    context = {"source": "transfermarkt", "slug": runtime_slug, "url": url, "headless": headless}
+    log_event(logger, logging.INFO, "scrape.start", **context)
+    try:
+        html = fetch_page_html(url, BrowserConfig(headless=headless), source="transfermarkt", slug=runtime_slug)
+        raw_path = save_raw_html(runtime_slug, html)
+        log_event(logger, logging.INFO, "scrape.raw_saved", raw_html_path=raw_path, html_length=len(html), **context)
 
-    payload = {
-        "profile": parse_player_profile(html, url),
-        "transfers": parse_transfer_history(html, url),
-    }
-    parsed_path = save_parsed_payload(runtime_slug, payload)
+        payload = {
+            "profile": parse_player_profile(html, url),
+            "transfers": parse_transfer_history(html, url),
+        }
+        profile_fields = sum(1 for key, value in (payload.get("profile") or {}).items() if key not in {"source", "source_url", "scraped_at"} and value)
+        transfer_count = len(payload.get("transfers") or [])
+        log_event(logger, logging.INFO, "scrape.records_extracted", profile_fields=profile_fields, transfer_count=transfer_count, **context)
+        if profile_fields <= 1 or transfer_count == 0:
+            log_event(logger, logging.WARNING, "scrape.empty_result", profile_fields=profile_fields, transfer_count=transfer_count, **context)
 
-    return {
-        "slug": runtime_slug,
-        "raw_html_path": raw_path,
-        "parsed_data_path": parsed_path,
-        "payload": payload,
-    }
+        parsed_path = save_parsed_payload(runtime_slug, payload)
+        log_event(logger, logging.INFO, "scrape.parsed_saved", parsed_data_path=parsed_path, **context)
+        log_event(logger, logging.INFO, "scrape.success", parsed_data_path=parsed_path, raw_html_path=raw_path, **context)
+
+        return {
+            "slug": runtime_slug,
+            "raw_html_path": raw_path,
+            "parsed_data_path": parsed_path,
+            "payload": payload,
+        }
+    except Exception as exc:
+        log_exception(logger, "scrape.failed", exc, stage="transfermarkt_pipeline", **context)
+        raise

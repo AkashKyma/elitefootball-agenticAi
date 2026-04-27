@@ -4,7 +4,13 @@ from datetime import datetime, timezone
 from html import unescape
 from html.parser import HTMLParser
 import json
+import logging
 import re
+
+from app.services.logging_service import get_logger, is_debug_enabled, log_event
+
+
+logger = get_logger(__name__)
 
 
 class _TagStripper(HTMLParser):
@@ -68,6 +74,7 @@ def extract_labeled_value(html: str, label: str) -> str | None:
 
 
 def parse_player_profile(html: str, source_url: str) -> dict[str, object]:
+    log_event(logger, logging.INFO, "parse.profile.start", source="transfermarkt", source_url=source_url)
     json_ld = extract_json_ld(html)
     player_name = (
         json_ld.get("name")
@@ -87,10 +94,26 @@ def parse_player_profile(html: str, source_url: str) -> dict[str, object]:
         "current_club": extract_labeled_value(html, "Current club"),
         "market_value": extract_labeled_value(html, "Market value"),
     }
+    present_fields = sum(1 for key, value in profile.items() if key not in {"source", "source_url", "scraped_at"} and value)
+    log_event(
+        logger,
+        logging.INFO,
+        "parse.profile.complete",
+        source="transfermarkt",
+        source_url=source_url,
+        fields_found=present_fields,
+        expected_fields=6,
+        used_json_ld=bool(isinstance(json_ld, dict) and json_ld),
+    )
+    if present_fields <= 1:
+        log_event(logger, logging.WARNING, "parse.partial_result", source="transfermarkt", source_url=source_url, fields_found=present_fields)
+    elif is_debug_enabled() and not json_ld:
+        log_event(logger, logging.DEBUG, "parse.profile.fallback_used", source="transfermarkt", source_url=source_url, fallback="meta_or_title")
     return profile
 
 
 def parse_transfer_history(html: str, source_url: str) -> list[dict[str, object]]:
+    log_event(logger, logging.INFO, "parse.transfers.start", source="transfermarkt", source_url=source_url)
     rows = re.findall(r"<tr[^>]*>(.*?)</tr>", html, re.IGNORECASE | re.DOTALL)
     transfers: list[dict[str, object]] = []
 
@@ -114,4 +137,7 @@ def parse_transfer_history(html: str, source_url: str) -> list[dict[str, object]
             }
         )
 
+    log_event(logger, logging.INFO, "parse.transfers.complete", source="transfermarkt", source_url=source_url, row_candidates=len(rows), records_extracted=len(transfers))
+    if not transfers:
+        log_event(logger, logging.WARNING, "parse.partial_result", source="transfermarkt", source_url=source_url, records_extracted=0, section="transfers")
     return transfers

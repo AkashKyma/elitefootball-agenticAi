@@ -3,10 +3,15 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from html import unescape
 from html.parser import HTMLParser
+import logging
 import re
 from urllib.parse import urlparse
 
 from app.scraping.parsers import extract_title, normalize_space, strip_tags
+from app.services.logging_service import get_logger, is_debug_enabled, log_event
+
+
+logger = get_logger(__name__)
 
 
 class _FBrefTableParser(HTMLParser):
@@ -152,11 +157,12 @@ def _row_to_stat_map(row: list[dict[str, str]]) -> dict[str, str]:
 
 
 def parse_fbref_match_payload(html: str, source_url: str) -> dict[str, object]:
+    log_event(logger, logging.INFO, "parse.fbref.match.start", source="fbref", source_url=source_url)
     title = extract_title(html)
     home_score, away_score = _extract_match_score(title)
     home_club, away_club = _extract_match_teams(title)
 
-    return {
+    payload = {
         "source": "fbref",
         "source_url": source_url,
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -171,15 +177,24 @@ def parse_fbref_match_payload(html: str, source_url: str) -> dict[str, object]:
         "venue": _extract_venue(html),
         "title": title,
     }
+    fields_found = sum(1 for value in payload.values() if value)
+    log_event(logger, logging.INFO, "parse.fbref.match.complete", source="fbref", source_url=source_url, fields_found=fields_found)
+    if not payload.get("external_id") and not payload.get("title"):
+        log_event(logger, logging.WARNING, "parse.partial_result", source="fbref", source_url=source_url, section="match")
+    return payload
 
 
 def parse_fbref_player_match_stats(html: str, source_url: str) -> list[dict[str, object]]:
+    log_event(logger, logging.INFO, "parse.fbref.player_stats.start", source="fbref", source_url=source_url)
     player_rows: list[dict[str, object]] = []
+    tables = _parse_tables(html)
+    candidate_table_ids: list[str] = []
 
-    for table in _parse_tables(html):
+    for table in tables:
         table_id = str(table.get("id", ""))
         if "stats" not in table_id and "summary" not in table_id:
             continue
+        candidate_table_ids.append(table_id)
 
         rows = table.get("rows", [])
         for row in rows:
@@ -214,13 +229,22 @@ def parse_fbref_player_match_stats(html: str, source_url: str) -> list[dict[str,
                 }
             )
 
+    log_fields = {"source": "fbref", "source_url": source_url, "tables_discovered": len(tables), "candidate_tables": len(candidate_table_ids), "records_extracted": len(player_rows)}
+    if is_debug_enabled():
+        log_fields["candidate_table_ids"] = candidate_table_ids
+    log_event(logger, logging.INFO, "parse.fbref.player_stats.complete", **log_fields)
+    if not player_rows:
+        log_event(logger, logging.WARNING, "parse.partial_result", source="fbref", source_url=source_url, section="player_match_stats", records_extracted=0)
     return player_rows
 
 
 def parse_fbref_player_per_90(html: str, source_url: str) -> list[dict[str, object]]:
+    log_event(logger, logging.INFO, "parse.fbref.per90.start", source="fbref", source_url=source_url)
     per_90_rows: list[dict[str, object]] = []
+    tables = _parse_tables(html)
+    candidate_table_ids: list[str] = []
 
-    for table in _parse_tables(html):
+    for table in tables:
         table_id = str(table.get("id", ""))
         rows = table.get("rows", [])
         for row in rows:
@@ -232,6 +256,8 @@ def parse_fbref_player_per_90(html: str, source_url: str) -> list[dict[str, obje
             per_90_keys = [key for key in stat_map if key.endswith("_per90") or key.endswith("per90")]
             if not per_90_keys and "per_90" not in table_id:
                 continue
+            if table_id and table_id not in candidate_table_ids:
+                candidate_table_ids.append(table_id)
 
             metrics = {key: stat_map[key] for key in per_90_keys}
             if not metrics:
@@ -248,4 +274,10 @@ def parse_fbref_player_per_90(html: str, source_url: str) -> list[dict[str, obje
                 }
             )
 
+    log_fields = {"source": "fbref", "source_url": source_url, "tables_discovered": len(tables), "candidate_tables": len(candidate_table_ids), "records_extracted": len(per_90_rows)}
+    if is_debug_enabled():
+        log_fields["candidate_table_ids"] = candidate_table_ids
+    log_event(logger, logging.INFO, "parse.fbref.per90.complete", **log_fields)
+    if not per_90_rows:
+        log_event(logger, logging.WARNING, "parse.partial_result", source="fbref", source_url=source_url, section="player_per90", records_extracted=0)
     return per_90_rows

@@ -30,6 +30,31 @@ The backend now exposes read-only artifact-backed endpoints:
 - The `injury_risk_score` inside that artifact is an availability-risk proxy derived from appearance gaps and minutes patterns, not true medical injury data.
 - Valuation now optionally consumes the risk artifact when available and falls back to the legacy discipline/consistency risk deduction when it is not.
 
+## Structured Scrape Logging (PAP-240)
+The scraper and Silver build pipeline now emit structured logs for fetch, parse, storage, and empty-result states.
+
+### Environment flags
+- `LOG_LEVEL=INFO` or `LOG_LEVEL=DEBUG`
+- `LOG_DEBUG_ENABLED=true` to include extra diagnostic detail
+- `LOG_FILE_ENABLED=true` to also write logs to a file
+- `LOG_FILE_PATH=/path/to/scrape.log` to choose the file target when file logging is enabled
+
+### Example failure log output
+```text
+2026-04-27T08:25:10Z INFO app.scraping.transfermarkt scrape.start headless=true slug=junior-sornoza source=transfermarkt url=https://www.transfermarkt.com/...
+2026-04-27T08:25:10Z INFO app.scraping.browser fetch.start delay_seconds=2.0 headless=true slug=junior-sornoza source=transfermarkt timeout_ms=30000 url=https://www.transfermarkt.com/...
+2026-04-27T08:25:10Z ERROR app.scraping.browser fetch.playwright_unavailable error=PlaywrightUnavailableError message="Playwright is not installed. Install dependencies and run `playwright install` before scraping." slug=junior-sornoza source=transfermarkt url=https://www.transfermarkt.com/...
+Traceback (most recent call last):
+  ...
+2026-04-27T08:25:10Z ERROR app.scraping.transfermarkt scrape.failed error=PlaywrightUnavailableError message="Playwright is not installed. Install dependencies and run `playwright install` before scraping." slug=junior-sornoza source=transfermarkt stage=transfermarkt_pipeline url=https://www.transfermarkt.com/...
+```
+
+### Empty-result visibility
+If a scrape finishes with no extracted rows or only severely incomplete fields, the pipeline logs warning events such as:
+- `scrape.empty_result`
+- `parse.partial_result`
+- `silver.empty_output`
+
 ## Safety + Approval Layer (PAP-224)
 The backend now includes a lightweight safety policy layer for evaluating high-risk actions before execution.
 

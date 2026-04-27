@@ -57,6 +57,13 @@ Initial repository bootstrap completed at the scaffold level.
 - confirmed the current runtime cannot import Playwright, so fetch-layer scraping fails before any HTML is captured
 - confirmed the current scraper orchestration only wires Transfermarkt, while downstream Silver/Gold/dashboard outputs depend heavily on FBref-derived match stats
 - added grunt handoff notes for PAP-239 at `GRUNT_HANDOFF_PAP-239.md`
+- completed architecture planning for PAP-240 structured scrape logging in `ARCHITECT_PLAN_PAP-240.md`
+- confirmed there is currently no shared logging infrastructure across scraper, parser, storage, pipeline, or DB seams
+- documented a minimal shared logging-service approach with debug-mode and optional file-log support
+- implemented PAP-240 structured logging across fetch, parse, storage, Silver shaping, and DB initialization seams
+- added logging tests in `tests/test_logging_service.py` and `tests/test_scraping_logging.py`
+- documented scrape logging env flags and example failure output in `README.md`
+- added grunt handoff notes for PAP-240 at `GRUNT_HANDOFF_PAP-240.md`
 
 ## Next Steps
 - validate player similarity rankings against real player data and tune feature weighting if needed
@@ -83,6 +90,10 @@ Initial repository bootstrap completed at the scaffold level.
 - implement PAP-240 by adding a concrete IDV scrape target registry, wiring it into `full_refresh`, and adding runtime scrape preflight checks for Playwright/browser readiness
 - wire FBref scraping into the orchestrated refresh path so match-stat-driven Silver/Gold/dashboard outputs can become non-empty
 - add scrape diagnostics for response status, selector readiness, timeout classification, and anti-bot/challenge detection before tuning parsers further
+- implement PAP-240 by adding shared structured logging across fetch, parse, storage, and Silver build paths with stack-trace logging on failures
+- document debug/logging env flags in `README.md` and add tests for logging helper behavior plus empty-result warnings
+- after PAP-240, implement PAP-241 to wire concrete IDV targets into `full_refresh` and add scrape runtime preflight checks
+- pedant-review PAP-240 event naming, INFO-vs-DEBUG verbosity, and whether `db.write.*` persistence logs are clear enough without implying real DB ingestion
 
 ## Working Rules
 All future tasks MUST:

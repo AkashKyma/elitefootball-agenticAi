@@ -1,10 +1,15 @@
 from __future__ import annotations
 
+import logging
 from pathlib import Path
 from typing import Any
 
 from app.config import settings
 from app.pipeline.io import list_files, read_json, write_json
+from app.services.logging_service import get_logger, log_event, log_exception
+
+
+logger = get_logger(__name__)
 
 
 def _clean_string(value: Any) -> str | None:
@@ -33,11 +38,20 @@ def _clean_float(value: Any) -> float | None:
 
 
 def _load_json_files(directory: str) -> list[dict[str, Any]]:
+    log_event(logger, logging.INFO, "silver.load.start", directory=directory)
     payloads: list[dict[str, Any]] = []
-    for path in list_files(directory, "*.json"):
-        data = read_json(path)
+    files = list_files(directory, "*.json")
+    for path in files:
+        try:
+            data = read_json(path)
+        except Exception as exc:
+            log_exception(logger, "silver.payload.invalid", exc, path=str(path))
+            continue
         if isinstance(data, dict):
             payloads.append(data)
+        else:
+            log_event(logger, logging.WARNING, "silver.payload.invalid", path=str(path), payload_type=type(data).__name__)
+    log_event(logger, logging.INFO, "silver.load.complete", directory=directory, files_discovered=len(files), payloads_loaded=len(payloads))
     return payloads
 
 
@@ -150,8 +164,31 @@ def build_silver_tables() -> dict[str, object]:
         "player_per90": player_per90,
     }
 
+    log_event(
+        logger,
+        logging.INFO,
+        "silver.build.complete",
+        transfermarkt_payloads=len(transfermarkt_payloads),
+        fbref_payloads=len(fbref_payloads),
+        players=len(players),
+        transfers=len(transfers),
+        matches=len(matches),
+        player_match_stats=len(player_match_stats),
+        player_per90=len(player_per90),
+    )
+    if not any(len(rows) for rows in outputs.values()):
+        log_event(logger, logging.WARNING, "silver.empty_output", players=0, transfers=0, matches=0, player_match_stats=0, player_per90=0)
+
     paths = {}
     for name, rows in outputs.items():
-        paths[name] = write_json(Path(settings.silver_data_dir) / f"{name}.json", rows)
+        path = Path(settings.silver_data_dir) / f"{name}.json"
+        log_event(logger, logging.INFO, "db.write.attempt", target="silver_json", table=name, path=str(path), records=len(rows), persisted=False)
+        try:
+            paths[name] = write_json(path, rows)
+        except Exception as exc:
+            log_exception(logger, "db.write.failed", exc, target="silver_json", table=name, path=str(path), records=len(rows), persisted=False)
+            raise
+        log_event(logger, logging.INFO, "silver.write.success", table=name, path=paths[name], records=len(rows))
+        log_event(logger, logging.INFO, "db.write.result", target="silver_json", table=name, path=paths[name], records=len(rows), persisted=False)
 
     return {"paths": paths, "tables": outputs}
