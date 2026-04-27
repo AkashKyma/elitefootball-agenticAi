@@ -64,6 +64,14 @@ Initial repository bootstrap completed at the scaffold level.
 - added logging tests in `tests/test_logging_service.py` and `tests/test_scraping_logging.py`
 - documented scrape logging env flags and example failure output in `README.md`
 - added grunt handoff notes for PAP-240 at `GRUNT_HANDOFF_PAP-240.md`
+- completed architecture planning for PAP-241 source accessibility and blocking validation in `ARCHITECT_PLAN_PAP-241.md`
+- confirmed via live probes that Transfermarkt currently returns usable HTML to static HTTP requests for the tested squad page
+- confirmed via live probes that FBref currently returns a Cloudflare challenge page (`403`, `cf-mitigated: challenge`) instead of real content to static HTTP requests
+- documented a source-specific recommendation: requests-first for tested Transfermarkt pages, browser-based validation required for FBref
+- implemented PAP-241 static compatibility probing in `app/scraping/compatibility.py`
+- added PAP-241 compatibility tests in `tests/test_scraping_compatibility.py`
+- captured the current source-access findings in `PAP-241_TECHNICAL_COMPATIBILITY_REPORT.md`
+- added grunt handoff notes for PAP-241 at `GRUNT_HANDOFF_PAP-241.md`
 
 ## Next Steps
 - validate player similarity rankings against real player data and tune feature weighting if needed
@@ -94,6 +102,8 @@ Initial repository bootstrap completed at the scaffold level.
 - document debug/logging env flags in `README.md` and add tests for logging helper behavior plus empty-result warnings
 - after PAP-240, implement PAP-241 to wire concrete IDV targets into `full_refresh` and add scrape runtime preflight checks
 - pedant-review PAP-240 event naming, INFO-vs-DEBUG verbosity, and whether `db.write.*` persistence logs are clear enough without implying real DB ingestion
+- implement PAP-242 by adding source compatibility probes plus browser-based FBref access validation so the team can confirm whether Playwright can clear or still hits the challenge path
+- pedant-review PAP-241 probe classification naming and challenge-page marker handling before wiring the probe into operational scraper flows
 
 ## Working Rules
 All future tasks MUST:
