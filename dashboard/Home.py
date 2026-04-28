@@ -57,7 +57,12 @@ with col2:
         if summary_rows:
             st.dataframe(summary_rows, use_container_width=True, hide_index=True)
 
-st.info(
-    "Start the backend first, then run the dashboard. "
-    "Default API base URL: `http://localhost:8000` or override with `ELITEFOOTBALL_API_BASE_URL`."
-)
+if backend_error:
+    st.warning(
+        "Backend connection issue detected. Start the backend first, then run the dashboard. "
+        "Default API base URL: `http://127.0.0.1:9001` "
+        "(fallback: `127.0.0.1:9000`, `http://localhost:8000`) "
+        "or override with `ELITEFOOTBALL_API_BASE_URL`."
+    )
+else:
+    st.caption(f"Connected API base URL: `{client.base_url}`")

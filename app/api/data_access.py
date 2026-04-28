@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Iterable
+import unicodedata
 
 from app.pipeline.io import read_json
 
@@ -31,7 +32,9 @@ REQUIRED_DASHBOARD_ARTIFACTS = {"players", "player_match_stats", "similarity", "
 
 
 def normalize_name(value: str | None) -> str:
-    return " ".join(str(value or "").strip().lower().split())
+    raw = " ".join(str(value or "").strip().lower().split())
+    normalized = unicodedata.normalize("NFKD", raw)
+    return "".join(char for char in normalized if not unicodedata.combining(char))
 
 
 def inspect_artifact(name: str, *, required: bool = True, sample_limit: int = 3) -> dict[str, Any]:

@@ -119,6 +119,9 @@ def players(
         }
         filtered_rows.append(item)
 
+    filtered_rows.sort(
+        key=lambda r: (str(r.get("player_name") or "")).casefold(),
+    )
     paged_rows = paginate(filtered_rows, offset=offset, limit=limit)
     return {"count": len(filtered_rows), "items": paged_rows}
 
@@ -131,7 +134,7 @@ def player_stats(
     sort: str = Query(default="-match_date"),
 ) -> dict[str, object]:
     try:
-        stat_rows = load_player_match_stats(required=True)
+        stat_rows = load_player_match_stats(required=False)
     except ArtifactUnavailableError as exc:
         raise _artifact_unavailable(str(exc)) from exc
     except ArtifactInvalidError as exc:
@@ -140,7 +143,7 @@ def player_stats(
     normalized_target = normalize_name(player_name)
     matching_rows = [row for row in stat_rows if normalize_name(row.get("player_name")) == normalized_target]
     if not matching_rows:
-        raise _player_not_found(player_name)
+        return {"player_name": player_name, "count": 0, "items": []}
 
     reverse = sort.startswith("-")
     sort_key = sort[1:] if reverse else sort
@@ -175,6 +178,7 @@ def compare(
 ) -> dict[str, object]:
     try:
         similarity_rows = load_similarity_rows(required=True)
+        feature_index, kpi_index, _ = _load_optional_indexes()
     except ArtifactUnavailableError as exc:
         raise _artifact_unavailable(str(exc)) from exc
     except ArtifactInvalidError as exc:
@@ -192,7 +196,22 @@ def compare(
             "similar_players": similar_players,
         }
 
-    raise _player_not_found(player_name)
+    feature_row = feature_index.get(target_key) or {}
+    kpi_row = kpi_index.get(target_key) or {}
+    return {
+        "player_name": player_name,
+        "position": feature_row.get("position"),
+        "comparison_features": {
+            "goal_contribution_per_90": feature_row.get("goal_contribution_per_90"),
+            "shots": feature_row.get("shots"),
+            "passes_completed_per_90": kpi_row.get("passes_completed_per_90"),
+            "minutes": feature_row.get("minutes"),
+            "discipline_risk_score": feature_row.get("discipline_risk_score"),
+            "consistency_score": kpi_row.get("consistency_score"),
+            "base_kpi_score": kpi_row.get("base_kpi_score"),
+        },
+        "similar_players": [],
+    }
 
 
 @router.get("/value", response_model=ValuationRow | ValuationListResponse)

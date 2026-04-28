@@ -7,6 +7,7 @@ import logging
 import re
 from urllib.parse import urlparse
 
+from app.scraping.browser import CHALLENGE_MARKERS
 from app.scraping.parsers import extract_title, normalize_space, strip_tags
 from app.services.logging_service import get_logger, is_debug_enabled, log_event
 
@@ -14,7 +15,6 @@ from app.services.logging_service import get_logger, is_debug_enabled, log_event
 logger = get_logger(__name__)
 PLAYER_STATS_TABLE_HINTS = ("stats_standard", "stats_summary", "stats_keeper", "stats_passing", "stats_misc")
 PER90_TABLE_HINTS = ("per_90", "stats_standard", "stats_misc")
-CHALLENGE_MARKERS = ("just a moment", "challenge", "captcha", "access denied")
 
 
 class _FBrefTableParser(HTMLParser):
@@ -193,7 +193,9 @@ def parse_fbref_match_payload(html: str, source_url: str) -> dict[str, object]:
         "away_score": away_score,
         "venue": _extract_venue(html),
         "title": title,
-        "challenge_detected": any(marker in (title or "").lower() for marker in CHALLENGE_MARKERS),
+        "challenge_detected": any(
+            marker in f"{(title or '')} {html[:12000]}".lower() for marker in CHALLENGE_MARKERS
+        ),
     }
     fields_found = sum(1 for value in payload.values() if value)
     log_event(logger, logging.INFO, "parse.fbref.match.complete", source="fbref", source_url=source_url, fields_found=fields_found)

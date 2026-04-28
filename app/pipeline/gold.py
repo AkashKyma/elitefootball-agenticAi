@@ -58,6 +58,29 @@ def build_gold_features(silver_tables: dict[str, list[dict[str, Any]]]) -> dict[
         }
         player_features.append(feature_row)
 
+    if not player_features:
+        # Fallback: if match stats are unavailable, still emit baseline features
+        # for discovered players so downstream similarity/compare flows can run.
+        for row in silver_tables.get("players", []):
+            player_name = row.get("player_name") or "unknown-player"
+            player_features.append(
+                {
+                    "player_name": player_name,
+                    "matches": 0,
+                    "minutes": 0,
+                    "goals": 0,
+                    "assists": 0,
+                    "shots": 0,
+                    "yellow_cards": 0,
+                    "red_cards": 0,
+                    "goal_contributions": 0,
+                    "goal_contribution_per_90": 0.0,
+                    "shot_involvement_flag": False,
+                    "discipline_risk_score": 0,
+                    "minutes_bucket": _minutes_bucket(0),
+                }
+            )
+
     match_features = []
     for row in silver_tables.get("matches", []):
         home_score = row.get("home_score")

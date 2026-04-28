@@ -6,6 +6,7 @@ from typing import Any
 
 from app.config import settings
 from app.pipeline.io import list_files, read_json, write_json
+from app.scraping.parsers import club_name_from_transfermarkt_club_url
 from app.services.logging_service import get_logger, log_event, log_exception
 
 
@@ -70,6 +71,7 @@ def _verify_written_table(path: str | Path, expected_rows: list[dict[str, Any]])
 def build_silver_tables() -> dict[str, object]:
     transfermarkt_payloads = _load_json_files(settings.parsed_data_dir)
     fbref_payloads = _load_json_files(settings.fbref_parsed_data_dir)
+    sofascore_payloads = _load_json_files(settings.sofascore_parsed_data_dir)
 
     players: list[dict[str, Any]] = []
     transfers: list[dict[str, Any]] = []
@@ -79,7 +81,13 @@ def build_silver_tables() -> dict[str, object]:
 
     for payload in transfermarkt_payloads:
         profile = payload.get("profile") or {}
-        if profile:
+        page_url = _clean_string(profile.get("source_url")) or _clean_string(
+            (payload.get("squad_players") or [{}])[0].get("source_url")
+        )
+        team_club = _clean_string(profile.get("current_club")) or _clean_string(
+            club_name_from_transfermarkt_club_url(page_url or "")
+        )
+        if profile and _clean_string(profile.get("player_name")):
             players.append(
                 {
                     "source": "transfermarkt",
@@ -91,6 +99,21 @@ def build_silver_tables() -> dict[str, object]:
                     "nationality": _clean_string(profile.get("nationality")),
                     "current_club": _clean_string(profile.get("current_club")),
                     "market_value": _clean_string(profile.get("market_value")),
+                }
+            )
+
+        for squad_row in payload.get("squad_players", []):
+            players.append(
+                {
+                    "source": "transfermarkt",
+                    "source_url": squad_row.get("profile_url") or squad_row.get("source_url"),
+                    "player_name": _clean_string(squad_row.get("player_name")),
+                    "preferred_name": None,
+                    "position": _clean_string(squad_row.get("position")),
+                    "date_of_birth": _clean_string(squad_row.get("date_of_birth")),
+                    "nationality": _clean_string(squad_row.get("nationality")),
+                    "current_club": _clean_string(squad_row.get("current_club")) or team_club,
+                    "market_value": _clean_string(squad_row.get("market_value")),
                 }
             )
 
@@ -107,6 +130,44 @@ def build_silver_tables() -> dict[str, object]:
                     "fee": _clean_string(transfer.get("fee")),
                 }
             )
+        for tm_stat in payload.get("squad_player_match_stats", []):
+            player_match_stats.append(
+                {
+                    "source": _clean_string(tm_stat.get("source")) or "transfermarkt_ceapi",
+                    "source_url": tm_stat.get("source_url"),
+                    "table_id": _clean_string(tm_stat.get("table_id")) or "transfermarkt_ceapi_performance_game",
+                    "player_name": _clean_string(tm_stat.get("player_name")),
+                    "club_name": _clean_string(tm_stat.get("club_name")) or team_club,
+                    "match_date": _clean_string(tm_stat.get("match_date")),
+                    "match_external_id": _clean_string(tm_stat.get("match_external_id")),
+                    "minutes": _clean_int(tm_stat.get("minutes")) or 0,
+                    "goals": _clean_int(tm_stat.get("goals")) or 0,
+                    "assists": _clean_int(tm_stat.get("assists")) or 0,
+                    "yellow_cards": _clean_int(tm_stat.get("yellow_cards")) or 0,
+                    "red_cards": _clean_int(tm_stat.get("red_cards")) or 0,
+                    "shots": _clean_int(tm_stat.get("shots")) or 0,
+                    "passes_completed": _clean_int(tm_stat.get("passes_completed")) or 0,
+                    "xg": _clean_float(tm_stat.get("xg")),
+                    "xa": _clean_float(tm_stat.get("xa")),
+                    "progressive_carries": _clean_int(tm_stat.get("progressive_carries")),
+                    "progressive_passes": _clean_int(tm_stat.get("progressive_passes")),
+                    "progressive_receptions": _clean_int(tm_stat.get("progressive_receptions")),
+                    "carries_into_final_third": _clean_int(tm_stat.get("carries_into_final_third")),
+                    "passes_into_final_third": _clean_int(tm_stat.get("passes_into_final_third")),
+                    "carries_into_penalty_area": _clean_int(tm_stat.get("carries_into_penalty_area")),
+                    "passes_into_penalty_area": _clean_int(tm_stat.get("passes_into_penalty_area")),
+                }
+            )
+
+    deduped_players: list[dict[str, Any]] = []
+    seen_players: set[str] = set()
+    for row in players:
+        key = f"{_clean_string(row.get('player_name'))}|{_clean_string(row.get('source_url'))}"
+        if key in seen_players:
+            continue
+        seen_players.add(key)
+        deduped_players.append(row)
+    players = deduped_players
 
     for payload in fbref_payloads:
         match = payload.get("match") or {}
@@ -168,6 +229,87 @@ def build_silver_tables() -> dict[str, object]:
                 }
             )
 
+    for payload in sofascore_payloads:
+        for stat in payload.get("player_match_stats", []):
+            player_match_stats.append(
+                {
+                    "source": _clean_string(stat.get("source")) or "sofascore",
+                    "source_url": stat.get("source_url"),
+                    "table_id": _clean_string(stat.get("table_id")) or "sofascore_lineups",
+                    "player_name": _clean_string(stat.get("player_name")),
+                    "club_name": _clean_string(stat.get("club_name")),
+                    "match_date": _clean_string(stat.get("match_date")),
+                    "match_external_id": _clean_string(stat.get("match_external_id")),
+                    "minutes": _clean_int(stat.get("minutes")) or 0,
+                    "goals": _clean_int(stat.get("goals")) or 0,
+                    "assists": _clean_int(stat.get("assists")) or 0,
+                    "yellow_cards": _clean_int(stat.get("yellow_cards")) or 0,
+                    "red_cards": _clean_int(stat.get("red_cards")) or 0,
+                    "shots": _clean_int(stat.get("shots")) or 0,
+                    "passes_completed": _clean_int(stat.get("passes_completed")) or 0,
+                    "xg": _clean_float(stat.get("xg")),
+                    "xa": _clean_float(stat.get("xa")),
+                    "progressive_carries": _clean_int(stat.get("progressive_carries")),
+                    "progressive_passes": _clean_int(stat.get("progressive_passes")),
+                    "progressive_receptions": _clean_int(stat.get("progressive_receptions")),
+                    "carries_into_final_third": _clean_int(stat.get("carries_into_final_third")),
+                    "passes_into_final_third": _clean_int(stat.get("passes_into_final_third")),
+                    "carries_into_penalty_area": _clean_int(stat.get("carries_into_penalty_area")),
+                    "passes_into_penalty_area": _clean_int(stat.get("passes_into_penalty_area")),
+                }
+            )
+
+    if player_match_stats:
+        deduped_stats: list[dict[str, Any]] = []
+        seen_stats: set[str] = set()
+        for row in player_match_stats:
+            key = (
+                f"{_clean_string(row.get('player_name'))}|"
+                f"{_clean_string(row.get('match_external_id'))}|"
+                f"{_clean_string(row.get('match_date'))}|"
+                f"{_clean_string(row.get('source'))}"
+            )
+            if key in seen_stats:
+                continue
+            seen_stats.add(key)
+            deduped_stats.append(row)
+        player_match_stats = deduped_stats
+
+    if not player_match_stats and players:
+        # Fallback path: when FBref is unavailable/challenged, emit a minimal
+        # per-player stat row so downstream artifacts remain structurally usable.
+        for row in players:
+            player_name = _clean_string(row.get("player_name"))
+            if not player_name:
+                continue
+            player_match_stats.append(
+                {
+                    "source": "transfermarkt_fallback",
+                    "source_url": row.get("source_url"),
+                    "table_id": "fallback",
+                    "player_name": player_name,
+                    "club_name": _clean_string(row.get("current_club")),
+                    "match_date": None,
+                    "match_external_id": None,
+                    "minutes": 0,
+                    "goals": 0,
+                    "assists": 0,
+                    "yellow_cards": 0,
+                    "red_cards": 0,
+                    "shots": 0,
+                    "passes_completed": 0,
+                    "xg": None,
+                    "xa": None,
+                    "progressive_carries": None,
+                    "progressive_passes": None,
+                    "progressive_receptions": None,
+                    "carries_into_final_third": None,
+                    "passes_into_final_third": None,
+                    "carries_into_penalty_area": None,
+                    "passes_into_penalty_area": None,
+                }
+            )
+
     outputs = {
         "players": players,
         "transfers": transfers,
@@ -182,6 +324,7 @@ def build_silver_tables() -> dict[str, object]:
         "silver.build.complete",
         transfermarkt_payloads=len(transfermarkt_payloads),
         fbref_payloads=len(fbref_payloads),
+        sofascore_payloads=len(sofascore_payloads),
         players=len(players),
         transfers=len(transfers),
         matches=len(matches),

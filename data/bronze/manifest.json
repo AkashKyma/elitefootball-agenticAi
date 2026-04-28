@@ -1,5 +1,34 @@
 {
-  "generated_at": "2026-04-22T11:24:13.496125+00:00",
-  "artifact_count": 0,
-  "artifacts": []
+  "generated_at": "2026-04-28T10:52:55.704121+00:00",
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "source": "transfermarkt",
+      "artifact_type": "raw_html",
+      "artifact_path": "data\\raw\\transfermarkt\\19309.html",
+      "slug": "19309",
+      "captured_at": "2026-04-28T07:03:25.066627+00:00"
+    },
+    {
+      "source": "transfermarkt",
+      "artifact_type": "parsed_json",
+      "artifact_path": "data\\parsed\\transfermarkt\\19309.json",
+      "slug": "19309",
+      "captured_at": "2026-04-28T07:04:09.636212+00:00"
+    },
+    {
+      "source": "fbref",
+      "artifact_type": "raw_html",
+      "artifact_path": "data\\raw\\fbref\\independiente-del-valle-stats.html",
+      "slug": "independiente-del-valle-stats",
+      "captured_at": "2026-04-28T10:21:27.916014+00:00"
+    },
+    {
+      "source": "fbref",
+      "artifact_type": "parsed_json",
+      "artifact_path": "data\\parsed\\fbref\\independiente-del-valle-stats.json",
+      "slug": "independiente-del-valle-stats",
+      "captured_at": "2026-04-28T10:21:27.929852+00:00"
+    }
+  ]
 }

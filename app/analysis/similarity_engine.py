@@ -15,6 +15,7 @@ from app.pipeline.io import write_json
 FEATURE_KEYS = (
     "goal_contribution_per_90",
     "shots",
+    "passes_completed_per_90",
     "minutes",
     "discipline_risk_score",
     "consistency_score",
@@ -50,6 +51,7 @@ def build_similarity_output(
             {
                 "goal_contribution_per_90": feature_row.get("goal_contribution_per_90"),
                 "shots": feature_row.get("shots"),
+                "passes_completed_per_90": kpi_row.get("passes_completed_per_90"),
                 "minutes": feature_row.get("minutes"),
                 "discipline_risk_score": feature_row.get("discipline_risk_score"),
                 "consistency_score": kpi_row.get("consistency_score"),
@@ -71,6 +73,7 @@ def build_similarity_output(
                 {
                     "goal_contribution_per_90": feature_row.get("goal_contribution_per_90"),
                     "shots": feature_row.get("shots"),
+                    "passes_completed_per_90": kpi_by_name.get(player_name, {}).get("passes_completed_per_90"),
                     "minutes": feature_row.get("minutes"),
                     "discipline_risk_score": feature_row.get("discipline_risk_score"),
                     "consistency_score": kpi_by_name.get(player_name, {}).get("consistency_score"),
@@ -82,6 +85,7 @@ def build_similarity_output(
         similar_players = nearest_neighbors(player_name, vector_map, limit=neighbor_limit)
         for neighbor in similar_players:
             neighbor_silver = players_by_name.get(_player_key(str(neighbor["player_name"])), {})
+            neighbor["player_name"] = neighbor_silver.get("player_name") or str(neighbor["player_name"])
             neighbor["position"] = neighbor_silver.get("position")
 
         output_rows.append(

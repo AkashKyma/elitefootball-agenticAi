@@ -86,12 +86,19 @@ if compare_payload is None:
 else:
     comparison_features = compare_payload.get("comparison_features") or {}
     if comparison_features:
-        st.json(comparison_features)
+        feature_rows = [{"feature": key, "value": value} for key, value in comparison_features.items()]
+        st.dataframe(feature_rows, use_container_width=True, hide_index=True)
     else:
         no_features_state = build_dashboard_state(status_payload, no_records_label="comparison feature rows")
         st.info("No comparison features are available yet.")
         for line in placeholder_message_lines(no_features_state)[1:]:
             st.caption(line)
+
+if selected_row.get("position") and "goalkeeper" in str(selected_row.get("position")).lower():
+    st.caption(
+        "Selected player is a goalkeeper; low goals/shots can be normal. "
+        "Use passing and minutes metrics for stronger comparison context."
+    )
 
 st.subheader("Similar players")
 if compare_payload is None:
@@ -105,7 +112,7 @@ else:
             st.caption(line)
     else:
         try:
-            valuation_lookup_payload = client.get_value(limit=200)
+            valuation_lookup_payload = client.get_value(limit=100)
             valuation_lookup = {
                 row.get("player_name"): row
                 for row in valuation_lookup_payload.get("items", [])

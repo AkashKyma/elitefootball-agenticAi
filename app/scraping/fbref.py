@@ -72,7 +72,8 @@ def scrape_fbref_page(url: str, *, slug: str | None = None, headless: bool = Tru
             **context,
         )
         if diagnostics["extraction_status"] != "success_complete":
-            log_event(logger, logging.WARNING, "diagnostics.incomplete_extraction", **diagnostics, **context)
+            diagnostics_payload = {key: value for key, value in diagnostics.items() if key != "source"}
+            log_event(logger, logging.WARNING, "diagnostics.incomplete_extraction", **diagnostics_payload, **context)
             log_event(
                 logger,
                 logging.WARNING,

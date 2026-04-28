@@ -6,6 +6,7 @@ from html.parser import HTMLParser
 import json
 import logging
 import re
+from urllib.parse import urlparse
 
 from app.services.logging_service import get_logger, is_debug_enabled, log_event
 
@@ -52,6 +53,15 @@ def extract_meta_content(html: str, attr_name: str, attr_value: str) -> str | No
 def extract_title(html: str) -> str | None:
     match = re.search(r"<title>(.*?)</title>", html, re.IGNORECASE | re.DOTALL)
     return normalize_space(strip_tags(match.group(1))) if match else None
+
+
+def extract_itemprop_content(html: str, itemprop: str) -> str | None:
+    pattern = rf'itemprop=["\']{re.escape(itemprop)}["\'][^>]*>(.*?)</'
+    match = re.search(pattern, html, re.IGNORECASE | re.DOTALL)
+    if not match:
+        return None
+    value = normalize_space(strip_tags(match.group(1)))
+    return value or None
 
 
 def extract_json_ld(html: str) -> dict[str, object]:
@@ -107,7 +117,102 @@ def _clean_player_name(value: str | None) -> str | None:
     return cleaned or None
 
 
+def is_transfermarkt_squad_page_url(source_url: str) -> bool:
+    """Kader/squad list pages are not single-player profiles; do not treat title as a player name."""
+    try:
+        return "/kader/" in urlparse(source_url).path.lower()
+    except Exception:
+        return False
+
+
+def club_name_from_transfermarkt_club_url(source_url: str) -> str | None:
+    """Best-effort club label from a TM path like /independiente-del-valle/kader/..."""
+    try:
+        parts = [p for p in urlparse(source_url).path.strip("/").split("/") if p]
+    except Exception:
+        return None
+    if not parts:
+        return None
+    slug = parts[0]
+    if slug in {"kader", "spielplan", "www", "com"}:
+        return None
+    if slug.isdigit():
+        return None
+    display = normalize_space(slug.replace("-", " "))
+    return display.title() if display else None
+
+
+def _looks_like_transfermarkt_market_value(value: str) -> bool:
+    """Ignore loose 'k'/'m' matches that catch player names (e.g. *Mate*o*)."""
+    v = value.strip()
+    if not v:
+        return False
+    if "€" in v or "$" in v:
+        return True
+    return bool(re.search(r"^\d+([.,]\d+)?\s*([KMBkmb]|[Kk](\s|\.|$)?|[mM](\s|\.|$|io)?)", v))
+
+
+def _sanitize_market_value(value: str | None) -> str | None:
+    cleaned = normalize_space(value or "")
+    if not cleaned:
+        return None
+    return cleaned if _looks_like_transfermarkt_market_value(cleaned) else None
+
+
+def _extract_market_value_from_header(html: str) -> str | None:
+    match = re.search(
+        r'class=["\']data-header__market-value-wrapper["\'][^>]*>(.*?)<p class=["\']data-header__last-update["\']',
+        html,
+        re.IGNORECASE | re.DOTALL,
+    )
+    if not match:
+        return None
+    value = normalize_space(strip_tags(match.group(1)))
+    return _sanitize_market_value(value)
+
+
+def _sanitize_date_of_birth(value: str | None) -> str | None:
+    cleaned = normalize_space(value or "")
+    if not cleaned:
+        return None
+    cleaned = re.sub(r"^\s*/?Age:\s*", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\s*\(.*?\)\s*$", "", cleaned).strip()
+    date_match = re.search(r"\b\d{2}/\d{2}/\d{4}\b|\b\d{4}-\d{2}-\d{2}\b", cleaned)
+    if date_match:
+        return date_match.group(0)
+    return cleaned or None
+
+
+def _sanitize_nationality(value: str | None) -> str | None:
+    cleaned = normalize_space(value or "")
+    if not cleaned:
+        return None
+    cleaned = cleaned.replace("�", "").strip()
+    cleaned = re.sub(r"[^\w\s\-/,]+$", "", cleaned).strip()
+    return cleaned or None
+
+
 def parse_player_profile(html: str, source_url: str) -> dict[str, object]:
+    if is_transfermarkt_squad_page_url(source_url):
+        log_event(
+            logger,
+            logging.INFO,
+            "parse.profile.squad_list_skip",
+            source="transfermarkt",
+            source_url=source_url,
+        )
+        return {
+            "source": "transfermarkt",
+            "source_url": source_url,
+            "scraped_at": datetime.now(timezone.utc).isoformat(),
+            "player_name": None,
+            "preferred_name": None,
+            "position": None,
+            "date_of_birth": None,
+            "nationality": None,
+            "current_club": club_name_from_transfermarkt_club_url(source_url),
+            "market_value": None,
+        }
     log_event(logger, logging.INFO, "parse.profile.start", source="transfermarkt", source_url=source_url)
     json_ld = extract_json_ld(html)
     player_name = (
@@ -123,10 +228,16 @@ def parse_player_profile(html: str, source_url: str) -> dict[str, object]:
         "player_name": _clean_player_name(player_name),
         "preferred_name": extract_labeled_value(html, "Name in home country"),
         "position": extract_labeled_value(html, "Position"),
-        "date_of_birth": extract_labeled_value(html, "Date of birth"),
-        "nationality": extract_labeled_value(html, "Citizenship"),
+        "date_of_birth": _sanitize_date_of_birth(
+            extract_labeled_value(html, "Date of birth")
+            or extract_labeled_value(html, "Date of birth/Age")
+            or extract_itemprop_content(html, "birthDate")
+        ),
+        "nationality": _sanitize_nationality(
+            extract_labeled_value(html, "Citizenship") or extract_itemprop_content(html, "nationality")
+        ),
         "current_club": extract_labeled_value(html, "Current club"),
-        "market_value": extract_labeled_value(html, "Market value"),
+        "market_value": _sanitize_market_value(extract_labeled_value(html, "Market value")) or _extract_market_value_from_header(html),
     }
     present_fields = sum(1 for key, value in profile.items() if key not in {"source", "source_url", "scraped_at"} and value)
     log_event(
@@ -186,3 +297,78 @@ def parse_transfer_history(html: str, source_url: str) -> list[dict[str, object]
     if not transfers:
         log_event(logger, logging.WARNING, "parse.partial_result", source="transfermarkt", source_url=source_url, records_extracted=0, section="transfers")
     return transfers
+
+
+def parse_transfermarkt_squad_players(html: str, source_url: str) -> list[dict[str, object]]:
+    """Parse player rows from a Transfermarkt squad page when present."""
+
+    log_event(logger, logging.INFO, "parse.squad.start", source="transfermarkt", source_url=source_url)
+    rows = re.findall(r"<tr[^>]*>(.*?)</tr>", html, re.IGNORECASE | re.DOTALL)
+    parsed_rows: list[dict[str, object]] = []
+    seen_names: set[str] = set()
+
+    for row in rows:
+        if "/profil/spieler/" not in row:
+            continue
+
+        link_match = re.search(r'href=["\']([^"\']*/profil/spieler/[^"\']+)["\']', row, re.IGNORECASE)
+        name_match = re.search(
+            r'<a[^>]*href=["\'][^"\']*/profil/spieler/[^"\']+["\'][^>]*>(.*?)</a>',
+            row,
+            re.IGNORECASE | re.DOTALL,
+        )
+        if not name_match:
+            continue
+
+        player_name = normalize_space(strip_tags(name_match.group(1)))
+        if not player_name:
+            continue
+        dedupe_key = player_name.lower()
+        if dedupe_key in seen_names:
+            continue
+        seen_names.add(dedupe_key)
+
+        columns = [strip_tags(column) for column in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row, re.IGNORECASE | re.DOTALL)]
+        cleaned = [normalize_space(value) for value in columns if normalize_space(value)]
+
+        position = None
+        age = None
+        market_value = None
+        for value in cleaned:
+            lower_value = value.lower()
+            if position is None and any(
+                token in lower_value
+                for token in ("goalkeeper", "defender", "midfielder", "forward", "attack", "winger", "striker")
+            ):
+                position = value
+            if age is None and re.fullmatch(r"\d{2}", value):
+                age = value
+            if market_value is None and _looks_like_transfermarkt_market_value(
+                value
+            ) and normalize_space(value).casefold() != player_name.casefold():
+                market_value = value
+
+        parsed_rows.append(
+            {
+                "source": "transfermarkt",
+                "source_url": source_url,
+                "player_name": player_name,
+                "profile_url": link_match.group(1) if link_match else None,
+                "position": position,
+                "age": age,
+                "market_value": market_value,
+            }
+        )
+
+    log_event(
+        logger,
+        logging.INFO,
+        "parse.squad.complete",
+        source="transfermarkt",
+        source_url=source_url,
+        row_candidates=len(rows),
+        records_extracted=len(parsed_rows),
+    )
+    if not parsed_rows:
+        log_event(logger, logging.WARNING, "parse.partial_result", source="transfermarkt", source_url=source_url, records_extracted=0, section="squad_players")
+    return parsed_rows

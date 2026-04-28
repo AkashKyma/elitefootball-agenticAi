@@ -173,6 +173,17 @@ class TestApiRoutes(unittest.TestCase):
         self.assertEqual(payload["count"], 2)
         self.assertEqual(payload["items"][0]["match_date"], "2026-01-10")
 
+    @patch("app.api.routes.load_player_match_stats")
+    def test_player_stats_returns_empty_payload_when_no_rows_exist(self, mock_stats):
+        mock_stats.return_value = []
+
+        response = self.client.get("/players/John Doe/stats")
+        self.assertEqual(response.status_code, 200)
+        payload = response.json()
+        self.assertEqual(payload["player_name"], "John Doe")
+        self.assertEqual(payload["count"], 0)
+        self.assertEqual(payload["items"], [])
+
     @patch("app.api.routes.load_similarity_rows")
     def test_compare(self, mock_similarity):
         mock_similarity.return_value = self.similarity
@@ -183,12 +194,21 @@ class TestApiRoutes(unittest.TestCase):
         self.assertEqual(payload["player_name"], "John Doe")
         self.assertEqual(len(payload["similar_players"]), 1)
 
+    @patch("app.api.routes.load_valuation_rows")
+    @patch("app.api.routes.load_kpi_rows")
+    @patch("app.api.routes.load_player_features")
     @patch("app.api.routes.load_similarity_rows")
-    def test_compare_not_found(self, mock_similarity):
+    def test_compare_not_found(self, mock_similarity, mock_features, mock_kpi, mock_valuation):
         mock_similarity.return_value = self.similarity
+        mock_features.return_value = []
+        mock_kpi.return_value = []
+        mock_valuation.return_value = []
 
         response = self.client.get("/compare", params={"player_name": "missing player"})
-        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 200)
+        payload = response.json()
+        self.assertEqual(payload["player_name"], "missing player")
+        self.assertEqual(payload["similar_players"], [])
 
     @patch("app.api.routes.load_valuation_rows")
     def test_value_list_and_lookup(self, mock_valuation):

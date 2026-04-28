@@ -1,1 +1,1038 @@
-[]
+[
+  {
+    "player_name": "Emerson Pata",
+    "position": "Right Winger",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 75.747,
+    "valuation_tier": "strong_mvp",
+    "components": {
+      "performance_score": 41.704,
+      "age_score": 18.0,
+      "minutes_score": 8.543,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 4.5
+    },
+    "inputs": {
+      "age": 21,
+      "minutes": 2563,
+      "base_kpi_score": 5.213,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 3,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Patrik Mercado",
+    "position": "Attacking Midfield",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 73.48,
+    "valuation_tier": "strong_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 16.0,
+      "minutes_score": 0.48,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": 22,
+      "minutes": 144,
+      "base_kpi_score": 7.673,
+      "consistency_score": 86.45,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 38.438
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Daykol Romero",
+    "position": "Right-Back",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 72.637,
+    "valuation_tier": "strong_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 16.0,
+      "minutes_score": 2.637,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 3.0
+    },
+    "inputs": {
+      "age": 24,
+      "minutes": 791,
+      "base_kpi_score": 7.223,
+      "consistency_score": 90.0,
+      "discipline_risk_score": 2,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Juan Cazares",
+    "position": null,
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 70.383,
+    "valuation_tier": "strong_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 10.0,
+      "minutes_score": 6.383,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 3.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 1915,
+      "base_kpi_score": 7.415,
+      "consistency_score": 70.0,
+      "discipline_risk_score": 2,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.681
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Jordy Alcívar",
+    "position": null,
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 70.0,
+    "valuation_tier": "strong_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 10.0,
+      "minutes_score": 15.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 12.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 6339,
+      "base_kpi_score": 7.569,
+      "consistency_score": 87.67,
+      "discipline_risk_score": 11,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Richard Schunke",
+    "position": null,
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 70.0,
+    "valuation_tier": "strong_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 10.0,
+      "minutes_score": 15.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 12.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 24655,
+      "base_kpi_score": 7.805,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 45,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.438
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Luis Zárate",
+    "position": null,
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 69.567,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 10.0,
+      "minutes_score": 11.567,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 9.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 3470,
+      "base_kpi_score": 6.988,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 6,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Joaquín Pombo",
+    "position": "Centre-Back",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 69.143,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 13.0,
+      "minutes_score": 2.143,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 3.0
+    },
+    "inputs": {
+      "age": 25,
+      "minutes": 643,
+      "base_kpi_score": 7.156,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 2,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Mateo Carabajal",
+    "position": null,
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 67.6,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 10.0,
+      "minutes_score": 0.6,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 180,
+      "base_kpi_score": 8.875,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 56.5
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Junior Sornoza",
+    "position": null,
+    "current_club": "Independiente del Valle",
+    "competition": null,
+    "valuation_score": 67.523,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 10.0,
+      "minutes_score": 0.523,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 157,
+      "base_kpi_score": 7.762,
+      "consistency_score": 83.213,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 39.841
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Jordy Alcivar",
+    "position": null,
+    "current_club": "Independiente del Valle",
+    "competition": null,
+    "valuation_score": 67.397,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 10.0,
+      "minutes_score": 0.397,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 119,
+      "base_kpi_score": 8.028,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 45.757
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Gustavo Cortez",
+    "position": "Left-Back",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 66.553,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 9.0,
+      "minutes_score": 0.553,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": 28,
+      "minutes": 166,
+      "base_kpi_score": 7.357,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 45.813
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Youri Ochoa",
+    "position": "Defensive Midfield",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 66.448,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 35.408,
+      "age_score": 18.0,
+      "minutes_score": 1.04,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": 21,
+      "minutes": 312,
+      "base_kpi_score": 4.426,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Andy Velasco",
+    "position": null,
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 65.933,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 45.0,
+      "age_score": 10.0,
+      "minutes_score": 4.933,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 6.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 1480,
+      "base_kpi_score": 6.278,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 4,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Justin Lerma",
+    "position": "Attacking Midfield",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 62.573,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 37.056,
+      "age_score": 10.0,
+      "minutes_score": 5.017,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 1.5
+    },
+    "inputs": {
+      "age": 17,
+      "minutes": 1505,
+      "base_kpi_score": 4.632,
+      "consistency_score": 88.46,
+      "discipline_risk_score": 1,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Jhon Espinoza",
+    "position": "Right-Back",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 60.255,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 35.728,
+      "age_score": 13.0,
+      "minutes_score": 1.027,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 1.5
+    },
+    "inputs": {
+      "age": 27,
+      "minutes": 308,
+      "base_kpi_score": 4.466,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 1,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Eduardo Bores",
+    "position": "Goalkeeper",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 58.851,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 32.008,
+      "age_score": 16.0,
+      "minutes_score": 0.343,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 1.5
+    },
+    "inputs": {
+      "age": 23,
+      "minutes": 103,
+      "base_kpi_score": 4.001,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 1,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Arón Rodríguez",
+    "position": null,
+    "current_club": "Independiente del Valle",
+    "competition": null,
+    "valuation_score": 58.499,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 36.289,
+      "age_score": 10.0,
+      "minutes_score": 0.21,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 63,
+      "base_kpi_score": 4.129,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 27.143
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Aron Rodríguez",
+    "position": "Left Winger",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 57.751,
+    "valuation_tier": "solid_mvp",
+    "components": {
+      "performance_score": 32.248,
+      "age_score": 13.0,
+      "minutes_score": 6.503,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 6.0
+    },
+    "inputs": {
+      "age": 26,
+      "minutes": 1951,
+      "base_kpi_score": 4.031,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 4,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Jean Arroyo",
+    "position": null,
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 53.132,
+    "valuation_tier": "rotation_mvp",
+    "components": {
+      "performance_score": 30.985,
+      "age_score": 10.0,
+      "minutes_score": 4.647,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 4.5
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 1394,
+      "base_kpi_score": 3.846,
+      "consistency_score": 80.0,
+      "discipline_risk_score": 3,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 1.808
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Jhegson Méndez",
+    "position": "Defensive Midfield",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 50.07,
+    "valuation_tier": "rotation_mvp",
+    "components": {
+      "performance_score": 26.07,
+      "age_score": 9.0,
+      "minutes_score": 15.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 12.0
+    },
+    "inputs": {
+      "age": 29,
+      "minutes": 9675,
+      "base_kpi_score": 3.246,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 26,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.851
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Guido Villar",
+    "position": "Goalkeeper",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 48.525,
+    "valuation_tier": "rotation_mvp",
+    "components": {
+      "performance_score": 18.525,
+      "age_score": 9.0,
+      "minutes_score": 15.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 6.0
+    },
+    "inputs": {
+      "age": 28,
+      "minutes": 6467,
+      "base_kpi_score": 2.306,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 4,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.64
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Darwin Guagua",
+    "position": null,
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 48.22,
+    "valuation_tier": "rotation_mvp",
+    "components": {
+      "performance_score": 26.69,
+      "age_score": 10.0,
+      "minutes_score": 5.53,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 6.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 1659,
+      "base_kpi_score": 3.322,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 4,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.95
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Yandri Vasquez",
+    "position": null,
+    "current_club": "Independiente del Valle",
+    "competition": null,
+    "valuation_score": 47.907,
+    "valuation_tier": "rotation_mvp",
+    "components": {
+      "performance_score": 25.63,
+      "age_score": 10.0,
+      "minutes_score": 0.277,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 83,
+      "base_kpi_score": 2.911,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 19.518
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Juan Angulo",
+    "position": null,
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 47.843,
+    "valuation_tier": "rotation_mvp",
+    "components": {
+      "performance_score": 28.376,
+      "age_score": 10.0,
+      "minutes_score": 0.467,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 3.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 140,
+      "base_kpi_score": 3.547,
+      "consistency_score": 70.0,
+      "discipline_risk_score": 2,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Djorkaeff Reasco",
+    "position": null,
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 47.174,
+    "valuation_tier": "rotation_mvp",
+    "components": {
+      "performance_score": 23.224,
+      "age_score": 10.0,
+      "minutes_score": 1.95,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 585,
+      "base_kpi_score": 2.903,
+      "consistency_score": 78.422,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Júnior Sornoza",
+    "position": "Attacking Midfield",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 46.256,
+    "valuation_tier": "rotation_mvp",
+    "components": {
+      "performance_score": 26.256,
+      "age_score": 5.0,
+      "minutes_score": 15.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 12.0
+    },
+    "inputs": {
+      "age": 32,
+      "minutes": 23467,
+      "base_kpi_score": 3.282,
+      "consistency_score": 90.0,
+      "discipline_risk_score": 63,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Yandri Vásquez",
+    "position": null,
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 44.379,
+    "valuation_tier": "rotation_mvp",
+    "components": {
+      "performance_score": 20.912,
+      "age_score": 10.0,
+      "minutes_score": 1.467,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 440,
+      "base_kpi_score": 2.614,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Aldair Quintana",
+    "position": "Goalkeeper",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 41.236,
+    "valuation_tier": "rotation_mvp",
+    "components": {
+      "performance_score": 24.536,
+      "age_score": 5.0,
+      "minutes_score": 2.7,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 3.0
+    },
+    "inputs": {
+      "age": 31,
+      "minutes": 810,
+      "base_kpi_score": 3.067,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 2,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Carlos González",
+    "position": "Centre-Forward",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 39.921,
+    "valuation_tier": "development_mvp",
+    "components": {
+      "performance_score": 22.664,
+      "age_score": 5.0,
+      "minutes_score": 1.757,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 1.5
+    },
+    "inputs": {
+      "age": 33,
+      "minutes": 527,
+      "base_kpi_score": 2.833,
+      "consistency_score": 71.647,
+      "discipline_risk_score": 1,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Matías Perelló",
+    "position": "Right Winger",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 28.0,
+    "valuation_tier": "development_mvp",
+    "components": {
+      "performance_score": 0.0,
+      "age_score": 16.0,
+      "minutes_score": 0.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": 24,
+      "minutes": null,
+      "base_kpi_score": null,
+      "consistency_score": null,
+      "discipline_risk_score": null,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": null
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Steven Góngora",
+    "position": "Left Winger",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 28.0,
+    "valuation_tier": "development_mvp",
+    "components": {
+      "performance_score": 0.0,
+      "age_score": 16.0,
+      "minutes_score": 0.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": 22,
+      "minutes": null,
+      "base_kpi_score": null,
+      "consistency_score": null,
+      "discipline_risk_score": null,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": null
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Juan Viacava",
+    "position": "Centre-Back",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 25.0,
+    "valuation_tier": "development_mvp",
+    "components": {
+      "performance_score": 0.0,
+      "age_score": 13.0,
+      "minutes_score": 0.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": 27,
+      "minutes": null,
+      "base_kpi_score": null,
+      "consistency_score": null,
+      "discipline_risk_score": null,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": null
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Ronald Briones",
+    "position": "Left Winger",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 25.0,
+    "valuation_tier": "development_mvp",
+    "components": {
+      "performance_score": 0.0,
+      "age_score": 13.0,
+      "minutes_score": 0.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": 25,
+      "minutes": null,
+      "base_kpi_score": null,
+      "consistency_score": null,
+      "discipline_risk_score": null,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": null
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Layan Loor",
+    "position": "Left-Back",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 23.2,
+    "valuation_tier": "development_mvp",
+    "components": {
+      "performance_score": 0.0,
+      "age_score": 16.0,
+      "minutes_score": 0.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 4.8
+    },
+    "inputs": {
+      "age": 24,
+      "minutes": 0,
+      "base_kpi_score": 0.0,
+      "consistency_score": 0.0,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Deinner Ordóñez",
+    "position": "Centre-Back",
+    "current_club": "Independiente Del Valle",
+    "competition": null,
+    "valuation_score": 22.0,
+    "valuation_tier": "development_mvp",
+    "components": {
+      "performance_score": 0.0,
+      "age_score": 10.0,
+      "minutes_score": 0.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 0.0
+    },
+    "inputs": {
+      "age": 16,
+      "minutes": null,
+      "base_kpi_score": null,
+      "consistency_score": null,
+      "discipline_risk_score": null,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": null
+    },
+    "model_version": "mvp_v2_risk"
+  },
+  {
+    "player_name": "Luis Felipe Zárate",
+    "position": null,
+    "current_club": "Independiente del Valle",
+    "competition": null,
+    "valuation_score": 17.2,
+    "valuation_tier": "development_mvp",
+    "components": {
+      "performance_score": 0.0,
+      "age_score": 10.0,
+      "minutes_score": 0.0,
+      "club_factor": 8.0,
+      "league_adjustment": 4.0,
+      "risk_score": 4.8
+    },
+    "inputs": {
+      "age": null,
+      "minutes": 0,
+      "base_kpi_score": 0.0,
+      "consistency_score": 0.0,
+      "discipline_risk_score": 0,
+      "player_risk_score": null,
+      "injury_risk_score": null,
+      "volatility_risk_score": null,
+      "progression_score": 0.0
+    },
+    "model_version": "mvp_v2_risk"
+  }
+]

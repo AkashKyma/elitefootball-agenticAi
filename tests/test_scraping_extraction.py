@@ -3,7 +3,11 @@ from unittest.mock import patch
 
 from app.scraping.fbref import scrape_fbref_page
 from app.scraping.fbref_parsers import parse_fbref_match_payload, parse_fbref_player_match_stats, parse_fbref_player_per_90
-from app.scraping.parsers import parse_player_profile, parse_transfer_history
+from app.scraping.parsers import (
+    is_transfermarkt_squad_page_url,
+    parse_player_profile,
+    parse_transfer_history,
+)
 from app.scraping.transfermarkt import scrape_transfermarkt_player
 from app.scraping.validation import validate_fbref_payload, validate_transfermarkt_payload
 
@@ -79,6 +83,20 @@ FBREF_CHALLENGE_HTML = "<html><head><title>Just a moment...</title></head><body>
 
 
 class TestScrapingExtraction(unittest.TestCase):
+    def test_squad_page_url_is_detected(self):
+        self.assertTrue(
+            is_transfermarkt_squad_page_url("https://www.transfermarkt.com/independiente-del-valle/kader/verein/19309")
+        )
+        self.assertFalse(is_transfermarkt_squad_page_url("https://www.transfermarkt.com/fake/profil/spieler/1"))
+
+    def test_squad_list_profile_does_not_use_club_title_as_player(self):
+        profile = parse_player_profile(
+            "<html><title>Independiente del Valle - Kader</title></html>",
+            "https://www.transfermarkt.com/independiente-del-valle/kader/verein/19309",
+        )
+        self.assertIsNone(profile.get("player_name"))
+        self.assertIsNotNone(profile.get("current_club"))
+
     def test_transfermarkt_parser_extracts_profile_and_transfer(self):
         profile = parse_player_profile(TRANSFERMARKT_HTML, "https://example.com/player")
         transfers = parse_transfer_history(TRANSFERMARKT_HTML, "https://example.com/player")

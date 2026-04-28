@@ -38,6 +38,8 @@ The scraper and Silver build pipeline now emit structured logs for fetch, parse,
 - `LOG_DEBUG_ENABLED=true` to include extra diagnostic detail
 - `LOG_FILE_ENABLED=true` to also write logs to a file
 - `LOG_FILE_PATH=/path/to/scrape.log` to choose the file target when file logging is enabled
+- `TAVILY_ENABLED=true|false` to toggle Tavily source discovery
+- `TAVILY_API_KEY=...` to enable Tavily search-backed source URL discovery
 
 ### Example failure log output
 ```text
@@ -54,6 +56,21 @@ If a scrape finishes with no extracted rows or only severely incomplete fields, 
 - `scrape.empty_result`
 - `parse.partial_result`
 - `silver.empty_output`
+
+## Source Discovery (Tavily)
+- The scraper plan now supports optional Tavily-backed source URL discovery.
+- If `TAVILY_API_KEY` is present, source discovery can return candidate Transfermarkt/FBref/Sofascore/WhoScored URLs for IDV-related queries.
+- Discovery is best-effort and non-blocking: scraping still runs even if Tavily is disabled or unavailable.
+
+### FBref challenge mitigation (persistent profile)
+When FBref shows a Cloudflare challenge repeatedly, use a persistent browser profile so solved cookies/session can be reused:
+
+- `SCRAPE_CHROMIUM_CHANNEL=chrome`
+- `SCRAPE_HEADLESS=false`
+- `SCRAPE_USER_DATA_DIR=.playwright/fbref-profile`
+- optional one-time manual window: `SCRAPE_HOLD_BROWSER_OPEN=true`
+
+This allows one interactive challenge solve in a real Chrome profile and then reuses that session on later scrapes.
 
 ## Safety + Approval Layer (PAP-224)
 The backend now includes a lightweight safety policy layer for evaluating high-risk actions before execution.

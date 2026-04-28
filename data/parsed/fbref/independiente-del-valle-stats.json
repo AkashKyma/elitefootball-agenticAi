@@ -1,0 +1,69 @@
+{
+  "match": {
+    "source": "fbref",
+    "source_url": "https://fbref.com/en/squads/990519b8/Independiente-del-Valle-Stats",
+    "scraped_at": "2026-04-28T10:21:27.918158+00:00",
+    "external_id": "en/squads/990519b8/Independiente-del-Valle-Stats",
+    "competition": null,
+    "season": null,
+    "match_date": null,
+    "home_club": null,
+    "away_club": null,
+    "home_score": null,
+    "away_score": null,
+    "venue": null,
+    "title": "Just a moment...",
+    "challenge_detected": true
+  },
+  "player_match_stats": [],
+  "player_per_90": [],
+  "db_mapping": {
+    "match": {
+      "external_id": "en/squads/990519b8/Independiente-del-Valle-Stats",
+      "competition": null,
+      "season": null,
+      "match_date": null,
+      "home_club_name": null,
+      "away_club_name": null,
+      "home_score": null,
+      "away_score": null,
+      "venue": null,
+      "source": "fbref"
+    },
+    "stats": []
+  },
+  "diagnostics": {
+    "source": "fbref",
+    "extraction_status": "challenge_page",
+    "missing_required_fields": [
+      "home_club",
+      "away_club"
+    ],
+    "record_counts": {
+      "player_match_stats": 0,
+      "player_match_stats_seen": 0,
+      "player_per_90": 0,
+      "player_per_90_seen": 0
+    },
+    "sample_records": {
+      "match": {
+        "source": "fbref",
+        "source_url": "https://fbref.com/en/squads/990519b8/Independiente-del-Valle-Stats",
+        "scraped_at": "2026-04-28T10:21:27.918158+00:00",
+        "external_id": "en/squads/990519b8/Independiente-del-Valle-Stats",
+        "competition": null,
+        "season": null,
+        "match_date": null,
+        "home_club": null,
+        "away_club": null,
+        "home_score": null,
+        "away_score": null,
+        "venue": null,
+        "title": "Just a moment...",
+        "challenge_detected": true
+      },
+      "player_match_stat": null,
+      "player_per_90": null
+    }
+  }
+}

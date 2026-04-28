@@ -63,6 +63,19 @@ class TestDashboardApiClient(unittest.TestCase):
         with self.assertRaises(DashboardAPIError):
             client.get_health()
 
+    @patch("dashboard.api_client.requests.get")
+    def test_get_player_stats_returns_empty_payload_on_not_found(self, mock_get):
+        response = Mock()
+        response.raise_for_status.side_effect = requests.HTTPError(response=Mock(status_code=404))
+        mock_get.return_value = response
+
+        client = DashboardAPIClient(base_url="http://example.com")
+        payload = client.get_player_stats("Unknown Player")
+
+        self.assertEqual(payload["player_name"], "Unknown Player")
+        self.assertEqual(payload["count"], 0)
+        self.assertEqual(payload["items"], [])
+
     def test_dashboard_status_message_distinguishes_empty_from_ready(self):
         self.assertEqual(dashboard_status_message({"status": "empty"})[0], "warning")
         self.assertEqual(dashboard_status_message({"status": "ready"})[0], "success")

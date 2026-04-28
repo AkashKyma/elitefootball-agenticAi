@@ -1,1 +1,1442 @@
-[]
+[
+  {
+    "player_name": "Aldair Quintana",
+    "position": "Goalkeeper",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 0.0,
+      "passes_completed_per_90": 19.111,
+      "minutes": 810.0,
+      "discipline_risk_score": 2.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 3.067
+    },
+    "similar_players": [
+      {
+        "player_name": "yandri vasquez",
+        "distance": 0.084119,
+        "similarity_score": 91.588,
+        "position": null
+      },
+      {
+        "player_name": "Eduardo Bores",
+        "distance": 0.155898,
+        "similarity_score": 84.41,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "arón rodríguez",
+        "distance": 0.156993,
+        "similarity_score": 84.301,
+        "position": null
+      },
+      {
+        "player_name": "Youri Ochoa",
+        "distance": 0.202855,
+        "similarity_score": 79.715,
+        "position": "Defensive Midfield"
+      },
+      {
+        "player_name": "Jhon Espinoza",
+        "distance": 0.211288,
+        "similarity_score": 78.871,
+        "position": "Right-Back"
+      }
+    ]
+  },
+  {
+    "player_name": "Andy Velasco",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 7.0,
+      "passes_completed_per_90": 39.953,
+      "minutes": 1480.0,
+      "discipline_risk_score": 4.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 6.278
+    },
+    "similar_players": [
+      {
+        "player_name": "Joaquín Pombo",
+        "distance": 0.15683,
+        "similarity_score": 84.317,
+        "position": "Centre-Back"
+      },
+      {
+        "player_name": "Luis Zárate",
+        "distance": 0.19861,
+        "similarity_score": 80.139,
+        "position": null
+      },
+      {
+        "player_name": "Gustavo Cortez",
+        "distance": 0.20282,
+        "similarity_score": 79.718,
+        "position": "Left-Back"
+      },
+      {
+        "player_name": "Daykol Romero",
+        "distance": 0.248064,
+        "similarity_score": 75.194,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "jordy alcivar",
+        "distance": 0.269665,
+        "similarity_score": 73.034,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Aron Rodríguez",
+    "position": "Left Winger",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.554,
+      "shots": 53.0,
+      "passes_completed_per_90": 20.62,
+      "minutes": 1951.0,
+      "discipline_risk_score": 4.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 4.031
+    },
+    "similar_players": [
+      {
+        "player_name": "Jean Arroyo",
+        "distance": 0.21051,
+        "similarity_score": 78.949,
+        "position": null
+      },
+      {
+        "player_name": "Emerson Pata",
+        "distance": 0.247977,
+        "similarity_score": 75.202,
+        "position": "Right Winger"
+      },
+      {
+        "player_name": "Darwin Guagua",
+        "distance": 0.2651,
+        "similarity_score": 73.49,
+        "position": null
+      },
+      {
+        "player_name": "Yandri Vásquez",
+        "distance": 0.300085,
+        "similarity_score": 69.992,
+        "position": null
+      },
+      {
+        "player_name": "Justin Lerma",
+        "distance": 0.362204,
+        "similarity_score": 63.78,
+        "position": "Attacking Midfield"
+      }
+    ]
+  },
+  {
+    "player_name": "Arón Rodríguez",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 1.0,
+      "passes_completed_per_90": 24.286,
+      "minutes": 63.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 4.129
+    },
+    "similar_players": [
+      {
+        "player_name": "Eduardo Bores",
+        "distance": 0.028696,
+        "similarity_score": 97.13,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "Youri Ochoa",
+        "distance": 0.05134,
+        "similarity_score": 94.866,
+        "position": "Defensive Midfield"
+      },
+      {
+        "player_name": "Jhon Espinoza",
+        "distance": 0.06341,
+        "similarity_score": 93.659,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Aldair Quintana",
+        "distance": 0.156993,
+        "similarity_score": 84.301,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "yandri vasquez",
+        "distance": 0.211702,
+        "similarity_score": 78.83,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Carlos González",
+    "position": "Centre-Forward",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.683,
+      "shots": 30.0,
+      "passes_completed_per_90": 9.051,
+      "minutes": 527.0,
+      "discipline_risk_score": 1.0,
+      "consistency_score": 71.647,
+      "base_kpi_score": 2.833
+    },
+    "similar_players": [
+      {
+        "player_name": "Djorkaeff Reasco",
+        "distance": 0.200341,
+        "similarity_score": 79.966,
+        "position": null
+      },
+      {
+        "player_name": "Jean Arroyo",
+        "distance": 0.273599,
+        "similarity_score": 72.64,
+        "position": null
+      },
+      {
+        "player_name": "Yandri Vásquez",
+        "distance": 0.293959,
+        "similarity_score": 70.604,
+        "position": null
+      },
+      {
+        "player_name": "Aron Rodríguez",
+        "distance": 0.403732,
+        "similarity_score": 59.627,
+        "position": "Left Winger"
+      },
+      {
+        "player_name": "Darwin Guagua",
+        "distance": 0.46905,
+        "similarity_score": 53.095,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Darwin Guagua",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.271,
+      "shots": 20.0,
+      "passes_completed_per_90": 18.553,
+      "minutes": 1659.0,
+      "discipline_risk_score": 4.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 3.322
+    },
+    "similar_players": [
+      {
+        "player_name": "Aldair Quintana",
+        "distance": 0.229484,
+        "similarity_score": 77.052,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "yandri vasquez",
+        "distance": 0.249788,
+        "similarity_score": 75.021,
+        "position": null
+      },
+      {
+        "player_name": "Justin Lerma",
+        "distance": 0.258401,
+        "similarity_score": 74.16,
+        "position": "Attacking Midfield"
+      },
+      {
+        "player_name": "Aron Rodríguez",
+        "distance": 0.2651,
+        "similarity_score": 73.49,
+        "position": "Left Winger"
+      },
+      {
+        "player_name": "arón rodríguez",
+        "distance": 0.275374,
+        "similarity_score": 72.463,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Daykol Romero",
+    "position": "Right-Back",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.228,
+      "shots": 11.0,
+      "passes_completed_per_90": 44.602,
+      "minutes": 791.0,
+      "discipline_risk_score": 2.0,
+      "consistency_score": 90.0,
+      "base_kpi_score": 7.223
+    },
+    "similar_players": [
+      {
+        "player_name": "Luis Zárate",
+        "distance": 0.184519,
+        "similarity_score": 81.548,
+        "position": null
+      },
+      {
+        "player_name": "Joaquín Pombo",
+        "distance": 0.208808,
+        "similarity_score": 79.119,
+        "position": "Centre-Back"
+      },
+      {
+        "player_name": "Gustavo Cortez",
+        "distance": 0.218847,
+        "similarity_score": 78.115,
+        "position": "Left-Back"
+      },
+      {
+        "player_name": "jordy alcivar",
+        "distance": 0.242366,
+        "similarity_score": 75.763,
+        "position": null
+      },
+      {
+        "player_name": "Andy Velasco",
+        "distance": 0.248064,
+        "similarity_score": 75.194,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Djorkaeff Reasco",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.923,
+      "shots": 27.0,
+      "passes_completed_per_90": 10.0,
+      "minutes": 585.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 78.422,
+      "base_kpi_score": 2.903
+    },
+    "similar_players": [
+      {
+        "player_name": "Carlos González",
+        "distance": 0.200341,
+        "similarity_score": 79.966,
+        "position": "Centre-Forward"
+      },
+      {
+        "player_name": "Juan Angulo",
+        "distance": 0.317906,
+        "similarity_score": 68.209,
+        "position": null
+      },
+      {
+        "player_name": "Yandri Vásquez",
+        "distance": 0.326683,
+        "similarity_score": 67.332,
+        "position": null
+      },
+      {
+        "player_name": "Jean Arroyo",
+        "distance": 0.381868,
+        "similarity_score": 61.813,
+        "position": null
+      },
+      {
+        "player_name": "Aron Rodríguez",
+        "distance": 0.442903,
+        "similarity_score": 55.71,
+        "position": "Left Winger"
+      }
+    ]
+  },
+  {
+    "player_name": "Eduardo Bores",
+    "position": "Goalkeeper",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 0.0,
+      "passes_completed_per_90": 25.34,
+      "minutes": 103.0,
+      "discipline_risk_score": 1.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 4.001
+    },
+    "similar_players": [
+      {
+        "player_name": "arón rodríguez",
+        "distance": 0.028696,
+        "similarity_score": 97.13,
+        "position": null
+      },
+      {
+        "player_name": "Youri Ochoa",
+        "distance": 0.056547,
+        "similarity_score": 94.345,
+        "position": "Defensive Midfield"
+      },
+      {
+        "player_name": "Jhon Espinoza",
+        "distance": 0.061364,
+        "similarity_score": 93.864,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Aldair Quintana",
+        "distance": 0.155898,
+        "similarity_score": 84.41,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "yandri vasquez",
+        "distance": 0.218445,
+        "similarity_score": 78.156,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Emerson Pata",
+    "position": "Right Winger",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.386,
+      "shots": 71.0,
+      "passes_completed_per_90": 28.935,
+      "minutes": 2563.0,
+      "discipline_risk_score": 3.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 5.213
+    },
+    "similar_players": [
+      {
+        "player_name": "Aron Rodríguez",
+        "distance": 0.247977,
+        "similarity_score": 75.202,
+        "position": "Left Winger"
+      },
+      {
+        "player_name": "Justin Lerma",
+        "distance": 0.277072,
+        "similarity_score": 72.293,
+        "position": "Attacking Midfield"
+      },
+      {
+        "player_name": "Jean Arroyo",
+        "distance": 0.340076,
+        "similarity_score": 65.992,
+        "position": null
+      },
+      {
+        "player_name": "Darwin Guagua",
+        "distance": 0.349529,
+        "similarity_score": 65.047,
+        "position": null
+      },
+      {
+        "player_name": "Jhon Espinoza",
+        "distance": 0.406865,
+        "similarity_score": 59.314,
+        "position": "Right-Back"
+      }
+    ]
+  },
+  {
+    "player_name": "Guido Villar",
+    "position": "Goalkeeper",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 0.0,
+      "passes_completed_per_90": 14.042,
+      "minutes": 6467.0,
+      "discipline_risk_score": 4.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 2.306
+    },
+    "similar_players": [
+      {
+        "player_name": "Aldair Quintana",
+        "distance": 0.262784,
+        "similarity_score": 73.722,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "yandri vasquez",
+        "distance": 0.276012,
+        "similarity_score": 72.399,
+        "position": null
+      },
+      {
+        "player_name": "Darwin Guagua",
+        "distance": 0.327194,
+        "similarity_score": 67.281,
+        "position": null
+      },
+      {
+        "player_name": "Eduardo Bores",
+        "distance": 0.381256,
+        "similarity_score": 61.874,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "arón rodríguez",
+        "distance": 0.382854,
+        "similarity_score": 61.715,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Gustavo Cortez",
+    "position": "Left-Back",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 0.0,
+      "passes_completed_per_90": 47.711,
+      "minutes": 166.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 7.357
+    },
+    "similar_players": [
+      {
+        "player_name": "Joaquín Pombo",
+        "distance": 0.051309,
+        "similarity_score": 94.869,
+        "position": "Centre-Back"
+      },
+      {
+        "player_name": "jordy alcivar",
+        "distance": 0.08058,
+        "similarity_score": 91.942,
+        "position": null
+      },
+      {
+        "player_name": "Andy Velasco",
+        "distance": 0.20282,
+        "similarity_score": 79.718,
+        "position": null
+      },
+      {
+        "player_name": "Daykol Romero",
+        "distance": 0.218847,
+        "similarity_score": 78.115,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Mateo Carabajal",
+        "distance": 0.231312,
+        "similarity_score": 76.869,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Jean Arroyo",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.516,
+      "shots": 41.0,
+      "passes_completed_per_90": 19.498,
+      "minutes": 1394.0,
+      "discipline_risk_score": 3.0,
+      "consistency_score": 80.0,
+      "base_kpi_score": 3.846
+    },
+    "similar_players": [
+      {
+        "player_name": "Aron Rodríguez",
+        "distance": 0.21051,
+        "similarity_score": 78.949,
+        "position": "Left Winger"
+      },
+      {
+        "player_name": "Carlos González",
+        "distance": 0.273599,
+        "similarity_score": 72.64,
+        "position": "Centre-Forward"
+      },
+      {
+        "player_name": "Darwin Guagua",
+        "distance": 0.293417,
+        "similarity_score": 70.658,
+        "position": null
+      },
+      {
+        "player_name": "Yandri Vásquez",
+        "distance": 0.326872,
+        "similarity_score": 67.313,
+        "position": null
+      },
+      {
+        "player_name": "Justin Lerma",
+        "distance": 0.328745,
+        "similarity_score": 67.126,
+        "position": "Attacking Midfield"
+      }
+    ]
+  },
+  {
+    "player_name": "Jhegson Méndez",
+    "position": "Defensive Midfield",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.084,
+      "shots": 30.0,
+      "passes_completed_per_90": 19.684,
+      "minutes": 9675.0,
+      "discipline_risk_score": 26.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 3.246
+    },
+    "similar_players": [
+      {
+        "player_name": "Guido Villar",
+        "distance": 0.419396,
+        "similarity_score": 58.06,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "Darwin Guagua",
+        "distance": 0.500555,
+        "similarity_score": 49.945,
+        "position": null
+      },
+      {
+        "player_name": "Aldair Quintana",
+        "distance": 0.53921,
+        "similarity_score": 46.079,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "Justin Lerma",
+        "distance": 0.573916,
+        "similarity_score": 42.608,
+        "position": "Attacking Midfield"
+      },
+      {
+        "player_name": "Eduardo Bores",
+        "distance": 0.584196,
+        "similarity_score": 41.58,
+        "position": "Goalkeeper"
+      }
+    ]
+  },
+  {
+    "player_name": "Jhon Espinoza",
+    "position": "Right-Back",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 4.0,
+      "passes_completed_per_90": 26.883,
+      "minutes": 308.0,
+      "discipline_risk_score": 1.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 4.466
+    },
+    "similar_players": [
+      {
+        "player_name": "Youri Ochoa",
+        "distance": 0.020264,
+        "similarity_score": 97.974,
+        "position": "Defensive Midfield"
+      },
+      {
+        "player_name": "Eduardo Bores",
+        "distance": 0.061364,
+        "similarity_score": 93.864,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "arón rodríguez",
+        "distance": 0.06341,
+        "similarity_score": 93.659,
+        "position": null
+      },
+      {
+        "player_name": "Justin Lerma",
+        "distance": 0.200245,
+        "similarity_score": 79.975,
+        "position": "Attacking Midfield"
+      },
+      {
+        "player_name": "Aldair Quintana",
+        "distance": 0.211288,
+        "similarity_score": 78.871,
+        "position": "Goalkeeper"
+      }
+    ]
+  },
+  {
+    "player_name": "Joaquín Pombo",
+    "position": "Centre-Back",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 1.0,
+      "passes_completed_per_90": 46.19,
+      "minutes": 643.0,
+      "discipline_risk_score": 2.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 7.156
+    },
+    "similar_players": [
+      {
+        "player_name": "Gustavo Cortez",
+        "distance": 0.051309,
+        "similarity_score": 94.869,
+        "position": "Left-Back"
+      },
+      {
+        "player_name": "jordy alcivar",
+        "distance": 0.118016,
+        "similarity_score": 88.198,
+        "position": null
+      },
+      {
+        "player_name": "Andy Velasco",
+        "distance": 0.15683,
+        "similarity_score": 84.317,
+        "position": null
+      },
+      {
+        "player_name": "Daykol Romero",
+        "distance": 0.208808,
+        "similarity_score": 79.119,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Luis Zárate",
+        "distance": 0.2101,
+        "similarity_score": 78.99,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Jordy Alcivar",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 3.0,
+      "passes_completed_per_90": 49.16,
+      "minutes": 119.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 8.028
+    },
+    "similar_players": [
+      {
+        "player_name": "Gustavo Cortez",
+        "distance": 0.08058,
+        "similarity_score": 91.942,
+        "position": "Left-Back"
+      },
+      {
+        "player_name": "Joaquín Pombo",
+        "distance": 0.118016,
+        "similarity_score": 88.198,
+        "position": "Centre-Back"
+      },
+      {
+        "player_name": "Mateo Carabajal",
+        "distance": 0.161259,
+        "similarity_score": 83.874,
+        "position": null
+      },
+      {
+        "player_name": "Daykol Romero",
+        "distance": 0.242366,
+        "similarity_score": 75.763,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Andy Velasco",
+        "distance": 0.269665,
+        "similarity_score": 73.034,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Jordy Alcívar",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.199,
+      "shots": 113.0,
+      "passes_completed_per_90": 46.555,
+      "minutes": 6339.0,
+      "discipline_risk_score": 11.0,
+      "consistency_score": 87.67,
+      "base_kpi_score": 7.569
+    },
+    "similar_players": [
+      {
+        "player_name": "Luis Zárate",
+        "distance": 0.365381,
+        "similarity_score": 63.462,
+        "position": null
+      },
+      {
+        "player_name": "Daykol Romero",
+        "distance": 0.456582,
+        "similarity_score": 54.342,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Juan Cazares",
+        "distance": 0.473255,
+        "similarity_score": 52.675,
+        "position": null
+      },
+      {
+        "player_name": "Emerson Pata",
+        "distance": 0.516059,
+        "similarity_score": 48.394,
+        "position": "Right Winger"
+      },
+      {
+        "player_name": "Andy Velasco",
+        "distance": 0.519128,
+        "similarity_score": 48.087,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Juan Angulo",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 1.286,
+      "shots": 7.0,
+      "passes_completed_per_90": 12.857,
+      "minutes": 140.0,
+      "discipline_risk_score": 2.0,
+      "consistency_score": 70.0,
+      "base_kpi_score": 3.547
+    },
+    "similar_players": [
+      {
+        "player_name": "Djorkaeff Reasco",
+        "distance": 0.317906,
+        "similarity_score": 68.209,
+        "position": null
+      },
+      {
+        "player_name": "Carlos González",
+        "distance": 0.488302,
+        "similarity_score": 51.17,
+        "position": "Centre-Forward"
+      },
+      {
+        "player_name": "Yandri Vásquez",
+        "distance": 0.616317,
+        "similarity_score": 38.368,
+        "position": null
+      },
+      {
+        "player_name": "Jean Arroyo",
+        "distance": 0.633363,
+        "similarity_score": 36.664,
+        "position": null
+      },
+      {
+        "player_name": "Aron Rodríguez",
+        "distance": 0.685154,
+        "similarity_score": 31.485,
+        "position": "Left Winger"
+      }
+    ]
+  },
+  {
+    "player_name": "Juan Cazares",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.47,
+      "shots": 27.0,
+      "passes_completed_per_90": 45.399,
+      "minutes": 1915.0,
+      "discipline_risk_score": 2.0,
+      "consistency_score": 70.0,
+      "base_kpi_score": 7.415
+    },
+    "similar_players": [
+      {
+        "player_name": "junior sornoza",
+        "distance": 0.195848,
+        "similarity_score": 80.415,
+        "position": null
+      },
+      {
+        "player_name": "Patrik Mercado",
+        "distance": 0.236676,
+        "similarity_score": 76.332,
+        "position": "Attacking Midfield"
+      },
+      {
+        "player_name": "Daykol Romero",
+        "distance": 0.285387,
+        "similarity_score": 71.461,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Luis Zárate",
+        "distance": 0.401015,
+        "similarity_score": 59.898,
+        "position": null
+      },
+      {
+        "player_name": "Jordy Alcívar",
+        "distance": 0.473255,
+        "similarity_score": 52.675,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Junior Sornoza",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.573,
+      "shots": 4.0,
+      "passes_completed_per_90": 45.86,
+      "minutes": 157.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 83.213,
+      "base_kpi_score": 7.762
+    },
+    "similar_players": [
+      {
+        "player_name": "Patrik Mercado",
+        "distance": 0.053045,
+        "similarity_score": 94.695,
+        "position": "Attacking Midfield"
+      },
+      {
+        "player_name": "Juan Cazares",
+        "distance": 0.195848,
+        "similarity_score": 80.415,
+        "position": null
+      },
+      {
+        "player_name": "Daykol Romero",
+        "distance": 0.288201,
+        "similarity_score": 71.18,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Luis Zárate",
+        "distance": 0.421239,
+        "similarity_score": 57.876,
+        "position": null
+      },
+      {
+        "player_name": "Gustavo Cortez",
+        "distance": 0.479659,
+        "similarity_score": 52.034,
+        "position": "Left-Back"
+      }
+    ]
+  },
+  {
+    "player_name": "Justin Lerma",
+    "position": "Attacking Midfield",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.179,
+      "shots": 23.0,
+      "passes_completed_per_90": 27.329,
+      "minutes": 1505.0,
+      "discipline_risk_score": 1.0,
+      "consistency_score": 88.46,
+      "base_kpi_score": 4.632
+    },
+    "similar_players": [
+      {
+        "player_name": "Jhon Espinoza",
+        "distance": 0.200245,
+        "similarity_score": 79.975,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Youri Ochoa",
+        "distance": 0.200874,
+        "similarity_score": 79.913,
+        "position": "Defensive Midfield"
+      },
+      {
+        "player_name": "arón rodríguez",
+        "distance": 0.220669,
+        "similarity_score": 77.933,
+        "position": null
+      },
+      {
+        "player_name": "Eduardo Bores",
+        "distance": 0.221393,
+        "similarity_score": 77.861,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "Darwin Guagua",
+        "distance": 0.258401,
+        "similarity_score": 74.16,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Júnior Sornoza",
+    "position": "Attacking Midfield",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.686,
+      "shots": 279.0,
+      "passes_completed_per_90": 17.197,
+      "minutes": 23467.0,
+      "discipline_risk_score": 63.0,
+      "consistency_score": 90.0,
+      "base_kpi_score": 3.282
+    },
+    "similar_players": [
+      {
+        "player_name": "Richard Schunke",
+        "distance": 1.057938,
+        "similarity_score": 0.0,
+        "position": null
+      },
+      {
+        "player_name": "Jhegson Méndez",
+        "distance": 1.298248,
+        "similarity_score": 0.0,
+        "position": "Defensive Midfield"
+      },
+      {
+        "player_name": "Jordy Alcívar",
+        "distance": 1.471454,
+        "similarity_score": 0.0,
+        "position": null
+      },
+      {
+        "player_name": "Aron Rodríguez",
+        "distance": 1.525159,
+        "similarity_score": 0.0,
+        "position": "Left Winger"
+      },
+      {
+        "player_name": "Emerson Pata",
+        "distance": 1.5286,
+        "similarity_score": 0.0,
+        "position": "Right Winger"
+      }
+    ]
+  },
+  {
+    "player_name": "Layan Loor",
+    "position": "Left-Back",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 0.0,
+      "passes_completed_per_90": 0.0,
+      "minutes": 0.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 0.0,
+      "base_kpi_score": 0.0
+    },
+    "similar_players": [
+      {
+        "player_name": "luis felipe zárate",
+        "distance": 0.0,
+        "similarity_score": 100.0,
+        "position": null
+      },
+      {
+        "player_name": "Carlos González",
+        "distance": 0.967073,
+        "similarity_score": 3.293,
+        "position": "Centre-Forward"
+      },
+      {
+        "player_name": "Jean Arroyo",
+        "distance": 1.065337,
+        "similarity_score": 0.0,
+        "position": null
+      },
+      {
+        "player_name": "yandri vasquez",
+        "distance": 1.086205,
+        "similarity_score": 0.0,
+        "position": null
+      },
+      {
+        "player_name": "Guido Villar",
+        "distance": 1.096409,
+        "similarity_score": 0.0,
+        "position": "Goalkeeper"
+      }
+    ]
+  },
+  {
+    "player_name": "Luis Felipe Zárate",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 0.0,
+      "passes_completed_per_90": 0.0,
+      "minutes": 0.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 0.0,
+      "base_kpi_score": 0.0
+    },
+    "similar_players": [
+      {
+        "player_name": "Layan Loor",
+        "distance": 0.0,
+        "similarity_score": 100.0,
+        "position": "Left-Back"
+      },
+      {
+        "player_name": "Carlos González",
+        "distance": 0.967073,
+        "similarity_score": 3.293,
+        "position": "Centre-Forward"
+      },
+      {
+        "player_name": "Jean Arroyo",
+        "distance": 1.065337,
+        "similarity_score": 0.0,
+        "position": null
+      },
+      {
+        "player_name": "yandri vasquez",
+        "distance": 1.086205,
+        "similarity_score": 0.0,
+        "position": null
+      },
+      {
+        "player_name": "Guido Villar",
+        "distance": 1.096409,
+        "similarity_score": 0.0,
+        "position": "Goalkeeper"
+      }
+    ]
+  },
+  {
+    "player_name": "Luis Zárate",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.156,
+      "shots": 29.0,
+      "passes_completed_per_90": 43.781,
+      "minutes": 3470.0,
+      "discipline_risk_score": 6.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 6.988
+    },
+    "similar_players": [
+      {
+        "player_name": "Daykol Romero",
+        "distance": 0.184519,
+        "similarity_score": 81.548,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Andy Velasco",
+        "distance": 0.19861,
+        "similarity_score": 80.139,
+        "position": null
+      },
+      {
+        "player_name": "Joaquín Pombo",
+        "distance": 0.2101,
+        "similarity_score": 78.99,
+        "position": "Centre-Back"
+      },
+      {
+        "player_name": "Gustavo Cortez",
+        "distance": 0.243136,
+        "similarity_score": 75.686,
+        "position": "Left-Back"
+      },
+      {
+        "player_name": "jordy alcivar",
+        "distance": 0.271548,
+        "similarity_score": 72.845,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Mateo Carabajal",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 2.0,
+      "passes_completed_per_90": 56.5,
+      "minutes": 180.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 8.875
+    },
+    "similar_players": [
+      {
+        "player_name": "jordy alcivar",
+        "distance": 0.161259,
+        "similarity_score": 83.874,
+        "position": null
+      },
+      {
+        "player_name": "Gustavo Cortez",
+        "distance": 0.231312,
+        "similarity_score": 76.869,
+        "position": "Left-Back"
+      },
+      {
+        "player_name": "Joaquín Pombo",
+        "distance": 0.268677,
+        "similarity_score": 73.132,
+        "position": "Centre-Back"
+      },
+      {
+        "player_name": "Daykol Romero",
+        "distance": 0.350842,
+        "similarity_score": 64.916,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Luis Zárate",
+        "distance": 0.383199,
+        "similarity_score": 61.68,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Patrik Mercado",
+    "position": "Attacking Midfield",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.625,
+      "shots": 3.0,
+      "passes_completed_per_90": 45.625,
+      "minutes": 144.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 86.45,
+      "base_kpi_score": 7.673
+    },
+    "similar_players": [
+      {
+        "player_name": "junior sornoza",
+        "distance": 0.053045,
+        "similarity_score": 94.695,
+        "position": null
+      },
+      {
+        "player_name": "Juan Cazares",
+        "distance": 0.236676,
+        "similarity_score": 76.332,
+        "position": null
+      },
+      {
+        "player_name": "Daykol Romero",
+        "distance": 0.319341,
+        "similarity_score": 68.066,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "Luis Zárate",
+        "distance": 0.44084,
+        "similarity_score": 55.916,
+        "position": null
+      },
+      {
+        "player_name": "Gustavo Cortez",
+        "distance": 0.507254,
+        "similarity_score": 49.275,
+        "position": "Left-Back"
+      }
+    ]
+  },
+  {
+    "player_name": "Richard Schunke",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.091,
+      "shots": 148.0,
+      "passes_completed_per_90": 49.704,
+      "minutes": 24655.0,
+      "discipline_risk_score": 45.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 7.805
+    },
+    "similar_players": [
+      {
+        "player_name": "Jordy Alcívar",
+        "distance": 0.940719,
+        "similarity_score": 5.928,
+        "position": null
+      },
+      {
+        "player_name": "Júnior Sornoza",
+        "distance": 1.057938,
+        "similarity_score": 0.0,
+        "position": "Attacking Midfield"
+      },
+      {
+        "player_name": "Jhegson Méndez",
+        "distance": 1.088673,
+        "similarity_score": 0.0,
+        "position": "Defensive Midfield"
+      },
+      {
+        "player_name": "Luis Zárate",
+        "distance": 1.151297,
+        "similarity_score": 0.0,
+        "position": null
+      },
+      {
+        "player_name": "Emerson Pata",
+        "distance": 1.263548,
+        "similarity_score": 0.0,
+        "position": "Right Winger"
+      }
+    ]
+  },
+  {
+    "player_name": "Yandri Vasquez",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 2.0,
+      "passes_completed_per_90": 15.181,
+      "minutes": 83.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 2.911
+    },
+    "similar_players": [
+      {
+        "player_name": "Aldair Quintana",
+        "distance": 0.084119,
+        "similarity_score": 91.588,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "arón rodríguez",
+        "distance": 0.211702,
+        "similarity_score": 78.83,
+        "position": null
+      },
+      {
+        "player_name": "Eduardo Bores",
+        "distance": 0.218445,
+        "similarity_score": 78.156,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "Darwin Guagua",
+        "distance": 0.249788,
+        "similarity_score": 75.021,
+        "position": null
+      },
+      {
+        "player_name": "Youri Ochoa",
+        "distance": 0.260237,
+        "similarity_score": 73.976,
+        "position": "Defensive Midfield"
+      }
+    ]
+  },
+  {
+    "player_name": "Yandri Vásquez",
+    "position": null,
+    "comparison_features": {
+      "goal_contribution_per_90": 0.614,
+      "shots": 17.0,
+      "passes_completed_per_90": 9.614,
+      "minutes": 440.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 2.614
+    },
+    "similar_players": [
+      {
+        "player_name": "Carlos González",
+        "distance": 0.293959,
+        "similarity_score": 70.604,
+        "position": "Centre-Forward"
+      },
+      {
+        "player_name": "Aron Rodríguez",
+        "distance": 0.300085,
+        "similarity_score": 69.992,
+        "position": "Left Winger"
+      },
+      {
+        "player_name": "Djorkaeff Reasco",
+        "distance": 0.326683,
+        "similarity_score": 67.332,
+        "position": null
+      },
+      {
+        "player_name": "Jean Arroyo",
+        "distance": 0.326872,
+        "similarity_score": 67.313,
+        "position": null
+      },
+      {
+        "player_name": "Darwin Guagua",
+        "distance": 0.330341,
+        "similarity_score": 66.966,
+        "position": null
+      }
+    ]
+  },
+  {
+    "player_name": "Youri Ochoa",
+    "position": "Defensive Midfield",
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 5.0,
+      "passes_completed_per_90": 26.25,
+      "minutes": 312.0,
+      "discipline_risk_score": 0.0,
+      "consistency_score": 100.0,
+      "base_kpi_score": 4.426
+    },
+    "similar_players": [
+      {
+        "player_name": "Jhon Espinoza",
+        "distance": 0.020264,
+        "similarity_score": 97.974,
+        "position": "Right-Back"
+      },
+      {
+        "player_name": "arón rodríguez",
+        "distance": 0.05134,
+        "similarity_score": 94.866,
+        "position": null
+      },
+      {
+        "player_name": "Eduardo Bores",
+        "distance": 0.056547,
+        "similarity_score": 94.345,
+        "position": "Goalkeeper"
+      },
+      {
+        "player_name": "Justin Lerma",
+        "distance": 0.200874,
+        "similarity_score": 79.913,
+        "position": "Attacking Midfield"
+      },
+      {
+        "player_name": "Aldair Quintana",
+        "distance": 0.202855,
+        "similarity_score": 79.715,
+        "position": "Goalkeeper"
+      }
+    ]
+  }
+]
