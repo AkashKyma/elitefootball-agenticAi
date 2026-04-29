@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/michael-espinoza/profil/spieler/1000",
+    "player_name": "Michael Espinoza",
+    "preferred_name": "Espinoza",
+    "position": "Midfielder",
+    "date_of_birth": "2003-12-01",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "\u20ac1.1m"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/michael-espinoza/transfers/spieler/1000",
+      "season": "2025/2026",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Independiente del Valle",
+      "market_value": "\u20ac1.1m",
+      "fee": "-"
+    }
+  ]
+}

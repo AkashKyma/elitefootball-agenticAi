@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/luis-segovia/profil/spieler/1000",
+    "player_name": "Luis Segovia",
+    "preferred_name": "Segovia",
+    "position": "Midfielder",
+    "date_of_birth": "2001-03-15",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "\u20ac2.5m"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/luis-segovia/transfers/spieler/1000",
+      "season": "2021/2022",
+      "date": "2025-01-01",
+      "from_club": "Liga Deportiva Universitaria",
+      "to_club": "Independiente del Valle",
+      "market_value": "\u20ac2.5m",
+      "fee": "\u20ac300k"
+    }
+  ]
+}

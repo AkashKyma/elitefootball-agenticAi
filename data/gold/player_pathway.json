@@ -1,0 +1,577 @@
+[
+  {
+    "player_name": "Michael Espinoza",
+    "position": "Midfielder",
+    "current_club": "Independiente del Valle",
+    "development_stage": "emerging",
+    "trajectory": "ascending",
+    "age_league_percentile": 6.2,
+    "improvement_rate": 1.214,
+    "development_velocity": 1.7,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 2.7,
+      "series": [
+        67.0,
+        90.0,
+        90.0,
+        75.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.361,
+    "inputs": {
+      "age": 22,
+      "kpi_score": 8.166,
+      "valuation_score": 56.67
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Dylan Borrero",
+    "position": "Forward",
+    "current_club": "Independiente del Valle",
+    "development_stage": "peak",
+    "trajectory": "stable",
+    "age_league_percentile": 5.5,
+    "improvement_rate": -0.151,
+    "development_velocity": -0.189,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        90.0,
+        79.0,
+        90.0,
+        88.0,
+        90.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.351,
+    "inputs": {
+      "age": 25,
+      "kpi_score": 7.611,
+      "valuation_score": 69.37
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Luis Segovia",
+    "position": "Midfielder",
+    "current_club": "Independiente del Valle",
+    "development_stage": "peak",
+    "trajectory": "stable",
+    "age_league_percentile": 6.7,
+    "improvement_rate": 0.333,
+    "development_velocity": 0.416,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": -0.7,
+      "series": [
+        90.0,
+        87.0,
+        90.0,
+        72.0,
+        90.0,
+        90.0,
+        90.0,
+        85.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.349,
+    "inputs": {
+      "age": 25,
+      "kpi_score": 9.185,
+      "valuation_score": 68.22
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Óscar Zambrano",
+    "position": "Midfielder",
+    "current_club": "Independiente del Valle",
+    "development_stage": "peak",
+    "trajectory": "stable",
+    "age_league_percentile": 7.4,
+    "improvement_rate": 0.005,
+    "development_velocity": 0.006,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.335,
+    "inputs": {
+      "age": 25,
+      "kpi_score": 10.123,
+      "valuation_score": 64.94
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Kendry Páez",
+    "position": "Midfielder",
+    "current_club": "Independiente del Valle",
+    "development_stage": "prospect",
+    "trajectory": "stable",
+    "age_league_percentile": 10.6,
+    "improvement_rate": -0.282,
+    "development_velocity": -0.423,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.333,
+    "inputs": {
+      "age": 18,
+      "kpi_score": 12.895,
+      "valuation_score": 60.29
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Sebastián Rodríguez",
+    "position": "Midfielder",
+    "current_club": "Independiente del Valle",
+    "development_stage": "peak",
+    "trajectory": "ascending",
+    "age_league_percentile": 8.5,
+    "improvement_rate": 0.913,
+    "development_velocity": 1.004,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        90.0,
+        90.0,
+        83.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.331,
+    "inputs": {
+      "age": 28,
+      "kpi_score": 10.745,
+      "valuation_score": 60.46
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Alan Minda",
+    "position": "Forward",
+    "current_club": "Independiente del Valle",
+    "development_stage": "peak",
+    "trajectory": "stable",
+    "age_league_percentile": 4.6,
+    "improvement_rate": 0.027,
+    "development_velocity": 0.034,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": -5.5,
+      "series": [
+        82.0,
+        90.0,
+        74.0,
+        90.0,
+        60.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.318,
+    "inputs": {
+      "age": 25,
+      "kpi_score": 6.29,
+      "valuation_score": 63.29
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Gabriel Villamil",
+    "position": "Defender",
+    "current_club": "Independiente del Valle",
+    "development_stage": "peak",
+    "trajectory": "stable",
+    "age_league_percentile": 6.1,
+    "improvement_rate": -0.117,
+    "development_velocity": -0.152,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        90.0,
+        90.0,
+        85.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.307,
+    "inputs": {
+      "age": 24,
+      "kpi_score": 8.249,
+      "valuation_score": 57.78
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Alexis Zapata",
+    "position": "Defender",
+    "current_club": "Independiente del Valle",
+    "development_stage": "peak",
+    "trajectory": "stable",
+    "age_league_percentile": 6.4,
+    "improvement_rate": -0.04,
+    "development_velocity": -0.048,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        90.0,
+        90.0,
+        90.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.296,
+    "inputs": {
+      "age": 26,
+      "kpi_score": 8.966,
+      "valuation_score": 60.42
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Piero Hincapié",
+    "position": "Defender",
+    "current_club": "Bayer Leverkusen",
+    "development_stage": "peak",
+    "trajectory": "stable",
+    "age_league_percentile": 8.1,
+    "improvement_rate": 0.04,
+    "development_velocity": 0.052,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        90.0,
+        90.0,
+        90.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.275,
+    "inputs": {
+      "age": 24,
+      "kpi_score": 10.963,
+      "valuation_score": 50.89
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Jordy Caicedo",
+    "position": "Forward",
+    "current_club": "Independiente del Valle",
+    "development_stage": "veteran",
+    "trajectory": "ascending",
+    "age_league_percentile": 5.1,
+    "improvement_rate": 0.792,
+    "development_velocity": 0.752,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 6.0,
+      "series": [
+        72.0,
+        90.0,
+        81.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.247,
+    "inputs": {
+      "age": 31,
+      "kpi_score": 5.355,
+      "valuation_score": 54.37
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Carlos Gutiérrez",
+    "position": "Defender",
+    "current_club": "Independiente del Valle",
+    "development_stage": "peak",
+    "trajectory": "stable",
+    "age_league_percentile": 6.7,
+    "improvement_rate": 0.0,
+    "development_velocity": 0.0,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        90.0,
+        90.0,
+        90.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.238,
+    "inputs": {
+      "age": 28,
+      "kpi_score": 8.416,
+      "valuation_score": 53.0
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Moisés Caicedo",
+    "position": "Midfielder",
+    "current_club": "Chelsea",
+    "development_stage": "peak",
+    "trajectory": "declining",
+    "age_league_percentile": 10.5,
+    "improvement_rate": -0.662,
+    "development_velocity": -0.861,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": -1.2,
+      "series": [
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        85.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.219,
+    "inputs": {
+      "age": 24,
+      "kpi_score": 14.154,
+      "valuation_score": 56.75
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Willian Pacho",
+    "position": "Defender",
+    "current_club": "Independiente del Valle",
+    "development_stage": "peak",
+    "trajectory": "declining",
+    "age_league_percentile": 7.3,
+    "improvement_rate": -0.703,
+    "development_velocity": -0.914,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.213,
+    "inputs": {
+      "age": 24,
+      "kpi_score": 9.925,
+      "valuation_score": 56.84
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Tomás Molina",
+    "position": "Forward",
+    "current_club": "Independiente del Valle",
+    "development_stage": "emerging",
+    "trajectory": "declining",
+    "age_league_percentile": 4.3,
+    "improvement_rate": -0.839,
+    "development_velocity": -1.175,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 8.3,
+      "series": [
+        55.0,
+        68.0,
+        72.0,
+        80.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.212,
+    "inputs": {
+      "age": 22,
+      "kpi_score": 5.574,
+      "valuation_score": 58.1
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Pedro Velasco",
+    "position": "Goalkeeper",
+    "current_club": "Independiente del Valle",
+    "development_stage": "veteran",
+    "trajectory": "stable",
+    "age_league_percentile": 4.7,
+    "improvement_rate": 0.0,
+    "development_velocity": 0.0,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "domestic league improvement"
+    ],
+    "success_probability": 0.179,
+    "inputs": {
+      "age": 29,
+      "kpi_score": 5.65,
+      "valuation_score": 42.7
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Renato Ibarra",
+    "position": "Forward",
+    "current_club": "Independiente del Valle",
+    "development_stage": "veteran",
+    "trajectory": "stable",
+    "age_league_percentile": 8.7,
+    "improvement_rate": 0.32,
+    "development_velocity": 0.256,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 2.4,
+      "series": [
+        78.0,
+        61.0,
+        90.0,
+        90.0,
+        68.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.168,
+    "inputs": {
+      "age": 34,
+      "kpi_score": 7.316,
+      "valuation_score": 51.49
+    },
+    "model_version": "pathway_v1"
+  },
+  {
+    "player_name": "Cristian Pellerano",
+    "position": "Midfielder",
+    "current_club": "Independiente del Valle",
+    "development_stage": "veteran",
+    "trajectory": "declining",
+    "age_league_percentile": 20.8,
+    "improvement_rate": -0.953,
+    "development_velocity": -0.572,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        90.0,
+        90.0,
+        90.0,
+        90.0
+      ]
+    },
+    "best_pathway": [
+      "domestic league improvement"
+    ],
+    "success_probability": 0.084,
+    "inputs": {
+      "age": 38,
+      "kpi_score": 11.65,
+      "valuation_score": 39.9
+    },
+    "model_version": "pathway_v1"
+  }
+]

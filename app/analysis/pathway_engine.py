@@ -97,12 +97,20 @@ def minutes_growth_curve(minutes_history: list[float]) -> dict[str, Any]:
 
 
 def career_trajectory(kpi_history: list[float], age: float | None) -> str:
+    n = len(kpi_history)
+    if n < 2:
+        # Single data point — infer from age: young players assumed ascending
+        if age and age <= 22:
+            return "ascending"
+        if age and age >= 32:
+            return "declining"
+        return "stable"
     rate = improvement_rate(kpi_history)
     if age and age > 30 and rate <= 0:
         return "declining"
-    if rate > 2:
+    if rate > 0.5:
         return "ascending"
-    if rate > 0:
+    if rate >= -0.3:
         return "stable"
     return "declining"
 
@@ -196,9 +204,32 @@ def build_pathway_output(
         club_name = pr.get("current_club") or fr.get("current_club")
         position = pr.get("position")
 
-        # Build mini KPI history from match stats (group by month bucket)
-        minutes_series = [float(s.get("minutes") or 0) for s in stats]
-        kpi_history = [kpi_score]  # Single point if no historical series
+        # Build multi-point KPI history from match stats sorted by date
+        sorted_stats = sorted(stats, key=lambda s: s.get("match_date") or "")
+        minutes_series = [float(s.get("minutes") or 0) for s in sorted_stats]
+
+        # Rolling contribution score per match as a proxy KPI history
+        def _match_contribution(s: dict) -> float:
+            mins = float(s.get("minutes") or 1)
+            gc = float(s.get("goals") or 0) + float(s.get("assists") or 0)
+            shots = float(s.get("shots") or 0)
+            xg = float(s.get("xg") or 0)
+            xa = float(s.get("xa") or 0)
+            return round((gc * 2.5 + shots * 0.2 + xg * 1.5 + xa * 1.2) / max(mins / 90, 0.1), 3)
+
+        match_contributions = [_match_contribution(s) for s in sorted_stats]
+        kpi_history: list[float]
+        if len(match_contributions) >= 3:
+            # Use rolling 3-match windows as history points
+            window = 3
+            kpi_history = [
+                sum(match_contributions[i:i+window]) / window
+                for i in range(0, len(match_contributions) - window + 1)
+            ]
+        elif len(match_contributions) >= 1:
+            kpi_history = match_contributions
+        else:
+            kpi_history = [kpi_score]
 
         traj = career_trajectory(kpi_history, age)
         percentile = age_league_percentile(age, kpi_score, None)

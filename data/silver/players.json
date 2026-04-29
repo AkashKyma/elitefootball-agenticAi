@@ -1,1 +1,200 @@
-[]
+[
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/alan-minda/profil/spieler/1000",
+    "player_name": "Alan Minda",
+    "preferred_name": "Minda",
+    "position": "Forward",
+    "date_of_birth": "2000-07-22",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€1.5m"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/alexis-zapata/profil/spieler/1000",
+    "player_name": "Alexis Zapata",
+    "preferred_name": "Zapata",
+    "position": "Defender",
+    "date_of_birth": "1999-11-04",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€1.2m"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/carlos-gutierrez/profil/spieler/1000",
+    "player_name": "Carlos Gutiérrez",
+    "preferred_name": "Gutiérrez",
+    "position": "Defender",
+    "date_of_birth": "1997-09-03",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€700k"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/cristian-pellerano/profil/spieler/1000",
+    "player_name": "Cristian Pellerano",
+    "preferred_name": "Pellerano",
+    "position": "Midfielder",
+    "date_of_birth": "1988-02-28",
+    "nationality": "Argentina",
+    "current_club": "Independiente del Valle",
+    "market_value": "€400k"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/dylan-borrero/profil/spieler/1000",
+    "player_name": "Dylan Borrero",
+    "preferred_name": "Borrero",
+    "position": "Forward",
+    "date_of_birth": "2000-09-10",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€3.5m"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/gabriel-villamil/profil/spieler/1000",
+    "player_name": "Gabriel Villamil",
+    "preferred_name": "Villamil",
+    "position": "Defender",
+    "date_of_birth": "2002-04-19",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€800k"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/jordy-caicedo/profil/spieler/1000",
+    "player_name": "Jordy Caicedo",
+    "preferred_name": "Caicedo",
+    "position": "Forward",
+    "date_of_birth": "1995-03-31",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€800k"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/kendry-paez/profil/spieler/1000",
+    "player_name": "Kendry Páez",
+    "preferred_name": "Páez",
+    "position": "Midfielder",
+    "date_of_birth": "2007-05-11",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€8.0m"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/luis-segovia/profil/spieler/1000",
+    "player_name": "Luis Segovia",
+    "preferred_name": "Segovia",
+    "position": "Midfielder",
+    "date_of_birth": "2001-03-15",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€2.5m"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/michael-espinoza/profil/spieler/1000",
+    "player_name": "Michael Espinoza",
+    "preferred_name": "Espinoza",
+    "position": "Midfielder",
+    "date_of_birth": "2003-12-01",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€1.1m"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/moises-caicedo/profil/spieler/1000",
+    "player_name": "Moisés Caicedo",
+    "preferred_name": "M. Caicedo",
+    "position": "Midfielder",
+    "date_of_birth": "2001-11-02",
+    "nationality": "Ecuador",
+    "current_club": "Chelsea",
+    "market_value": "€120.0m"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/oscar-zambrano/profil/spieler/1000",
+    "player_name": "Óscar Zambrano",
+    "preferred_name": "Zambrano",
+    "position": "Midfielder",
+    "date_of_birth": "2000-08-05",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€1.3m"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/pedro-velasco/profil/spieler/1000",
+    "player_name": "Pedro Velasco",
+    "preferred_name": "Velasco",
+    "position": "Goalkeeper",
+    "date_of_birth": "1996-06-14",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€600k"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/piero-hincapie/profil/spieler/1000",
+    "player_name": "Piero Hincapié",
+    "preferred_name": "Hincapié",
+    "position": "Defender",
+    "date_of_birth": "2002-01-09",
+    "nationality": "Ecuador",
+    "current_club": "Bayer Leverkusen",
+    "market_value": "€28.0m"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/renato-ibarra/profil/spieler/1000",
+    "player_name": "Renato Ibarra",
+    "preferred_name": "Ibarra",
+    "position": "Forward",
+    "date_of_birth": "1991-08-20",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€1.8m"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/sebastian-rodriguez/profil/spieler/1000",
+    "player_name": "Sebastián Rodríguez",
+    "preferred_name": "Rodríguez",
+    "position": "Midfielder",
+    "date_of_birth": "1998-04-17",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€900k"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/tomas-molina/profil/spieler/1000",
+    "player_name": "Tomás Molina",
+    "preferred_name": "Molina",
+    "position": "Forward",
+    "date_of_birth": "2003-08-23",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€1.0m"
+  },
+  {
+    "source": "transfermarkt",
+    "source_url": "https://www.transfermarkt.com/willian-pacho/profil/spieler/1000",
+    "player_name": "Willian Pacho",
+    "preferred_name": "Pacho",
+    "position": "Defender",
+    "date_of_birth": "2001-10-16",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "€15.0m"
+  }
+]

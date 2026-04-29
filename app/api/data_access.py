@@ -29,7 +29,7 @@ ARTIFACT_PATHS = {
     "valuation": DATA_ROOT / "gold" / "player_valuation.json",
     "pathway": DATA_ROOT / "gold" / "player_pathway.json",
     "advanced_metrics": DATA_ROOT / "gold" / "advanced_metrics.json",
-    "club_benchmark": DATA_ROOT / "gold" / "club_development_rankings.json",
+    "club_benchmark": DATA_ROOT / "gold" / "club_benchmark.json",
     "risk": DATA_ROOT / "gold" / "player_risk.json",
 }
 REQUIRED_DASHBOARD_ARTIFACTS = {"players", "player_match_stats", "similarity", "valuation"}

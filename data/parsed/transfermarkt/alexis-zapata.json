@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/alexis-zapata/profil/spieler/1000",
+    "player_name": "Alexis Zapata",
+    "preferred_name": "Zapata",
+    "position": "Defender",
+    "date_of_birth": "1999-11-04",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "\u20ac1.2m"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/alexis-zapata/transfers/spieler/1000",
+      "season": "2025/2026",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Independiente del Valle",
+      "market_value": "\u20ac1.2m",
+      "fee": "-"
+    }
+  ]
+}

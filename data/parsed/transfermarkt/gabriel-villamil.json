@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/gabriel-villamil/profil/spieler/1000",
+    "player_name": "Gabriel Villamil",
+    "preferred_name": "Villamil",
+    "position": "Defender",
+    "date_of_birth": "2002-04-19",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "\u20ac800k"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/gabriel-villamil/transfers/spieler/1000",
+      "season": "2025/2026",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Independiente del Valle",
+      "market_value": "\u20ac800k",
+      "fee": "-"
+    }
+  ]
+}

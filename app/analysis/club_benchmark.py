@@ -141,7 +141,7 @@ def build_club_benchmark_output(
             "model_version": MODEL_VERSION,
         })
 
-    path = write_json(Path(settings.gold_data_dir) / "club_development_rankings.json", output_rows)
+    path = write_json(Path(settings.gold_data_dir) / "club_benchmark.json", output_rows)
     return {"path": path, "rows": output_rows}
 
 

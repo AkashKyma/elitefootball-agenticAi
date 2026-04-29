@@ -1,0 +1,32 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/moises-caicedo/profil/spieler/1000",
+    "player_name": "Mois\u00e9s Caicedo",
+    "preferred_name": "M. Caicedo",
+    "position": "Midfielder",
+    "date_of_birth": "2001-11-02",
+    "nationality": "Ecuador",
+    "current_club": "Chelsea",
+    "market_value": "\u20ac120.0m"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/moises-caicedo/transfers/spieler/1000",
+      "season": "2020/2021",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Brighton & Hove Albion",
+      "market_value": "\u20ac120.0m",
+      "fee": "\u20ac5m"
+    },
+    {
+      "source_url": "https://www.transfermarkt.com/moises-caicedo/transfers/spieler/1000",
+      "season": "2023/2024",
+      "date": "2025-01-01",
+      "from_club": "Brighton & Hove Albion",
+      "to_club": "Chelsea",
+      "market_value": "\u20ac120.0m",
+      "fee": "\u20ac115m"
+    }
+  ]
+}

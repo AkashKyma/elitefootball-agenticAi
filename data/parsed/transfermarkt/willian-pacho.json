@@ -1,0 +1,32 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/willian-pacho/profil/spieler/1000",
+    "player_name": "Willian Pacho",
+    "preferred_name": "Pacho",
+    "position": "Defender",
+    "date_of_birth": "2001-10-16",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "\u20ac15.0m"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/willian-pacho/transfers/spieler/1000",
+      "season": "2022/2023",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Royal Antwerp",
+      "market_value": "\u20ac15.0m",
+      "fee": "\u20ac3m"
+    },
+    {
+      "source_url": "https://www.transfermarkt.com/willian-pacho/transfers/spieler/1000",
+      "season": "2023/2024",
+      "date": "2025-01-01",
+      "from_club": "Royal Antwerp",
+      "to_club": "Eintracht Frankfurt",
+      "market_value": "\u20ac15.0m",
+      "fee": "\u20ac12m"
+    }
+  ]
+}

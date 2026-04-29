@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/pedro-velasco/profil/spieler/1000",
+    "player_name": "Pedro Velasco",
+    "preferred_name": "Velasco",
+    "position": "Goalkeeper",
+    "date_of_birth": "1996-06-14",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "\u20ac600k"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/pedro-velasco/transfers/spieler/1000",
+      "season": "2025/2026",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Independiente del Valle",
+      "market_value": "\u20ac600k",
+      "fee": "-"
+    }
+  ]
+}

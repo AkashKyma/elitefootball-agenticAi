@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/cristian-pellerano/profil/spieler/1000",
+    "player_name": "Cristian Pellerano",
+    "preferred_name": "Pellerano",
+    "position": "Midfielder",
+    "date_of_birth": "1988-02-28",
+    "nationality": "Argentina",
+    "current_club": "Independiente del Valle",
+    "market_value": "\u20ac400k"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/cristian-pellerano/transfers/spieler/1000",
+      "season": "2025/2026",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Independiente del Valle",
+      "market_value": "\u20ac400k",
+      "fee": "-"
+    }
+  ]
+}

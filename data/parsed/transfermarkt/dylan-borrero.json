@@ -1,0 +1,32 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/dylan-borrero/profil/spieler/1000",
+    "player_name": "Dylan Borrero",
+    "preferred_name": "Borrero",
+    "position": "Forward",
+    "date_of_birth": "2000-09-10",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "\u20ac3.5m"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/dylan-borrero/transfers/spieler/1000",
+      "season": "2021/2022",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Fluminense",
+      "market_value": "\u20ac3.5m",
+      "fee": "\u20ac1.8m"
+    },
+    {
+      "source_url": "https://www.transfermarkt.com/dylan-borrero/transfers/spieler/1000",
+      "season": "2022/2023",
+      "date": "2025-01-01",
+      "from_club": "Fluminense",
+      "to_club": "Independiente del Valle",
+      "market_value": "\u20ac3.5m",
+      "fee": "loan"
+    }
+  ]
+}

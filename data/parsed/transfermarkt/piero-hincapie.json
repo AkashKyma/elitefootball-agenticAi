@@ -1,0 +1,41 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/piero-hincapie/profil/spieler/1000",
+    "player_name": "Piero Hincapi\u00e9",
+    "preferred_name": "Hincapi\u00e9",
+    "position": "Defender",
+    "date_of_birth": "2002-01-09",
+    "nationality": "Ecuador",
+    "current_club": "Bayer Leverkusen",
+    "market_value": "\u20ac28.0m"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/piero-hincapie/transfers/spieler/1000",
+      "season": "2019/2020",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Talleres",
+      "market_value": "\u20ac28.0m",
+      "fee": "\u20ac1.5m"
+    },
+    {
+      "source_url": "https://www.transfermarkt.com/piero-hincapie/transfers/spieler/1000",
+      "season": "2021/2022",
+      "date": "2025-01-01",
+      "from_club": "Talleres",
+      "to_club": "Bayer Leverkusen",
+      "market_value": "\u20ac28.0m",
+      "fee": "\u20ac6m"
+    },
+    {
+      "source_url": "https://www.transfermarkt.com/piero-hincapie/transfers/spieler/1000",
+      "season": "2023/2024",
+      "date": "2025-01-01",
+      "from_club": "Bayer Leverkusen",
+      "to_club": "Bayer Leverkusen",
+      "market_value": "\u20ac28.0m",
+      "fee": "-"
+    }
+  ]
+}

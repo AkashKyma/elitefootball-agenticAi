@@ -1,1 +1,1280 @@
-[]
+[
+  {
+    "player_name": "Alan Minda",
+    "position": "Forward",
+    "role": "forward",
+    "current_club": "Independiente del Valle",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Jordy Caicedo",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7948,
+        "distance": 0.2052,
+        "trajectory": "ascending",
+        "valuation_score": 54.37,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7817,
+        "distance": 0.2183,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Dylan Borrero",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7644,
+        "distance": 0.2356,
+        "trajectory": "stable",
+        "valuation_score": 69.37,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Michael Espinoza",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7572,
+        "distance": 0.2428,
+        "trajectory": "ascending",
+        "valuation_score": 56.67,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Renato Ibarra",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7334,
+        "distance": 0.2666,
+        "trajectory": "stable",
+        "valuation_score": 51.49,
+        "comp_classification": "neutral"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 1.364,
+      "shots": 19.0,
+      "minutes": 396.0,
+      "base_kpi_score": 6.29,
+      "consistency_score": 70.913,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.623,
+      "xa_per_90": 0.386,
+      "progression_score": 10.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Alexis Zapata",
+    "position": "Defender",
+    "role": "defender",
+    "current_club": "Independiente del Valle",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Gabriel Villamil",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.9122,
+        "distance": 0.0878,
+        "trajectory": "stable",
+        "valuation_score": 57.78,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Carlos Gutiérrez",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.8484,
+        "distance": 0.1516,
+        "trajectory": "stable",
+        "valuation_score": 53.0,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.8244,
+        "distance": 0.1756,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Sebastián Rodríguez",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.8132,
+        "distance": 0.1868,
+        "trajectory": "ascending",
+        "valuation_score": 60.46,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Michael Espinoza",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7992,
+        "distance": 0.2008,
+        "trajectory": "ascending",
+        "valuation_score": 56.67,
+        "comp_classification": "successful"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 0.75,
+      "shots": 4.0,
+      "minutes": 360.0,
+      "base_kpi_score": 8.966,
+      "consistency_score": 89.175,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.16,
+      "xa_per_90": 0.425,
+      "progression_score": 7.5
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Carlos Gutiérrez",
+    "position": "Defender",
+    "role": "defender",
+    "current_club": "Independiente del Valle",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Gabriel Villamil",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.9138,
+        "distance": 0.0862,
+        "trajectory": "stable",
+        "valuation_score": 57.78,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Alexis Zapata",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.8484,
+        "distance": 0.1516,
+        "trajectory": "stable",
+        "valuation_score": 60.42,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Pedro Velasco",
+        "position": "Goalkeeper",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7426,
+        "distance": 0.2574,
+        "trajectory": "stable",
+        "valuation_score": 42.7,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Cristian Pellerano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7324,
+        "distance": 0.2676,
+        "trajectory": "declining",
+        "valuation_score": 39.9,
+        "comp_classification": "failed"
+      },
+      {
+        "player_name": "Michael Espinoza",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7197,
+        "distance": 0.2803,
+        "trajectory": "ascending",
+        "valuation_score": 56.67,
+        "comp_classification": "successful"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 0.25,
+      "shots": 2.0,
+      "minutes": 360.0,
+      "base_kpi_score": 8.416,
+      "consistency_score": 89.175,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.03,
+      "xa_per_90": 0.212,
+      "progression_score": 2.5
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Cristian Pellerano",
+    "position": "Midfielder",
+    "role": "midfielder",
+    "current_club": "Independiente del Valle",
+    "trajectory": "declining",
+    "similar_players": [
+      {
+        "player_name": "Gabriel Villamil",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7382,
+        "distance": 0.2618,
+        "trajectory": "stable",
+        "valuation_score": 57.78,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Alexis Zapata",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.731,
+        "distance": 0.269,
+        "trajectory": "stable",
+        "valuation_score": 60.42,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Carlos Gutiérrez",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7119,
+        "distance": 0.2881,
+        "trajectory": "stable",
+        "valuation_score": 53.0,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Willian Pacho",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.676,
+        "distance": 0.324,
+        "trajectory": "declining",
+        "valuation_score": 56.84,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Sebastián Rodríguez",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6544,
+        "distance": 0.3456,
+        "trajectory": "ascending",
+        "valuation_score": 60.46,
+        "comp_classification": "successful"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 0.5,
+      "shots": 3.0,
+      "minutes": 360.0,
+      "base_kpi_score": 11.65,
+      "consistency_score": 87.5,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.045,
+      "xa_per_90": 0.425,
+      "progression_score": 5.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Dylan Borrero",
+    "position": "Forward",
+    "role": "forward",
+    "current_club": "Independiente del Valle",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Renato Ibarra",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7726,
+        "distance": 0.2274,
+        "trajectory": "stable",
+        "valuation_score": 51.49,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Alan Minda",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7644,
+        "distance": 0.2356,
+        "trajectory": "stable",
+        "valuation_score": 63.29,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Luis Segovia",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7444,
+        "distance": 0.2556,
+        "trajectory": "stable",
+        "valuation_score": 68.22,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Jordy Caicedo",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6936,
+        "distance": 0.3064,
+        "trajectory": "ascending",
+        "valuation_score": 54.37,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Kendry Páez",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6877,
+        "distance": 0.3123,
+        "trajectory": "stable",
+        "valuation_score": 60.29,
+        "comp_classification": "neutral"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 2.22,
+      "shots": 30.0,
+      "minutes": 527.0,
+      "base_kpi_score": 7.611,
+      "consistency_score": 78.522,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.854,
+      "xa_per_90": 0.726,
+      "progression_score": 10.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Gabriel Villamil",
+    "position": "Defender",
+    "role": "defender",
+    "current_club": "Independiente del Valle",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Carlos Gutiérrez",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.9138,
+        "distance": 0.0862,
+        "trajectory": "stable",
+        "valuation_score": 53.0,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Alexis Zapata",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.9122,
+        "distance": 0.0878,
+        "trajectory": "stable",
+        "valuation_score": 60.42,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Michael Espinoza",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.8001,
+        "distance": 0.1999,
+        "trajectory": "ascending",
+        "valuation_score": 56.67,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7726,
+        "distance": 0.2274,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Sebastián Rodríguez",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7512,
+        "distance": 0.2488,
+        "trajectory": "ascending",
+        "valuation_score": 60.46,
+        "comp_classification": "successful"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 0.507,
+      "shots": 4.0,
+      "minutes": 355.0,
+      "base_kpi_score": 8.249,
+      "consistency_score": 87.121,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.162,
+      "xa_per_90": 0.215,
+      "progression_score": 5.07
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Jordy Caicedo",
+    "position": "Forward",
+    "role": "forward",
+    "current_club": "Independiente del Valle",
+    "trajectory": "ascending",
+    "similar_players": [
+      {
+        "player_name": "Alan Minda",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7948,
+        "distance": 0.2052,
+        "trajectory": "stable",
+        "valuation_score": 63.29,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Tomás Molina",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7825,
+        "distance": 0.2175,
+        "trajectory": "declining",
+        "valuation_score": 58.1,
+        "comp_classification": "failed"
+      },
+      {
+        "player_name": "Michael Espinoza",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7755,
+        "distance": 0.2245,
+        "trajectory": "ascending",
+        "valuation_score": 56.67,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Sebastián Rodríguez",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7194,
+        "distance": 0.2806,
+        "trajectory": "ascending",
+        "valuation_score": 60.46,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7107,
+        "distance": 0.2893,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "successful"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 1.622,
+      "shots": 14.0,
+      "minutes": 333.0,
+      "base_kpi_score": 5.355,
+      "consistency_score": 89.683,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.659,
+      "xa_per_90": 0.459,
+      "progression_score": 10.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Kendry Páez",
+    "position": "Midfielder",
+    "role": "midfielder",
+    "current_club": "Independiente del Valle",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Dylan Borrero",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6528,
+        "distance": 0.3472,
+        "trajectory": "stable",
+        "valuation_score": 69.37,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Luis Segovia",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.5912,
+        "distance": 0.4088,
+        "trajectory": "stable",
+        "valuation_score": 68.22,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Renato Ibarra",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.5572,
+        "distance": 0.4428,
+        "trajectory": "stable",
+        "valuation_score": 51.49,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.546,
+        "distance": 0.454,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Alan Minda",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.509,
+        "distance": 0.491,
+        "trajectory": "stable",
+        "valuation_score": 63.29,
+        "comp_classification": "neutral"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 3.125,
+      "shots": 39.0,
+      "minutes": 720.0,
+      "base_kpi_score": 12.895,
+      "consistency_score": 63.258,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.892,
+      "xa_per_90": 1.381,
+      "progression_score": 10.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Luis Segovia",
+    "position": "Midfielder",
+    "role": "midfielder",
+    "current_club": "Independiente del Valle",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Renato Ibarra",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.747,
+        "distance": 0.253,
+        "trajectory": "stable",
+        "valuation_score": 51.49,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Dylan Borrero",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6809,
+        "distance": 0.3191,
+        "trajectory": "stable",
+        "valuation_score": 69.37,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6319,
+        "distance": 0.3681,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Alan Minda",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.5927,
+        "distance": 0.4073,
+        "trajectory": "stable",
+        "valuation_score": 63.29,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Kendry Páez",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.5912,
+        "distance": 0.4088,
+        "trajectory": "stable",
+        "valuation_score": 60.29,
+        "comp_classification": "neutral"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 1.945,
+      "shots": 29.0,
+      "minutes": 694.0,
+      "base_kpi_score": 9.185,
+      "consistency_score": 82.852,
+      "discipline_risk_score": 2.0,
+      "xg_per_90": 0.589,
+      "xa_per_90": 0.882,
+      "progression_score": 10.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Michael Espinoza",
+    "position": "Midfielder",
+    "role": "midfielder",
+    "current_club": "Independiente del Valle",
+    "trajectory": "ascending",
+    "similar_players": [
+      {
+        "player_name": "Sebastián Rodríguez",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.8341,
+        "distance": 0.1659,
+        "trajectory": "ascending",
+        "valuation_score": 60.46,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Alexis Zapata",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.8176,
+        "distance": 0.1824,
+        "trajectory": "stable",
+        "valuation_score": 60.42,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Jordy Caicedo",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7851,
+        "distance": 0.2149,
+        "trajectory": "ascending",
+        "valuation_score": 54.37,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7788,
+        "distance": 0.2212,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Gabriel Villamil",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7743,
+        "distance": 0.2257,
+        "trajectory": "stable",
+        "valuation_score": 57.78,
+        "comp_classification": "neutral"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 0.839,
+      "shots": 9.0,
+      "minutes": 322.0,
+      "base_kpi_score": 8.166,
+      "consistency_score": 78.787,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.375,
+      "xa_per_90": 0.238,
+      "progression_score": 8.39
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Moisés Caicedo",
+    "position": "Midfielder",
+    "role": "midfielder",
+    "current_club": "Chelsea",
+    "trajectory": "declining",
+    "similar_players": [
+      {
+        "player_name": "Willian Pacho",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6276,
+        "distance": 0.3724,
+        "trajectory": "declining",
+        "valuation_score": 56.84,
+        "comp_classification": "failed"
+      },
+      {
+        "player_name": "Cristian Pellerano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6175,
+        "distance": 0.3825,
+        "trajectory": "declining",
+        "valuation_score": 39.9,
+        "comp_classification": "failed"
+      },
+      {
+        "player_name": "Piero Hincapié",
+        "position": "Defender",
+        "current_club": "Bayer Leverkusen",
+        "similarity_score": 0.6068,
+        "distance": 0.3932,
+        "trajectory": "stable",
+        "valuation_score": 50.89,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Sebastián Rodríguez",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.5793,
+        "distance": 0.4207,
+        "trajectory": "ascending",
+        "valuation_score": 60.46,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.5722,
+        "distance": 0.4278,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "successful"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 1.011,
+      "shots": 12.0,
+      "minutes": 445.0,
+      "base_kpi_score": 14.154,
+      "consistency_score": 84.178,
+      "discipline_risk_score": 2.0,
+      "xg_per_90": 0.227,
+      "xa_per_90": 0.688,
+      "progression_score": 10.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Pedro Velasco",
+    "position": "Goalkeeper",
+    "role": "goalkeeper",
+    "current_club": "Independiente del Valle",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Carlos Gutiérrez",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7085,
+        "distance": 0.2915,
+        "trajectory": "stable",
+        "valuation_score": 53.0,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Gabriel Villamil",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6661,
+        "distance": 0.3339,
+        "trajectory": "stable",
+        "valuation_score": 57.78,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Alexis Zapata",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6251,
+        "distance": 0.3749,
+        "trajectory": "stable",
+        "valuation_score": 60.42,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.5216,
+        "distance": 0.4784,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Piero Hincapié",
+        "position": "Defender",
+        "current_club": "Bayer Leverkusen",
+        "similarity_score": 0.5203,
+        "distance": 0.4797,
+        "trajectory": "stable",
+        "valuation_score": 50.89,
+        "comp_classification": "successful"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 0.0,
+      "shots": 0.0,
+      "minutes": 540.0,
+      "base_kpi_score": 5.65,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.0,
+      "xa_per_90": 0.0,
+      "progression_score": 0.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Piero Hincapié",
+    "position": "Defender",
+    "role": "defender",
+    "current_club": "Bayer Leverkusen",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Willian Pacho",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7102,
+        "distance": 0.2898,
+        "trajectory": "declining",
+        "valuation_score": 56.84,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Moisés Caicedo",
+        "position": "Midfielder",
+        "current_club": "Chelsea",
+        "similarity_score": 0.6557,
+        "distance": 0.3443,
+        "trajectory": "declining",
+        "valuation_score": 56.75,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Gabriel Villamil",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6504,
+        "distance": 0.3496,
+        "trajectory": "stable",
+        "valuation_score": 57.78,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Alexis Zapata",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6497,
+        "distance": 0.3503,
+        "trajectory": "stable",
+        "valuation_score": 60.42,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Carlos Gutiérrez",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6423,
+        "distance": 0.3577,
+        "trajectory": "stable",
+        "valuation_score": 53.0,
+        "comp_classification": "neutral"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 0.5,
+      "shots": 5.0,
+      "minutes": 360.0,
+      "base_kpi_score": 10.963,
+      "consistency_score": 87.5,
+      "discipline_risk_score": 2.0,
+      "xg_per_90": 0.175,
+      "xa_per_90": 0.212,
+      "progression_score": 5.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Renato Ibarra",
+    "position": "Forward",
+    "role": "forward",
+    "current_club": "Independiente del Valle",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Luis Segovia",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7862,
+        "distance": 0.2138,
+        "trajectory": "stable",
+        "valuation_score": 68.22,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Dylan Borrero",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7726,
+        "distance": 0.2274,
+        "trajectory": "stable",
+        "valuation_score": 69.37,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Alan Minda",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7334,
+        "distance": 0.2666,
+        "trajectory": "stable",
+        "valuation_score": 63.29,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6273,
+        "distance": 0.3727,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Jordy Caicedo",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6231,
+        "distance": 0.3769,
+        "trajectory": "ascending",
+        "valuation_score": 54.37,
+        "comp_classification": "successful"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 2.075,
+      "shots": 27.0,
+      "minutes": 477.0,
+      "base_kpi_score": 7.316,
+      "consistency_score": 64.004,
+      "discipline_risk_score": 2.0,
+      "xg_per_90": 0.758,
+      "xa_per_90": 0.802,
+      "progression_score": 10.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Sebastián Rodríguez",
+    "position": "Midfielder",
+    "role": "midfielder",
+    "current_club": "Independiente del Valle",
+    "trajectory": "ascending",
+    "similar_players": [
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.8673,
+        "distance": 0.1327,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Michael Espinoza",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.8341,
+        "distance": 0.1659,
+        "trajectory": "ascending",
+        "valuation_score": 56.67,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Alexis Zapata",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7973,
+        "distance": 0.2027,
+        "trajectory": "stable",
+        "valuation_score": 60.42,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Jordy Caicedo",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7117,
+        "distance": 0.2883,
+        "trajectory": "ascending",
+        "valuation_score": 54.37,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Gabriel Villamil",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6931,
+        "distance": 0.3069,
+        "trajectory": "stable",
+        "valuation_score": 57.78,
+        "comp_classification": "neutral"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 1.02,
+      "shots": 8.0,
+      "minutes": 353.0,
+      "base_kpi_score": 10.745,
+      "consistency_score": 82.299,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.224,
+      "xa_per_90": 0.65,
+      "progression_score": 10.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Tomás Molina",
+    "position": "Forward",
+    "role": "forward",
+    "current_club": "Independiente del Valle",
+    "trajectory": "declining",
+    "similar_players": [
+      {
+        "player_name": "Jordy Caicedo",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7825,
+        "distance": 0.2175,
+        "trajectory": "ascending",
+        "valuation_score": 54.37,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Michael Espinoza",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7069,
+        "distance": 0.2931,
+        "trajectory": "ascending",
+        "valuation_score": 56.67,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Óscar Zambrano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6772,
+        "distance": 0.3228,
+        "trajectory": "stable",
+        "valuation_score": 64.94,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Alan Minda",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6743,
+        "distance": 0.3257,
+        "trajectory": "stable",
+        "valuation_score": 63.29,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Sebastián Rodríguez",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6686,
+        "distance": 0.3314,
+        "trajectory": "ascending",
+        "valuation_score": 60.46,
+        "comp_classification": "successful"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 1.309,
+      "shots": 11.0,
+      "minutes": 275.0,
+      "base_kpi_score": 5.574,
+      "consistency_score": 95.289,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.478,
+      "xa_per_90": 0.556,
+      "progression_score": 10.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Willian Pacho",
+    "position": "Defender",
+    "role": "defender",
+    "current_club": "Independiente del Valle",
+    "trajectory": "declining",
+    "similar_players": [
+      {
+        "player_name": "Piero Hincapié",
+        "position": "Defender",
+        "current_club": "Bayer Leverkusen",
+        "similarity_score": 0.7102,
+        "distance": 0.2898,
+        "trajectory": "stable",
+        "valuation_score": 50.89,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Moisés Caicedo",
+        "position": "Midfielder",
+        "current_club": "Chelsea",
+        "similarity_score": 0.6982,
+        "distance": 0.3018,
+        "trajectory": "declining",
+        "valuation_score": 56.75,
+        "comp_classification": "failed"
+      },
+      {
+        "player_name": "Cristian Pellerano",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.6131,
+        "distance": 0.3869,
+        "trajectory": "declining",
+        "valuation_score": 39.9,
+        "comp_classification": "failed"
+      },
+      {
+        "player_name": "Luis Segovia",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.5305,
+        "distance": 0.4695,
+        "trajectory": "stable",
+        "valuation_score": 68.22,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Carlos Gutiérrez",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.5145,
+        "distance": 0.4855,
+        "trajectory": "stable",
+        "valuation_score": 53.0,
+        "comp_classification": "neutral"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 0.333,
+      "shots": 6.0,
+      "minutes": 540.0,
+      "base_kpi_score": 9.925,
+      "consistency_score": 87.753,
+      "discipline_risk_score": 2.0,
+      "xg_per_90": 0.127,
+      "xa_per_90": 0.142,
+      "progression_score": 3.33
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
+    "player_name": "Óscar Zambrano",
+    "position": "Midfielder",
+    "role": "midfielder",
+    "current_club": "Independiente del Valle",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Sebastián Rodríguez",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.8673,
+        "distance": 0.1327,
+        "trajectory": "ascending",
+        "valuation_score": 60.46,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Alexis Zapata",
+        "position": "Defender",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.8188,
+        "distance": 0.1812,
+        "trajectory": "stable",
+        "valuation_score": 60.42,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Michael Espinoza",
+        "position": "Midfielder",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7788,
+        "distance": 0.2212,
+        "trajectory": "ascending",
+        "valuation_score": 56.67,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Alan Minda",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7702,
+        "distance": 0.2298,
+        "trajectory": "stable",
+        "valuation_score": 63.29,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Dylan Borrero",
+        "position": "Forward",
+        "current_club": "Independiente del Valle",
+        "similarity_score": 0.7352,
+        "distance": 0.2648,
+        "trajectory": "stable",
+        "valuation_score": 69.37,
+        "comp_classification": "neutral"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 1.2,
+      "shots": 12.0,
+      "minutes": 450.0,
+      "base_kpi_score": 10.123,
+      "consistency_score": 81.292,
+      "discipline_risk_score": 1.0,
+      "xg_per_90": 0.304,
+      "xa_per_90": 0.68,
+      "progression_score": 10.0
+    },
+    "model_version": "similarity_v2_role_aware"
+  }
+]

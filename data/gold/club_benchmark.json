@@ -1,0 +1,95 @@
+[
+  {
+    "club": "IDV",
+    "development_score": 75.0,
+    "reference_benchmarks": {
+      "avg_player_improvement_rate": 8.5,
+      "avg_resale_multiplier": 4.2,
+      "success_rate": 0.62,
+      "avg_age_at_breakout": 20.1,
+      "players_exported_to_europe": 12
+    },
+    "live_metrics": {
+      "live_data": true,
+      "player_count": 16,
+      "avg_kpi_score": 8.51,
+      "avg_consistency_score": 82.976
+    },
+    "comparison_vs_idv": {
+      "note": "baseline"
+    },
+    "model_version": "club_benchmark_v2"
+  },
+  {
+    "club": "Benfica",
+    "development_score": 90.0,
+    "reference_benchmarks": {
+      "avg_player_improvement_rate": 12.0,
+      "avg_resale_multiplier": 6.8,
+      "success_rate": 0.71,
+      "avg_age_at_breakout": 21.5,
+      "players_exported_to_europe": 45
+    },
+    "live_metrics": {
+      "live_data": false,
+      "player_count": 0
+    },
+    "comparison_vs_idv": {
+      "avg_player_improvement_rate_delta_vs_idv": 3.5,
+      "avg_player_improvement_rate_ratio_vs_idv": 1.41,
+      "avg_resale_multiplier_delta_vs_idv": 2.6,
+      "avg_resale_multiplier_ratio_vs_idv": 1.62,
+      "success_rate_delta_vs_idv": 0.09,
+      "success_rate_ratio_vs_idv": 1.15
+    },
+    "model_version": "club_benchmark_v2"
+  },
+  {
+    "club": "Ajax",
+    "development_score": 95.0,
+    "reference_benchmarks": {
+      "avg_player_improvement_rate": 14.0,
+      "avg_resale_multiplier": 8.5,
+      "success_rate": 0.76,
+      "avg_age_at_breakout": 20.8,
+      "players_exported_to_europe": 60
+    },
+    "live_metrics": {
+      "live_data": false,
+      "player_count": 0
+    },
+    "comparison_vs_idv": {
+      "avg_player_improvement_rate_delta_vs_idv": 5.5,
+      "avg_player_improvement_rate_ratio_vs_idv": 1.65,
+      "avg_resale_multiplier_delta_vs_idv": 4.3,
+      "avg_resale_multiplier_ratio_vs_idv": 2.02,
+      "success_rate_delta_vs_idv": 0.14,
+      "success_rate_ratio_vs_idv": 1.23
+    },
+    "model_version": "club_benchmark_v2"
+  },
+  {
+    "club": "Salzburg",
+    "development_score": 88.0,
+    "reference_benchmarks": {
+      "avg_player_improvement_rate": 11.5,
+      "avg_resale_multiplier": 7.2,
+      "success_rate": 0.68,
+      "avg_age_at_breakout": 20.4,
+      "players_exported_to_europe": 38
+    },
+    "live_metrics": {
+      "live_data": false,
+      "player_count": 0
+    },
+    "comparison_vs_idv": {
+      "avg_player_improvement_rate_delta_vs_idv": 3.0,
+      "avg_player_improvement_rate_ratio_vs_idv": 1.35,
+      "avg_resale_multiplier_delta_vs_idv": 3.0,
+      "avg_resale_multiplier_ratio_vs_idv": 1.71,
+      "success_rate_delta_vs_idv": 0.06,
+      "success_rate_ratio_vs_idv": 1.1
+    },
+    "model_version": "club_benchmark_v2"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/jordy-caicedo/profil/spieler/1000",
+    "player_name": "Jordy Caicedo",
+    "preferred_name": "Caicedo",
+    "position": "Forward",
+    "date_of_birth": "1995-03-31",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "\u20ac800k"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/jordy-caicedo/transfers/spieler/1000",
+      "season": "2025/2026",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Independiente del Valle",
+      "market_value": "\u20ac800k",
+      "fee": "-"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/oscar-zambrano/profil/spieler/1000",
+    "player_name": "\u00d3scar Zambrano",
+    "preferred_name": "Zambrano",
+    "position": "Midfielder",
+    "date_of_birth": "2000-08-05",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "\u20ac1.3m"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/oscar-zambrano/transfers/spieler/1000",
+      "season": "2025/2026",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Independiente del Valle",
+      "market_value": "\u20ac1.3m",
+      "fee": "-"
+    }
+  ]
+}

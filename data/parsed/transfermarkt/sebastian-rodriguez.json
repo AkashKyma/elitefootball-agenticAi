@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "source_url": "https://www.transfermarkt.com/sebastian-rodriguez/profil/spieler/1000",
+    "player_name": "Sebasti\u00e1n Rodr\u00edguez",
+    "preferred_name": "Rodr\u00edguez",
+    "position": "Midfielder",
+    "date_of_birth": "1998-04-17",
+    "nationality": "Ecuador",
+    "current_club": "Independiente del Valle",
+    "market_value": "\u20ac900k"
+  },
+  "transfers": [
+    {
+      "source_url": "https://www.transfermarkt.com/sebastian-rodriguez/transfers/spieler/1000",
+      "season": "2025/2026",
+      "date": "2025-01-01",
+      "from_club": "Independiente del Valle",
+      "to_club": "Independiente del Valle",
+      "market_value": "\u20ac900k",
+      "fee": "-"
+    }
+  ]
+}

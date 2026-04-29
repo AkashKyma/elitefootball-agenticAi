@@ -124,19 +124,15 @@ def _min_max_normalize(vectors: list[dict[str, float]]) -> list[dict[str, float]
     return normalized
 
 
-def _weighted_cosine_distance(
+def _weighted_euclidean_distance(
     vec_a: dict[str, float],
     vec_b: dict[str, float],
     weights: dict[str, float],
 ) -> float:
+    """Weighted Euclidean distance — more discriminating than cosine for sparse vectors."""
     all_keys = set(vec_a) | set(vec_b)
-    dot = sum(vec_a.get(k, 0.0) * vec_b.get(k, 0.0) * weights.get(k, 0.1) for k in all_keys)
-    mag_a = math.sqrt(sum((vec_a.get(k, 0.0) * weights.get(k, 0.1)) ** 2 for k in all_keys))
-    mag_b = math.sqrt(sum((vec_b.get(k, 0.0) * weights.get(k, 0.1)) ** 2 for k in all_keys))
-    if mag_a < 1e-9 or mag_b < 1e-9:
-        return 1.0
-    cosine_sim = dot / (mag_a * mag_b)
-    return round(1.0 - max(-1.0, min(1.0, cosine_sim)), 6)
+    dist_sq = sum(weights.get(k, 0.1) * (vec_a.get(k, 0.0) - vec_b.get(k, 0.0)) ** 2 for k in all_keys)
+    return round(math.sqrt(dist_sq), 6)
 
 
 def _trajectory_similarity(traj_a: str | None, traj_b: str | None) -> float:
@@ -219,7 +215,7 @@ def build_similarity_v2_output(
             if other_name == name:
                 continue
             other_vec = vector_map[other_name]
-            feature_dist = _weighted_cosine_distance(target_vec, other_vec, weights)
+            feature_dist = _weighted_euclidean_distance(target_vec, other_vec, weights)
             other_traj = pathway_by_name.get(other_name, {}).get("trajectory")
             traj_bonus = (1.0 - _trajectory_similarity(target_traj, other_traj)) * 0.15
             combined = feature_dist * 0.85 + traj_bonus
