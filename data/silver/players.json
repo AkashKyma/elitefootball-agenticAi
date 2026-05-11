@@ -1,16 +1,16 @@
 [
   {
     "source": "transfermarkt",
-    "source_url": "https://www.transfermarkt.com/adam-armstrong/profil/spieler/226456",
-    "player_name": "Silvio Gori",
+    "source_url": "https://www.transfermarkt.com/adam-armstrong/profil/spieler/243615",
+    "player_name": "Adam Armstrong",
     "preferred_name": null,
-    "position": "Defender - Centre-Back",
-    "date_of_birth": null,
-    "nationality": "Italy",
-    "current_club": "---",
-    "market_value": null,
-    "market_value_eur": null,
-    "age": null
+    "position": "Striker",
+    "date_of_birth": "1997-02-10",
+    "nationality": "England",
+    "current_club": "Southampton",
+    "market_value": "€16.00m",
+    "market_value_eur": 16000000,
+    "age": 29
   },
   {
     "source": "transfermarkt",

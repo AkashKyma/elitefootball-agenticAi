@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T11:35:18.063966+00:00",
+  "generated_at": "2026-05-11T11:48:00.735542+00:00",
   "artifact_count": 616,
   "artifacts": [
     {
@@ -7,7 +7,7 @@
       "artifact_type": "raw_html",
       "artifact_path": "data/raw/transfermarkt/adam-armstrong.html",
       "slug": "adam-armstrong",
-      "captured_at": "2026-05-11T03:58:21.780863+00:00"
+      "captured_at": "2026-05-11T11:46:55.332942+00:00"
     },
     {
       "source": "transfermarkt",
@@ -2149,7 +2149,7 @@
       "artifact_type": "parsed_json",
       "artifact_path": "data/parsed/transfermarkt/adam-armstrong.json",
       "slug": "adam-armstrong",
-      "captured_at": "2026-05-11T03:58:26.091917+00:00"
+      "captured_at": "2026-05-11T11:47:50.293154+00:00"
     },
     {
       "source": "transfermarkt",

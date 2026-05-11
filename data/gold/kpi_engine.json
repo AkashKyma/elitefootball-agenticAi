@@ -3297,6 +3297,27 @@
     "validation_flag": "SINGLE_SOURCE"
   },
   {
+    "player_name": "Adam Armstrong",
+    "minutes_played": 2150,
+    "age": 29,
+    "goals_per_90": 0.502,
+    "assists_per_90": 0.209,
+    "shots_per_90": 2.805,
+    "goal_contributions_per_90": 0.712,
+    "passes_completed_per_90": 34.995,
+    "rolling_3_goals_per_90": 0.502,
+    "rolling_5_goal_contributions_per_90": 0.712,
+    "rolling_3_shots_per_90": 2.805,
+    "rolling_5_minutes": 2150.0,
+    "consistency_score": 100.0,
+    "age_multiplier": 1.0,
+    "base_kpi_score": 6.331,
+    "age_adjusted_kpi_score": 6.331,
+    "confidence_weighted_kpi": 4.301,
+    "data_confidence_score": 0.6793,
+    "validation_flag": "LOW_SAMPLE"
+  },
+  {
     "player_name": "Julián Alvarez",
     "minutes_played": 3549,
     "age": 26,

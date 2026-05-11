@@ -1,6 +1,16 @@
 [
   {
     "player_name": "",
+    "from_club": "Blackburn",
+    "to_club": "Southampton",
+    "fee_eur": 17700000.0,
+    "season": "21/22",
+    "transfer_type": "transfer",
+    "loan": false,
+    "source": "transfermarkt"
+  },
+  {
+    "player_name": "",
     "from_club": "Independiente del Valle",
     "to_club": "Independiente del Valle",
     "fee_eur": null,

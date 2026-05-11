@@ -2665,6 +2665,34 @@
     "model_version": "pathway_v1"
   },
   {
+    "player_name": "Adam Armstrong",
+    "position": "Striker",
+    "current_club": "Southampton",
+    "development_stage": "veteran",
+    "trajectory": "stable",
+    "age_league_percentile": 24.7,
+    "improvement_rate": 0.0,
+    "development_velocity": 0.0,
+    "minutes_growth": {
+      "trend": "stable",
+      "delta": 0.0,
+      "series": [
+        2150.0
+      ]
+    },
+    "best_pathway": [
+      "tier-2 european league",
+      "copa libertadores"
+    ],
+    "success_probability": 0.295,
+    "inputs": {
+      "age": 29,
+      "kpi_score": 6.331,
+      "valuation_score": 59.23
+    },
+    "model_version": "pathway_v1"
+  },
+  {
     "player_name": "Jefferson Lerma",
     "position": "Midfield - Defensive Midfield",
     "current_club": "Crystal Palace",
@@ -6138,31 +6166,6 @@
     "player_name": "Shola Shoretire",
     "position": null,
     "current_club": null,
-    "development_stage": "peak",
-    "trajectory": "stable",
-    "age_league_percentile": 50.0,
-    "improvement_rate": 0.0,
-    "development_velocity": 0.0,
-    "minutes_growth": {
-      "trend": "unknown",
-      "delta": 0.0,
-      "series": []
-    },
-    "best_pathway": [
-      "domestic league improvement"
-    ],
-    "success_probability": 0.15,
-    "inputs": {
-      "age": null,
-      "kpi_score": 0.0,
-      "valuation_score": 20.85
-    },
-    "model_version": "pathway_v1"
-  },
-  {
-    "player_name": "Silvio Gori",
-    "position": "Defender - Centre-Back",
-    "current_club": "---",
     "development_stage": "peak",
     "trajectory": "stable",
     "age_league_percentile": 50.0,

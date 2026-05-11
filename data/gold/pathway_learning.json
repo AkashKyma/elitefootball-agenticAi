@@ -5551,6 +5551,67 @@
     ]
   },
   {
+    "player_name": "Adam Armstrong",
+    "age": 29,
+    "competition": "Premier League",
+    "trajectory": "stable",
+    "pathway_probabilities": [
+      {
+        "destination_league": "austrian bundesliga",
+        "success_probability": 0.9819,
+        "recommended": true,
+        "prestige_step": -0.4
+      },
+      {
+        "destination_league": "eredivisie",
+        "success_probability": 0.9819,
+        "recommended": true,
+        "prestige_step": -0.28
+      },
+      {
+        "destination_league": "primera liga",
+        "success_probability": 0.9819,
+        "recommended": true,
+        "prestige_step": -0.3
+      },
+      {
+        "destination_league": "pro league",
+        "success_probability": 0.9819,
+        "recommended": true,
+        "prestige_step": -0.35
+      },
+      {
+        "destination_league": "bundesliga",
+        "success_probability": 0.9819,
+        "recommended": true,
+        "prestige_step": -0.12
+      },
+      {
+        "destination_league": "ligue 1",
+        "success_probability": 0.9819,
+        "recommended": true,
+        "prestige_step": -0.18
+      },
+      {
+        "destination_league": "premier league",
+        "success_probability": 0.9688,
+        "recommended": true,
+        "prestige_step": 0.0
+      }
+    ],
+    "best_destination": "austrian bundesliga",
+    "best_success_probability": 0.9819,
+    "recommended_destinations": [
+      "austrian bundesliga",
+      "eredivisie",
+      "primera liga",
+      "pro league",
+      "bundesliga",
+      "ligue 1",
+      "premier league"
+    ]
+  },
+  {
     "player_name": "Robert Lewandowski",
     "age": 37,
     "competition": "LaLiga",
@@ -15262,59 +15323,6 @@
   },
   {
     "player_name": "Shola Shoretire",
-    "age": null,
-    "competition": null,
-    "trajectory": "stable",
-    "pathway_probabilities": [
-      {
-        "destination_league": "premier league",
-        "success_probability": 0.0001,
-        "recommended": false,
-        "prestige_step": 0.75
-      },
-      {
-        "destination_league": "austrian bundesliga",
-        "success_probability": 0.0,
-        "recommended": false,
-        "prestige_step": 0.35
-      },
-      {
-        "destination_league": "eredivisie",
-        "success_probability": 0.0,
-        "recommended": false,
-        "prestige_step": 0.47
-      },
-      {
-        "destination_league": "primera liga",
-        "success_probability": 0.0,
-        "recommended": false,
-        "prestige_step": 0.45
-      },
-      {
-        "destination_league": "pro league",
-        "success_probability": 0.0,
-        "recommended": false,
-        "prestige_step": 0.4
-      },
-      {
-        "destination_league": "bundesliga",
-        "success_probability": 0.0,
-        "recommended": false,
-        "prestige_step": 0.63
-      },
-      {
-        "destination_league": "ligue 1",
-        "success_probability": 0.0,
-        "recommended": false,
-        "prestige_step": 0.57
-      }
-    ],
-    "best_destination": "premier league",
-    "best_success_probability": 0.0001,
-    "recommended_destinations": []
-  },
-  {
-    "player_name": "Silvio Gori",
     "age": null,
     "competition": null,
     "trajectory": "stable",

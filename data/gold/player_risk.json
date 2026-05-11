@@ -6944,6 +6944,34 @@
     "model_version": "risk_mvp_v1"
   },
   {
+    "player_name": "Adam Armstrong",
+    "position": "Striker",
+    "current_club": "Southampton",
+    "risk_score": 13.5,
+    "risk_tier": "low",
+    "components": {
+      "injury_risk_score": 26.0,
+      "volatility_risk_score": 0.0,
+      "discipline_risk_score": 12.0,
+      "availability_penalty": 0.0,
+      "minutes_instability_score": 0.0,
+      "small_sample_penalty": 14.0
+    },
+    "inputs": {
+      "age": 29,
+      "matches": 1,
+      "minutes": 2150.0,
+      "minutes_per_match": 2150.0,
+      "max_gap_days": 0,
+      "avg_gap_days": 0.0,
+      "minutes_cv": 0.0,
+      "goal_contribution_p90_cv": 0.0,
+      "shots_p90_cv": 0.0,
+      "consistency_score": 100.0
+    },
+    "model_version": "risk_mvp_v1"
+  },
+  {
     "player_name": "Amirhossein Sarvi",
     "position": "Defender - Centre-Back",
     "current_club": "Sepidrood Rasht FC",
@@ -8039,34 +8067,6 @@
     "player_name": "Shola Shoretire",
     "position": null,
     "current_club": null,
-    "risk_score": 12.3,
-    "risk_tier": "low",
-    "components": {
-      "injury_risk_score": 22.0,
-      "volatility_risk_score": 6.0,
-      "discipline_risk_score": 0.0,
-      "availability_penalty": 0.0,
-      "minutes_instability_score": 0.0,
-      "small_sample_penalty": 14.0
-    },
-    "inputs": {
-      "age": null,
-      "matches": 0,
-      "minutes": 0,
-      "minutes_per_match": 0.0,
-      "max_gap_days": 0,
-      "avg_gap_days": 0.0,
-      "minutes_cv": 0.0,
-      "goal_contribution_p90_cv": 0.0,
-      "shots_p90_cv": 0.0,
-      "consistency_score": null
-    },
-    "model_version": "risk_mvp_v1"
-  },
-  {
-    "player_name": "Silvio Gori",
-    "position": "Defender - Centre-Back",
-    "current_club": "---",
     "risk_score": 12.3,
     "risk_tier": "low",
     "components": {

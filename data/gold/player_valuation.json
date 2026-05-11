@@ -2907,6 +2907,57 @@
     "model_version": "valuation_v2_weighted"
   },
   {
+    "player_name": "Adam Armstrong",
+    "position": "Striker",
+    "current_club": "Southampton",
+    "competition": "Premier League",
+    "valuation_score": 59.23,
+    "confidence_weighted_score": 40.235,
+    "potential_score": 59.23,
+    "market_value_raw": "€16.00m",
+    "market_value_eur": 16000000.0,
+    "computed_value_eur": 12584148.0,
+    "confidence_weighted_computed_eur": 8548412.0,
+    "value_gap_pct": -21.3,
+    "undervalued": false,
+    "data_confidence_score": 0.6793,
+    "validation_flag": "LOW_SAMPLE",
+    "valuation_tier": "mid",
+    "future_value": {
+      "current": 59.23,
+      "in_2yr": 39.71,
+      "in_5yr": 16.14,
+      "peak_window": "21–32"
+    },
+    "components": {
+      "performance_score": 28.21,
+      "age_curve_score": 72.61,
+      "minutes_probability": 100.0,
+      "league_adjustment": 100.0,
+      "club_development": 50.0,
+      "risk_discount": 3.38
+    },
+    "weights_used": {
+      "performance": 0.35,
+      "age_curve": 0.2,
+      "minutes_probability": 0.15,
+      "league_adjustment": 0.15,
+      "club_development": 0.1,
+      "risk_discount": 0.05
+    },
+    "inputs": {
+      "age": 29,
+      "minutes": 2150,
+      "matches": 1,
+      "base_kpi_score": 6.331,
+      "consistency_score": 100.0,
+      "risk_score": 13.5,
+      "xg_per_90": null,
+      "xa_per_90": 0.178
+    },
+    "model_version": "valuation_v2_weighted"
+  },
+  {
     "player_name": "Amadou Onana",
     "position": "Midfield - Defensive Midfield",
     "current_club": "Aston Villa",
@@ -13070,57 +13121,6 @@
     "value_gap_pct": -99.9,
     "undervalued": false,
     "data_confidence_score": 0.465,
-    "validation_flag": "LOW_SAMPLE",
-    "valuation_tier": "low",
-    "future_value": {
-      "current": 20.85,
-      "in_2yr": 19.25,
-      "in_5yr": 12.65,
-      "peak_window": "25–28"
-    },
-    "components": {
-      "performance_score": 0.0,
-      "age_curve_score": 50.0,
-      "minutes_probability": 40.0,
-      "league_adjustment": 0.0,
-      "club_development": 50.0,
-      "risk_discount": 3.08
-    },
-    "weights_used": {
-      "performance": 0.35,
-      "age_curve": 0.2,
-      "minutes_probability": 0.15,
-      "league_adjustment": 0.15,
-      "club_development": 0.1,
-      "risk_discount": 0.05
-    },
-    "inputs": {
-      "age": null,
-      "minutes": null,
-      "matches": null,
-      "base_kpi_score": null,
-      "consistency_score": null,
-      "risk_score": 12.3,
-      "xg_per_90": null,
-      "xa_per_90": null
-    },
-    "model_version": "valuation_v2_weighted"
-  },
-  {
-    "player_name": "Silvio Gori",
-    "position": "Defender - Centre-Back",
-    "current_club": "---",
-    "competition": null,
-    "valuation_score": 20.85,
-    "confidence_weighted_score": 10.59,
-    "potential_score": 21.89,
-    "market_value_raw": null,
-    "market_value_eur": null,
-    "computed_value_eur": 271020.0,
-    "confidence_weighted_computed_eur": 137651.0,
-    "value_gap_pct": null,
-    "undervalued": false,
-    "data_confidence_score": 0.5079,
     "validation_flag": "LOW_SAMPLE",
     "valuation_tier": "low",
     "future_value": {

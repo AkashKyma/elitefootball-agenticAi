@@ -17264,6 +17264,110 @@
     "best_fit_score": 0.736
   },
   {
+    "player_name": "Adam Armstrong",
+    "age": 29,
+    "position": "Striker",
+    "top_5_club_fits": [
+      {
+        "club": "real madrid",
+        "fit_score": 0.7355,
+        "components": {
+          "role_similarity": 1.0,
+          "age_profile_match": 0.4449,
+          "league_step_up": 0.5,
+          "value_accessibility": 0.9371,
+          "tactical_fit": 0.8592,
+          "pathway_score": 0.7,
+          "positional_demand": 0.7
+        },
+        "club_profile": {
+          "pressing_intensity": 0.6,
+          "formation_style": "4-3-3",
+          "physical_demand": 0.78,
+          "technical_demand": 0.98
+        }
+      },
+      {
+        "club": "atletico madrid",
+        "fit_score": 0.7261,
+        "components": {
+          "role_similarity": 1.0,
+          "age_profile_match": 0.5461,
+          "league_step_up": 0.35,
+          "value_accessibility": 0.8742,
+          "tactical_fit": 0.8713,
+          "pathway_score": 0.68,
+          "positional_demand": 0.8
+        },
+        "club_profile": {
+          "pressing_intensity": 0.82,
+          "formation_style": "4-4-2",
+          "physical_demand": 0.92,
+          "technical_demand": 0.8
+        }
+      },
+      {
+        "club": "inter milan",
+        "fit_score": 0.7239,
+        "components": {
+          "role_similarity": 1.0,
+          "age_profile_match": 0.5394,
+          "league_step_up": 0.38,
+          "value_accessibility": 0.849,
+          "tactical_fit": 0.8854,
+          "pathway_score": 0.65,
+          "positional_demand": 0.75
+        },
+        "club_profile": {
+          "pressing_intensity": 0.65,
+          "formation_style": "3-5-2",
+          "physical_demand": 0.8,
+          "technical_demand": 0.88
+        }
+      },
+      {
+        "club": "barcelona",
+        "fit_score": 0.6963,
+        "components": {
+          "role_similarity": 1.0,
+          "age_profile_match": 0.2621,
+          "league_step_up": 0.47,
+          "value_accessibility": 0.9161,
+          "tactical_fit": 0.8475,
+          "pathway_score": 0.72,
+          "positional_demand": 0.8
+        },
+        "club_profile": {
+          "pressing_intensity": 0.78,
+          "formation_style": "4-3-3",
+          "physical_demand": 0.72,
+          "technical_demand": 0.98
+        }
+      },
+      {
+        "club": "nottingham forest",
+        "fit_score": 0.6956,
+        "components": {
+          "role_similarity": 1.0,
+          "age_profile_match": 0.5461,
+          "league_step_up": 0.18,
+          "value_accessibility": 0.8112,
+          "tactical_fit": 0.9295,
+          "pathway_score": 0.72,
+          "positional_demand": 0.75
+        },
+        "club_profile": {
+          "pressing_intensity": 0.7,
+          "formation_style": "4-2-3-1",
+          "physical_demand": 0.78,
+          "technical_demand": 0.75
+        }
+      }
+    ],
+    "best_fit_club": "real madrid",
+    "best_fit_score": 0.7355
+  },
+  {
     "player_name": "Federico Dimarco",
     "age": 28,
     "position": "Defender - Left-Back",
@@ -19763,110 +19867,6 @@
     "player_name": "Shola Shoretire",
     "age": null,
     "position": null,
-    "top_5_club_fits": [
-      {
-        "club": "benfica",
-        "fit_score": 0.7143,
-        "components": {
-          "role_similarity": 0.5,
-          "age_profile_match": 0.5,
-          "league_step_up": 1.0,
-          "value_accessibility": 0.9932,
-          "tactical_fit": 0.7897,
-          "pathway_score": 0.88,
-          "positional_demand": 0.5
-        },
-        "club_profile": {
-          "pressing_intensity": 0.72,
-          "formation_style": "4-4-2",
-          "physical_demand": 0.75,
-          "technical_demand": 0.82
-        }
-      },
-      {
-        "club": "brighton",
-        "fit_score": 0.71,
-        "components": {
-          "role_similarity": 0.5,
-          "age_profile_match": 0.5,
-          "league_step_up": 0.98,
-          "value_accessibility": 0.9946,
-          "tactical_fit": 0.7689,
-          "pathway_score": 0.9,
-          "positional_demand": 0.5
-        },
-        "club_profile": {
-          "pressing_intensity": 0.8,
-          "formation_style": "4-2-3-1",
-          "physical_demand": 0.75,
-          "technical_demand": 0.85
-        }
-      },
-      {
-        "club": "ajax",
-        "fit_score": 0.708,
-        "components": {
-          "role_similarity": 0.5,
-          "age_profile_match": 0.5,
-          "league_step_up": 1.0,
-          "value_accessibility": 0.9919,
-          "tactical_fit": 0.7383,
-          "pathway_score": 0.88,
-          "positional_demand": 0.5
-        },
-        "club_profile": {
-          "pressing_intensity": 0.8,
-          "formation_style": "4-3-3",
-          "physical_demand": 0.72,
-          "technical_demand": 0.95
-        }
-      },
-      {
-        "club": "sporting cp",
-        "fit_score": 0.7071,
-        "components": {
-          "role_similarity": 0.5,
-          "age_profile_match": 0.5,
-          "league_step_up": 1.0,
-          "value_accessibility": 0.9919,
-          "tactical_fit": 0.7841,
-          "pathway_score": 0.8,
-          "positional_demand": 0.5
-        },
-        "club_profile": {
-          "pressing_intensity": 0.75,
-          "formation_style": "4-3-3",
-          "physical_demand": 0.76,
-          "technical_demand": 0.82
-        }
-      },
-      {
-        "club": "porto",
-        "fit_score": 0.7037,
-        "components": {
-          "role_similarity": 0.5,
-          "age_profile_match": 0.5,
-          "league_step_up": 1.0,
-          "value_accessibility": 0.9932,
-          "tactical_fit": 0.7877,
-          "pathway_score": 0.75,
-          "positional_demand": 0.5
-        },
-        "club_profile": {
-          "pressing_intensity": 0.75,
-          "formation_style": "4-4-2",
-          "physical_demand": 0.78,
-          "technical_demand": 0.8
-        }
-      }
-    ],
-    "best_fit_club": "benfica",
-    "best_fit_score": 0.7143
-  },
-  {
-    "player_name": "Silvio Gori",
-    "age": null,
-    "position": "Defender - Centre-Back",
     "top_5_club_fits": [
       {
         "club": "benfica",

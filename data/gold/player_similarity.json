@@ -1,5 +1,76 @@
 [
   {
+    "player_name": "Adam Armstrong",
+    "position": "Striker",
+    "role": "forward",
+    "current_club": "Southampton",
+    "trajectory": "stable",
+    "similar_players": [
+      {
+        "player_name": "Marcos Leonardo",
+        "position": "Attack - Centre-Forward",
+        "current_club": "Al-Hilal SFC",
+        "similarity_score": 0.9217,
+        "distance": 0.0783,
+        "trajectory": "stable",
+        "valuation_score": 47.61,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Antony",
+        "position": "Attack - Right Winger",
+        "current_club": "Real Betis Balompié",
+        "similarity_score": 0.9059,
+        "distance": 0.0941,
+        "trajectory": "stable",
+        "valuation_score": 49.42,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Bukayo Saka",
+        "position": "Attack - Right Winger",
+        "current_club": "Arsenal FC",
+        "similarity_score": 0.8959,
+        "distance": 0.1041,
+        "trajectory": "stable",
+        "valuation_score": 63.77,
+        "comp_classification": "neutral"
+      },
+      {
+        "player_name": "Rafael Leão",
+        "position": "Attack - Left Winger",
+        "current_club": "AC Milan",
+        "similarity_score": 0.8904,
+        "distance": 0.1096,
+        "trajectory": "ascending",
+        "valuation_score": 61.39,
+        "comp_classification": "successful"
+      },
+      {
+        "player_name": "Darwin Núñez",
+        "position": "Attack - Centre-Forward",
+        "current_club": "Al-Hilal SFC",
+        "similarity_score": 0.8879,
+        "distance": 0.1121,
+        "trajectory": "stable",
+        "valuation_score": 49.73,
+        "comp_classification": "neutral"
+      }
+    ],
+    "comparison_features": {
+      "goal_contribution_per_90": 0.712,
+      "shots": 0.0,
+      "minutes": 2150.0,
+      "base_kpi_score": 6.331,
+      "consistency_score": 100.0,
+      "discipline_risk_score": 2.0,
+      "xg_per_90": 0.0,
+      "xa_per_90": 0.178,
+      "progression_score": 7.12
+    },
+    "model_version": "similarity_v2_role_aware"
+  },
+  {
     "player_name": "Adam Daghim",
     "position": "Attack - Right Winger",
     "role": "forward",
@@ -9095,6 +9166,16 @@
     "trajectory": "stable",
     "similar_players": [
       {
+        "player_name": "Adam Armstrong",
+        "position": "Striker",
+        "current_club": "Southampton",
+        "similarity_score": 0.9217,
+        "distance": 0.0783,
+        "trajectory": "stable",
+        "valuation_score": 59.23,
+        "comp_classification": "successful"
+      },
+      {
         "player_name": "Robert Lewandowski",
         "position": "Attack - Centre-Forward",
         "current_club": "FC Barcelona",
@@ -9132,16 +9213,6 @@
         "distance": 0.1206,
         "trajectory": "stable",
         "valuation_score": 34.81,
-        "comp_classification": "neutral"
-      },
-      {
-        "player_name": "Antony",
-        "position": "Attack - Right Winger",
-        "current_club": "Real Betis Balompié",
-        "similarity_score": 0.8774,
-        "distance": 0.1226,
-        "trajectory": "stable",
-        "valuation_score": 49.42,
         "comp_classification": "neutral"
       }
     ],

@@ -1,5 +1,20 @@
 [
   {
+    "player_name": "Adam Armstrong",
+    "matches": 1,
+    "minutes": 2150,
+    "goals": 12,
+    "assists": 5,
+    "shots": 0,
+    "yellow_cards": 2,
+    "red_cards": 0,
+    "goal_contributions": 17,
+    "goal_contribution_per_90": 0.712,
+    "shot_involvement_flag": false,
+    "discipline_risk_score": 2,
+    "minutes_bucket": "starter"
+  },
+  {
     "player_name": "Adam Daghim",
     "matches": 5,
     "minutes": 1541,
