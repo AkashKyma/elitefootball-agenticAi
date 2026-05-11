@@ -196,6 +196,16 @@ def compare(
             "similar_players": similar_players,
         }
 
+    # Improved debugging: provide context if the player exists without valid analytical vectors.
+    try:
+        all_players = load_players(required=False)
+        if any(normalize_name(p.get("player_name")) == target_key for p in all_players):
+            raise HTTPException(status_code=404, detail=f"Player '{player_name}' exists but has insufficient match statistics recorded for mathematical comparison.")
+    except HTTPException:
+        raise
+    except Exception:
+        pass
+
     raise _player_not_found(player_name)
 
 
@@ -322,9 +332,17 @@ def admin_run_pipeline() -> dict[str, object]:
     try:
         from app.pipeline.run_pipeline import run_pipeline
         result = run_pipeline()
+        def _count(obj):
+            if not isinstance(obj, dict): return "done"
+            if "rows" in obj and isinstance(obj["rows"], (list, dict)):
+                return len(obj["rows"])
+            if "tables" in obj and isinstance(obj["tables"], dict):
+                return sum(len(tbl) for tbl in obj["tables"].values() if isinstance(tbl, list))
+            return len(obj)
+
         return {
             "status": "ok",
-            "stages": {k: (len(v.get("rows", [])) if isinstance(v, dict) else "done") for k, v in result.items()},
+            "stages": {k: _count(v) for k, v in result.items()},
         }
     except Exception as exc:
         return {"status": "error", "message": str(exc)}
