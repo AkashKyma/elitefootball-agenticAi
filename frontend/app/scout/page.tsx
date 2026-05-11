@@ -644,7 +644,8 @@ export default function ScoutWorkflowPage() {
                         {alert.priority || "MEDIUM"} PRIORITY
                       </span>
                     </div>
-                    <p className="text-slate-100 font-semibold text-lg">{alert.message}</p>
+                    <p className="text-slate-100 font-bold text-xl">{alert.player_name}</p>
+                    <p className="text-slate-300 font-medium text-sm">{alert.trigger_reason}</p>
                   </div>
                   <button
                     onClick={() => loadProfile(alert.player_slug)}
