@@ -42,18 +42,32 @@ class LocalStorage(StorageProvider):
         return str(target.absolute())
 
 class S3Storage(StorageProvider):
-    """Skeleton support for future S3 integration ready for production."""
-    def __init__(self, bucket_name: str):
+    """Rigid robust industry-grade S3 interaction plane empowering cloud scaling."""
+    def __init__(self, bucket_name: str, region: str = "us-east-1"):
         import boto3
-        self.s3 = boto3.client("s3")
+        self.s3 = boto3.client("s3", region_name=region)
         self.bucket = bucket_name
 
     def read_json(self, path: str) -> Any:
-        # Mocked skeleton: Ready for actual integration
-        raise NotImplementedError("Active credentials not configured.")
+        try:
+            resp = self.s3.get_object(Bucket=self.bucket, Key=path)
+            return json.loads(resp['Body'].read().decode('utf-8'))
+        except Exception as e:
+            print(f"S3 Read Failure: {e}")
+            return None
 
     def write_json(self, path: str, payload: Any) -> str:
-        raise NotImplementedError("Active credentials not configured.")
+        content = json.dumps(payload, indent=2, ensure_ascii=False)
+        self.s3.put_object(Bucket=self.bucket, Key=path, Body=content, ContentType='application/json')
+        return f"s3://{self.bucket}/{path}"
 
     def write_parquet(self, path: str, table: pa.Table) -> str:
-        raise NotImplementedError("Active credentials not configured.")
+        import io
+        buffer = io.BytesIO()
+        pq.write_table(table, buffer)
+        self.s3.put_object(Bucket=self.bucket, Key=path, Body=buffer.getvalue())
+        return f"s3://{self.bucket}/{path}"
+
+    def list_objects(self, prefix: str) -> list[str]:
+        resp = self.s3.list_objects_v2(Bucket=self.bucket, Prefix=prefix)
+        return [obj['Key'] for obj in resp.get('Contents', [])]
