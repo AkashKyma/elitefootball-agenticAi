@@ -12,17 +12,17 @@ def ensure_directory(path: str | Path) -> Path:
 
 
 def read_json(path: str | Path) -> Any:
-    return json.loads(Path(path).read_text(encoding="utf-8"))
+    from app.storage import get_default_provider
+    return get_default_provider().read_json(str(path))
 
 
 def write_json(path: str | Path, payload: Any) -> str:
     import os, sys
+    from app.storage import get_default_provider
     output_path = Path(path)
     if "pytest" in sys.modules or "PYTEST_CURRENT_TEST" in os.environ:
         output_path = Path("data/test") / output_path.name
-    ensure_directory(output_path.parent)
-    output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
-    return str(output_path)
+    return get_default_provider().write_json(str(output_path), payload)
 
 
 def list_files(directory: str | Path, pattern: str) -> list[Path]:
